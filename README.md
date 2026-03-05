@@ -5,10 +5,10 @@ Coincidence gamma-ray spectrometry can achieve greatly improved minimum detectab
 The MDA of a a pair of coincident gamma-rays is 
 
 $$
-MDA = \dfrac{L_D}{\varepsilon_{\gamma\gamma} \, I_{\gamma\gamma} \, t} ,
+MDA = \dfrac{L_D}{\varepsilon_{\gamma\gamma} I_{\gamma\gamma} t} ,
 $$
 
-where $L_D$ is the detection limit and is a function of the amount of background radiation, $\varepsilon_{\gamma\gamma}$ is the absolute full-energy peak gamma-ray coincidence detection efficiency, $I_{\gamma\gamma}$ is the coincidence gamma-ray emission intensity, and $t$ is the measurement time. To caluclate the MDA, two simulations are performed. A radionuclide simulation is used to determine $\varepsilon_{\gamma\gamma} \, I_{\gamma\gamma}$ and a background simulation is used to determine $L_D$. 
+where $L_D$ is the detection limit and is a function of the amount of background radiation, $\varepsilon_{\gamma\gamma}$ is the absolute full-energy peak gamma-ray coincidence detection efficiency, $I_{\gamma\gamma}$ is the coincidence gamma-ray emission intensity, and $t$ is the measurement time. To caluclate the MDA, two simulations are performed. A radionuclide simulation is used to determine $\varepsilon_{\gamma\gamma} I_{\gamma\gamma}$ and a background simulation is used to determine $L_D$. 
 
 Python code is also included for data analysis, which yields MDA as a function of a detector design parameter. In other words, facilitating parameteric design optimization of a detector concept. 
 
