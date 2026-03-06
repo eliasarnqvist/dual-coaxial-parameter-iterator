@@ -28,9 +28,8 @@ private:
     G4ParticleGun *fParticleGun;
 
     G4GenericMessenger *fMessengerSource;
-    G4double sourceRadiusR;
-    G4bool selectBackground;
-    G4bool selectFilterSource;
+    G4double sourceRadiusSURER;
+    G4int sourceType;
     
     std::vector<G4double> xx, yy;
 };

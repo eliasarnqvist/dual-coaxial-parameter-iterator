@@ -3,13 +3,18 @@
 EPrimaryGenerator::EPrimaryGenerator()
 {
     fMessengerSource = new G4GenericMessenger(this, "/E_source/", "Settings for the source");
-    fMessengerSource->DeclareProperty("selectBackground", selectBackground, "If true: simulate a background source, if false: simulate a radionuclide source");
-    fMessengerSource->DeclareProperty("sourceRadius", sourceRadiusR, "Radius of the source (mm)");
-    fMessengerSource->DeclareProperty("selectFilterSource", selectFilterSource, "If true: simulate a filter source, if false: simulate a point source");
+    fMessengerSource->DeclareProperty("sourceType", sourceType, "Select the type of source to use: 0 = point source, 1 = filter source, 2 = SURE source");
+    fMessengerSource->DeclareProperty("sourceRadiusSURE", sourceRadiusSURER, "Radius of the SURE source, if the SURE source is used (mm)");
 
-    selectBackground = false;
-    selectFilterSource = true;
-    sourceRadiusR = 104.;
+
+
+    // fMessengerSource->DeclareProperty("selectBackground", selectBackground, "If true: simulate a background source, if false: simulate a radionuclide source");
+    // fMessengerSource->DeclareProperty("selectFilterSource", selectFilterSource, "If true: simulate a filter source, if false: simulate a point source");
+
+    // selectBackground = false;
+    // selectFilterSource = true;
+    sourceType = 1;
+    sourceRadiusSURER = 104.;
 
     G4int n_particle = 1;
     fParticleGun  = new G4ParticleGun(n_particle);
@@ -29,7 +34,7 @@ void EPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
     // If the particle has not bee assigned yet, assign it as either a gamma ray or an ion
     if (fParticleGun->GetParticleDefinition() == G4Geantino::Geantino())
     {
-        if (selectBackground)
+        if (sourceType == 2)
         {
             // Read gamma ray flux CDF (should work both in the build directory and outside!)
             std::ifstream datafile;
@@ -68,7 +73,7 @@ void EPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
     }
 
     // If we simulate a gamma ray, the energy needs to follow the CDF and the position needs to be random
-    if (selectBackground)
+    if (sourceType == 2)
     {
         // Set the energy of the gamma ray
         G4double CFD_sample = G4UniformRand();
@@ -79,13 +84,13 @@ void EPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
         }
         // G4cout << "CDF sample " << CFD_sample << " out of 1" << G4endl;
         // G4cout << "Gamma energy " << xx[j] << " keV" << G4endl;
-        // Spread the emitted gamma-rays equally over the whole bin
+        // Spread the emitted gamma-rays equally over the whole bin (of width 9800/2400=4.78515625 keV)
         G4double gammaSpread = 4.78515625 * (G4UniformRand() - 0.5);
         G4double gammaEnergy = (xx[j] + gammaSpread) * keV;
         // G4cout << "Gamma energy " << gammaEnergy << " MeV" << G4endl;
         fParticleGun->SetParticleEnergy(gammaEnergy);
 
-        G4double sourceRadius = sourceRadiusR * mm;
+        G4double sourceRadius = sourceRadiusSURER * mm;
 
         // Random position
         G4double phi = 2  * pi * G4UniformRand();
@@ -114,7 +119,7 @@ void EPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
         fParticleGun->SetParticlePosition(G4ThreeVector(x,y,z));
         fParticleGun->SetParticleMomentumDirection(G4ThreeVector(-rhat_x,-rhat_y,-rhat_z));
     }
-    else if (selectFilterSource)
+    else if (sourceType == 1)
     {
         // New random position inside filter source
         G4double filterDiameter = 31.0 * 2 * mm;
@@ -129,9 +134,11 @@ void EPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 
         fParticleGun->SetParticlePosition(G4ThreeVector(x,y,z));
     }
+    else if (sourceType == 0)
+    {
+        fParticleGun->SetParticlePosition(G4ThreeVector(0. * mm, 0. * mm, 0. * mm));
+    }
 
     // Create vertex
     fParticleGun->GeneratePrimaryVertex(anEvent);
 }
-
-
