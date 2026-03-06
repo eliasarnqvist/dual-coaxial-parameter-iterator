@@ -5,14 +5,7 @@ EPrimaryGenerator::EPrimaryGenerator()
     fMessengerSource = new G4GenericMessenger(this, "/E_source/", "Settings for the source");
     fMessengerSource->DeclareProperty("sourceType", sourceType, "Select the type of source to use: 0 = point source, 1 = filter source, 2 = SURE source");
     fMessengerSource->DeclareProperty("sourceRadiusSURE", sourceRadiusSURER, "Radius of the SURE source, if the SURE source is used (mm)");
-
-
-
-    // fMessengerSource->DeclareProperty("selectBackground", selectBackground, "If true: simulate a background source, if false: simulate a radionuclide source");
-    // fMessengerSource->DeclareProperty("selectFilterSource", selectFilterSource, "If true: simulate a filter source, if false: simulate a point source");
-
-    // selectBackground = false;
-    // selectFilterSource = true;
+    
     sourceType = 1;
     sourceRadiusSURER = 104.;
 

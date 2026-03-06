@@ -8,15 +8,24 @@ ERunAction::ERunAction()
 
     G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
 
-    analysisManager->CreateH2("Edet_ab", "Detected energy", 1024, 0, 5. * MeV, 1024, 0, 5. * MeV);
-    analysisManager->CreateH1("Edet_a", "Detected energy", 1024, 0, 5. * MeV);
-    analysisManager->CreateH1("Edet_b", "Detected energy", 1024, 0, 5. * MeV);
+    analysisManager->CreateH2("E_ab_histo", "Detected energy 2D coincidence histogram", 1024, 0, 5. * MeV, 1024, 0, 5. * MeV);
 
-    analysisManager->CreateNtuple("Detectors", "Detectors");
-    // analysisManager->CreateNtupleIColumn("iEvent");
+    analysisManager->CreateH1("E_a_histo", "Detected energy 1D histogram", 1024, 0, 5. * MeV);
+
+    analysisManager->CreateH1("E_b_histo", "Detected energy 1D histogram", 1024, 0, 5. * MeV);
+
+    analysisManager->CreateNtuple("E_ab_list", "Detected energy coincidence list");
     analysisManager->CreateNtupleDColumn("energy_a");
     analysisManager->CreateNtupleDColumn("energy_b");
     analysisManager->FinishNtuple(0);
+
+    analysisManager->CreateNtuple("E_a_list", "Detected energy list");
+    analysisManager->CreateNtupleDColumn("energy_a");
+    analysisManager->FinishNtuple(1);
+
+    analysisManager->CreateNtuple("E_b_list", "Detected energy list");
+    analysisManager->CreateNtupleDColumn("energy_b");
+    analysisManager->FinishNtuple(2);
 }
 
 ERunAction::~ERunAction()
