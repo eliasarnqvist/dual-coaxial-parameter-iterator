@@ -9,8 +9,8 @@
 
 /vis/scene/add/trajectories smooth
 /vis/scene/endOfEventAction accumulate
-/vis/scene/add/scale 10 cm
-/vis/scene/add/axes
+#/vis/scene/add/scale 10 cm
+#/vis/scene/add/axes
 /vis/scene/add/eventID
 
 /process/had/rdm/thresholdForVeryLongDecayTime 1.0e+60 year
