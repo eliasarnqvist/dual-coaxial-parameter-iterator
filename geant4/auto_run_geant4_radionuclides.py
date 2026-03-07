@@ -11,12 +11,16 @@ import os
 use_filter_source = "true" # "true" or "false"
 
 # The radionuclides to simulate (Z, A)
-# ZAs = [(57, 140)]
 # La-140, Ba-140, Mo-99, Te-132, I-132, I-131, I-133, I-135, Np-239
 ZAs = [(57, 140), (56, 140), (42, 99), (52, 132), (53, 132), (53, 131), (53, 133), (53, 135), (93, 239)]
-# Detector parameters to iterate over
-detector_diameters = [50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0] # mm
-detector_lengths = "same as diameter"
+# Detector parameters to iterate over (in mm)
+detector_diameters = [50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0]
+detector_lengths = [-1] # if -1 then length=diameter
+source_distances = [0]
+select_n_type_instead_of_p_type = True
+select_filter_source = True
+source_type = 1 # 0=point, 1=filter, =SURE
+source_SURE_radius = None
 
 # Number of runs per setting
 runs_per_radionuclide = 1e7
@@ -34,49 +38,62 @@ print("Settings: ")
 print("\tradionuclides: " + str(ZAs))
 print("\tdetector diameters: " + str(detector_diameters))
 print("\tdetector lengths: " + str(detector_lengths))
+print("\tsource distances: " + str(source_distances))
+print("\tn-type (True) or p-type (False): " + str(select_n_type_instead_of_p_type))
+print("\tfilter source (True) or point source (False): " + str(select_filter_source))
 print("\truns per radionuclide: " + str(int(runs_per_radionuclide)))
 
 start_time = time.time()
 time_interval = start_time
 
-settings = [(ZA, dia) 
+settings = [(ZA, dia, len, dis) 
             for ZA in ZAs
-            for dia in detector_diameters]
-            # for len in detector_lengths]
+            for dia in detector_diameters
+            for len in detector_lengths
+            for dis in source_distances]
 
 # Iterate over radionuclides
-for i_s, (ZA, diameter) in enumerate(settings):
+for i_s, (ZA, diameter, length, distance) in enumerate(settings):
+    # Optional: skip some iterations
     # if i_s <= 2:
     #     continue
     
-    length = diameter
+    if length == -1:
+        length = diameter
 
     print(f"Running setting {i_s + 1} of {len(settings)}: ")
-    print(f"\tZA={ZA}, diameter={diameter}, length={length}")
+    print(f"\tZA={ZA}, diameter={diameter}, length={length}, distance={distance}")
 
     Z = int(ZA[0])
     A = int(ZA[1])
 
     settings_name = "_Z_" + str(Z) + "_A_" + str(A)
-    settings_name += "_dia_" + str(diameter) + "_len_" + str(length)
+    settings_name += "_dia_" + str(diameter) + "_len_" + str(length) + "_dis_" + str(distance)
     settings_name += "_.root"
 
     # Make macro file first
     macro_content = ""
     macro_content += "/run/numberOfThreads " + str(number_of_threads) + "\n"
+
     file_name = output_folder + "threadoutput_" + str(i_s) + settings_name
     macro_content += "/E_file_settings/fileName " + file_name + "\n"
+
     macro_content += "/E_detector/detectorDiameter " + str(diameter) + "\n"
     macro_content += "/E_detector/detectorLength " + str(length) + "\n"
-    macro_content += "/E_source/selectFilterSource " + use_filter_source + "\n"
+    macro_content += "/E_detector/sourceDistance " + str(distance) + "\n"
+    macro_content += "/E_detector/selectNTypeInsteadOfPType " + str(select_n_type_instead_of_p_type) + "\n"
+    macro_content += "/E_detector/selectFilterSource " + str(select_filter_source) + "\n"
+
     macro_content += "/run/reinitializeGeometry" + "\n"
     macro_content += "/run/initialize" + "\n"
     macro_content += "/process/had/rdm/thresholdForVeryLongDecayTime 1.0e+60 year" + "\n"
     macro_content += "/gun/particle ion" + "\n"
     macro_content += "/gun/ion " + str(Z) + " " + str(A) + " 0 0" + "\n"
     macro_content += "/process/had/rdm/nucleusLimits "+str(A)+" "+str(A)+" "+str(Z)+" "+str(Z)+"\n"
-    macro_content += "/E_source/selectBackground false" + "\n"
-    macro_content += "/E_source/selectFilterSource " + use_filter_source + "\n"
+
+    macro_content += "/E_source/sourceType " + str(source_type) + "\n"
+    # macro_content += "/E_source/sourceRadiusSURE " + XXX + "\n"
+
     macro_content += "/run/printProgress " + str(int(runs_per_radionuclide/10)) + "\n"
     macro_content += "/run/beamOn " + str(int(runs_per_radionuclide))
 
@@ -113,17 +130,23 @@ for i_s, (ZA, diameter) in enumerate(settings):
     metadata[run_id] = {
         "filename":(run_id + ".root"),
         "file_size":os.path.getsize(output_file),
-        "type":"radionuclides_in_filter",
+        "type":"radionuclides",
         "properties":{
-            "model":"coaxial n-type v1",
+            "model":"coaxial_v2",
             "Z":Z,
             "A":A,
-            "diameter":diameter,
-            "length":length,
-            "source_type":"FOI filter v1",
+            "detector_diameter":diameter,
+            "detector_length":length,
+            "source_distance":distance,
+            "select_n_type_instead_of_ptype":select_n_type_instead_of_p_type,
+            "select_filter_source":select_filter_source,
+            "source_type":source_type,
+            "source_SURE_radius":source_SURE_radius,
+            "source_type":"FOI_filter_v1",
             "runs":runs_per_radionuclide,
             "threads":number_of_threads,
             "time":simulated_minutes,
+            "throughput":runs_per_radionuclide/(simulated_minutes*60*number_of_threads),
             },
         }
     with open(output_folder + "metadata.json", "w") as f:
@@ -144,5 +167,3 @@ print("All finished!")
 end_time = time.time() # End timing
 elapsed_minutes = (end_time - start_time) / 60
 print(f"Total time spent: {elapsed_minutes:.2f} minutes")
-
-
