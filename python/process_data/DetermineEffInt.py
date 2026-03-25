@@ -8,28 +8,39 @@ import re
 
 
 def start_analysis(ZAs):
+    metadata_peakinfo = {}
+
     print("Starting analysis: ")
-    for Z, A in ZAs:
-        print("\tZ=" + str(Z) + ", A=" + str(A))
+    for i, (Z, A) in enumerate(ZAs):
+        print("\tZ=" + str(Z) + ", A=" + str(A) + " (" + str(i+1) + " out of " + str(len(ZAs)) + ")")
 
         # Go through the metadata and look for the interesting simulations
         data_keys = []
-        data_filenames = []
+        data_values = []
         for key, value in metadata.items():
             if value["type"] != "radionuclides":
                 continue
             if value["properties"]["Z"] != Z or value["properties"]["A"] != A:
                 continue
-            data_filenames.append(value["filename"])
+            data_values.append(value)
             data_keys.append(key)
         
-        print("\tFound " + str(len(data_filenames)) + " files")
+        print("\tFound " + str(len(data_keys)) + " files")
 
         # Now do the analysis
-        for i, data_filename in enumerate(data_filenames):
-            print("\t\tAnalyzing file " + str(i+1) + " out of " + str(len(data_filenames)) + ": " + str(data_filename))
+        for i, (data_key, data_value) in enumerate(zip(data_keys, data_values)):
+            data_filename = data_value["filename"]
+            data_filesize = data_value["file_size"] / (1024**2)
 
-            analyze_single_and_coincidence(Z, A, data_filename)
+            print("\t\tAnalyzing file " + str(i+1) + " out of " + str(len(data_keys)) + ": " + str(data_filename) + f" ({data_filesize:.2f} mb)")
+
+            peakdata = analyze_single_and_coincidence(Z, A, data_filename)
+
+            data_value["peakdata"] = peakdata
+
+            metadata_peakinfo[data_key] = data_value
+    
+    return metadata_peakinfo
 
 
 def analyze_single_and_coincidence(Z, A, data_filename):
@@ -71,14 +82,24 @@ def analyze_single_and_coincidence(Z, A, data_filename):
         counts_a2b1 = count_2d(events_coincidence_a, events_coincidence_b, E_gamma2, E_gamma1, ROI_standard)
         counts_coincidence_a2b1.append(int(counts_a2b1))
 
-    # print(gammas_single)
-    # print(counts_single_a)
-    # print(counts_single_b)
-    # print(gammas_coincidence_1)
-    # print(gammas_coincidence_2)
-    # print(counts_coincidence_a1b2)
-    # print(counts_coincidence_a2b1)
-    return
+    ZA_peak_data = {
+        "singles" : {
+            "E_gamma" : gammas_single,
+            "counts_a" : counts_single_a,
+            "counts_b" : counts_single_b,
+            "ROI_type" : "standard",
+            "ROI" : ROI_standard,
+        },
+        "coincidences" : {
+            "E_gamma1" : gammas_coincidence_1,
+            "E_gamma2" : gammas_coincidence_2,
+            "counts_a1b2" : counts_coincidence_a1b2,
+            "counts_a2b1" : counts_coincidence_a2b1,
+            "ROI_type" : "standard_square",
+            "ROI" : ROI_standard,
+        },
+    }
+    return ZA_peak_data
 
 
 # @jit(nopython=True)
@@ -114,7 +135,7 @@ parser.add_argument("-A", type=int, required=False, default=0, help="Mass number
 parser.add_argument("-d", "--data", type=str, required=False, default="../../geant4/output_pelle/", help="Path to directory with root files")
 parser.add_argument("-m", "--metadata", type=str, required=False, default="../../geant4/output_pelle/metadata.json", help="Path to metadata file")
 parser.add_argument("-g", "--gammas", type=str, required=False, default="gammas.json", help="Path to gamma ray information")
-parser.add_argument("-s", "--save", type=str, required=False, default="/efficiency_intensity.json", help="Path to save output data")
+parser.add_argument("-o", "--output", type=str, required=False, default="metadata_peakinfo.json", help="Path to save output data")
 args = parser.parse_args()
 
 ROI_standard = 5
@@ -132,7 +153,7 @@ with open(metadata_filepath, "r") as f:
     metadata = json.load(f)
 
 # Dictionary to save results in
-output = {}
+metadata_peakinfo = {}
 
 # Look for radionuclides in the gammas and metadata
 # Make a list of Z, A present in gammas and metadata
@@ -151,7 +172,7 @@ if Z != 0 and A != 0:
     if (Z, A) not in ZAs_metadata:
         raise Exception("Used Z and A not found in metadata")
 
-    start_analysis([(Z, A)])
+    metadata_peakinfo = start_analysis([(Z, A)])
 else:
     # Z and A not specified, so use the ones in the gammas
     print("Using ZA in gamma file: " + str(ZAs_gammas))
@@ -159,4 +180,10 @@ else:
         if ZA not in ZAs_metadata:
             print("Could not find " + str(ZA) + " in metadata!")
             raise Exception("Used Z and A not found in metadata")
+    
+    metadata_peakinfo = start_analysis(ZAs_gammas)
 
+output_filepath = args.output
+print("Writing output file: " + output_filepath)
+with open(output_filepath, "w") as f:
+    json.dump(metadata_peakinfo, f, indent=4)
