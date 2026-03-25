@@ -126,7 +126,7 @@ def count_2d(events_a, events_b, Eg1, Eg2, ROI):
 
 
 # Parser for adding arguments
-parser = argparse.ArgumentParser(prog="DetermineEffInt",
+parser = argparse.ArgumentParser(prog="analyze_effint",
                                  description="Analyze .root files to determine the product of efficiency and intensity",
                                  epilog="Elias Arnqvist, 2026, Uppsala University",
                                  add_help=True)
