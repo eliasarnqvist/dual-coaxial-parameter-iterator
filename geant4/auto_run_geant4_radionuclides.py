@@ -7,22 +7,20 @@ import os
 
 # %% Settings
 
-# Choose what to do
-use_filter_source = "true" # "true" or "false"
-
 # The radionuclides to simulate (Z, A)
 # La-140, Ba-140, Mo-99, Te-132, I-132, I-131, I-133, I-135, Np-239
 ZAs = [(57, 140), (56, 140), (42, 99), (52, 132), (53, 132), (53, 131), (53, 133), (53, 135), (93, 239)]
+
 # Detector parameters to iterate over (in mm)
 detector_diameters = [50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0]
 detector_lengths = [-1] # if -1 then length=diameter
 source_distances = [0]
-select_n_type_instead_of_p_type = True
+select_n_type_instead_of_p_type = False
 select_filter_source = True
-source_type = 1 # 0=point, 1=filter, =SURE
+source_type = 1 # 0=point, 1=filter, 2=SURE
 source_SURE_radius = None
 
-# Number of runs per setting
+# Number of events per run
 runs_per_radionuclide = 1e7
 # 1e7 = 8 min per ZA pelle 20t
 
