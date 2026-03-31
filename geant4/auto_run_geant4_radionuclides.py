@@ -12,7 +12,7 @@ import os
 ZAs = [(57, 140), (56, 140), (42, 99), (52, 132), (53, 132), (53, 131), (53, 133), (53, 135), (93, 239)]
 
 # Detector parameters to iterate over (in mm)
-detector_diameters = [50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0]
+detector_diameters = [40.0, 45.0, 50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0]
 detector_lengths = [-1] # if -1 then length=diameter
 source_distances = [0]
 select_n_type_instead_of_p_type = False
