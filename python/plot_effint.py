@@ -38,7 +38,7 @@ def plot_singles(metadata_peakfinfo, datacut):
         for k, E_gamma in enumerate(peakdata["E_gamma"]):
             # Data values for this energy
             x_val = value["properties"][plot_on_x]
-            counts = peakdata["counts_a"][k] + peakdata["counts_a"][k]
+            counts = peakdata["counts_a"][k] + peakdata["counts_b"][k]
             events = value["properties"]["runs"]
             y_val = counts / events
             # Use Binomial statistics here instead of Poisson
