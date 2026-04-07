@@ -12,6 +12,7 @@
     "plot": {
         "x_plot": "detector_diameter",
         "x_label": "$d=l$ (mm)",
-        "nuclide": "$\\mathrm{^{99}Mo}$"
+        "nuclide": "$\\mathrm{^{99}Mo}$",
+        "save_name": "mo99"
     }
 }
