@@ -4,44 +4,84 @@ import json
 import numpy as np
 
 
-def plot_singles(ZAs):
-    for i, (Z, A) in enumerate(ZAs):
-        fig, ax = plt.subplots(1, 1, figsize=(100/inch_to_mm,100/inch_to_mm))
+def plot_singles(metadata_peakfinfo, datacut):
+    fig, ax = plt.subplots(1, 1, figsize=(80/inch_to_mm, 60/inch_to_mm))
 
-        x = []
-        y = []
-        y_unc = []
+    effint = {}
 
-        for i, (key, value) in enumerate(metadata_peakfinfo.items()):
-            if value["type"] != "radionuclides":
+    for i, (key, value) in enumerate(metadata_peakfinfo.items()):
+
+        # Make sure we only plot the data specified in datacut
+        cut_included = True
+        for j, (key2, value2) in enumerate(datacut.items()):
+            if key2 == "plot":
                 continue
-            if value["properties"]["Z"] != Z or value["properties"]["A"] != A:
-                continue
-            # if value["properties"]["select_n_type_instead_of_ptype"] != True:
-            #     continue
+            elif key2 == "type":
+                this_check = (value[key2] == value2)
+                cut_included *= this_check
+            else:
+                if value2 == "any":
+                    this_check = True
+                else:
+                    this_check = (value["properties"][key2] == value2)
+                cut_included *= this_check
+        
+        if not cut_included:
+            continue
 
-            counts = value["peakdata"]["singles"]["counts_a"][1]
+        # Look at the peak data
+        peakdata = value["peakdata"]["singles"]
 
+        # What to plot on the x-axis
+        plot_on_x = datacut["plot"]["x_plot"]
+
+        for k, E_gamma in enumerate(peakdata["E_gamma"]):
+            # Data values for this energy
+            x_val = value["properties"][plot_on_x]
+            counts = peakdata["counts_a"][k] + peakdata["counts_a"][k]
             events = value["properties"]["runs"]
+            y_val = counts / events
+            # Use Binomial statistics here instead of Poisson
+            dy_val = np.sqrt(counts * (1 - counts/events)) / events
 
-            effint = counts / events
-            effint_unc = np.sqrt(counts) / events
+            if E_gamma not in effint.keys():
+                entry = {"x": [x_val], "y": [y_val], "dy": [dy_val]}
+                effint[E_gamma] = entry
+            else:
+                effint[E_gamma]["x"].append(x_val)
+                effint[E_gamma]["y"].append(y_val)
+                effint[E_gamma]["dy"].append(dy_val)
 
-            x.append(value["properties"]["detector_diameter"])
+    print(effint)
 
+    # Plot the efficiency
+    for l, (key, value) in enumerate(effint.items()):
+        E_gamma = key
+        x = value["x"]
+        y = value["y"]
+        dy = value["dy"]
 
-            y.append(effint)
-            y_unc.append(effint_unc)
+        idx = np.argsort(x)
+        x_sorted = np.array(x)[idx]
+        y_sorted = np.array(y)[idx] * 1e2
+        dy_sorted = np.array(dy)[idx] * 1e2
 
-        ax.errorbar(x, y, yerr=y_unc, fmt=".", ls="-", markersize=4, lw=1, capsize=2, capthick=1)
-        # plt.show(block=False)
+        # Generally 2 decimals for ENSDF data, but check for your case!
+        line_label = f"{E_gamma:.2f}"
+        ax.errorbar(x_sorted, y_sorted, yerr=dy_sorted, fmt=".", ls="-", 
+                    markersize=4, lw=1, capsize=2, capthick=1, 
+                    label=line_label)
+    
+    x_label = datacut["plot"]["x_label"]
+    ax.set_xlabel(x_label)
+    y_label = r"$I_\gamma \, \varepsilon_\gamma$ (%)"
+    ax.set_ylabel(y_label)
+    legend_title = datacut["plot"]["nuclide"] + str(" (keV)")
+    ax.legend(frameon=False, fontsize=8, title=legend_title, title_fontsize=8)
 
-        plt.tight_layout(pad = 0.2)
-        fig.subplots_adjust(hspace=0, wspace=0)
-        plt.savefig("figures/test.jpg", dpi=300)
-
-
-    return
+    plt.tight_layout(pad = 0.2)
+    fig.subplots_adjust(hspace=0, wspace=0)
+    plt.savefig("figures/test.jpg", dpi=300)
 
 
 def plot_coincidences():
@@ -57,9 +97,12 @@ parser = argparse.ArgumentParser(prog="plot_effint",
 # parser.add_argument("-y", type=str, required=True, default="None", help="What to plot on the y-axis")
 parser.add_argument("-Z", type=int, required=True, default=0, help="Atomic number (Z) of radionuclide")
 parser.add_argument("-A", type=int, required=True, default=0, help="Mass number (A) of radionuclide")
+parser.add_argument("-dc", "--datacut", type=str, required=True, default="datacut.json", help="File for only selecting part of the dataset")
+parser.add_argument("-s", "--save_name", type=str, required=False, default="figure_test", help="Filename of saved figure")
 parser.add_argument("-mp", "--metadata_peakinfo", type=str, required=False, default="metadata_peakinfo.json", help="Path to metadata and peakinfo file")
 args = parser.parse_args()
 
+# Get the metadata and peak counts
 metadata_peakfinfo_filepath = args.metadata_peakinfo
 with open(metadata_peakfinfo_filepath, "r") as f:
     metadata_peakfinfo = json.load(f)
@@ -73,10 +116,18 @@ print("Using specified ZA: Z=" + str(Z) + ", A=" + str(A))
 if (Z, A) not in ZAs_metadata:
     raise Exception("Used Z and A not found in metadata")
 
+# Get the information of how to select what to plot
+datacut_filepath = args.datacut
+with open(datacut_filepath, "r") as f:
+    datacut = json.load(f)
+
+print(datacut)
+
+# Plot the efficiency and intensity
 plt.close('all')
 inch_to_mm = 25.4
 
-plot_singles([(Z, A)])
+plot_singles(metadata_peakfinfo, datacut)
 
 
 
