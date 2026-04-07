@@ -1313,6 +1313,298 @@
             }
         }
     },
+    "19cb15b1-6225-410a-bb13-651ef311d103": {
+        "filename": "19cb15b1-6225-410a-bb13-651ef311d103.root",
+        "file_size": 23251548,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 57,
+            "A": 140,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 5.518751235802968,
+            "throughput": 1887.504296096626
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    328.76,
+                    487.02,
+                    815.77,
+                    1596.21
+                ],
+                "counts_a": [
+                    49404,
+                    66496,
+                    22212,
+                    41430
+                ],
+                "counts_b": [
+                    49371,
+                    66547,
+                    22456,
+                    41251
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    328.76,
+                    328.76,
+                    815.77,
+                    487.02
+                ],
+                "E_gamma2": [
+                    487.02,
+                    1596.21,
+                    1596.21,
+                    1596.21
+                ],
+                "counts_a1b2": [
+                    728,
+                    247,
+                    99,
+                    300
+                ],
+                "counts_a2b1": [
+                    700,
+                    218,
+                    96,
+                    314
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "42db60e9-a6d5-401a-aa41-2baa961c0afa": {
+        "filename": "42db60e9-a6d5-401a-aa41-2baa961c0afa.root",
+        "file_size": 29414380,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 57,
+            "A": 140,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 5.882672723134359,
+            "throughput": 1770.7370708728704
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    328.76,
+                    487.02,
+                    815.77,
+                    1596.21
+                ],
+                "counts_a": [
+                    63758,
+                    90197,
+                    32144,
+                    61457
+                ],
+                "counts_b": [
+                    63037,
+                    90617,
+                    32061,
+                    60718
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    328.76,
+                    328.76,
+                    815.77,
+                    487.02
+                ],
+                "E_gamma2": [
+                    487.02,
+                    1596.21,
+                    1596.21,
+                    1596.21
+                ],
+                "counts_a1b2": [
+                    1358,
+                    422,
+                    221,
+                    599
+                ],
+                "counts_a2b1": [
+                    1366,
+                    426,
+                    220,
+                    669
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "74e0aab3-d669-4c55-9eb1-87ae6de8b472": {
+        "filename": "74e0aab3-d669-4c55-9eb1-87ae6de8b472.root",
+        "file_size": 26732441,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 57,
+            "A": 140,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 2.4344995776812235,
+            "throughput": 4278.771194771855
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    328.76,
+                    487.02,
+                    815.77,
+                    1596.21
+                ],
+                "counts_a": [
+                    57134,
+                    76240,
+                    25439,
+                    45828
+                ],
+                "counts_b": [
+                    56967,
+                    76066,
+                    25683,
+                    45468
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    328.76,
+                    328.76,
+                    815.77,
+                    487.02
+                ],
+                "E_gamma2": [
+                    487.02,
+                    1596.21,
+                    1596.21,
+                    1596.21
+                ],
+                "counts_a1b2": [
+                    948,
+                    294,
+                    137,
+                    423
+                ],
+                "counts_a2b1": [
+                    966,
+                    278,
+                    130,
+                    395
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "f8d7f6ea-d8e0-4e5c-b45b-119945cabaf1": {
+        "filename": "f8d7f6ea-d8e0-4e5c-b45b-119945cabaf1.root",
+        "file_size": 33528871,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 57,
+            "A": 140,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 2.483736745516459,
+            "throughput": 4193.949574354211
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    328.76,
+                    487.02,
+                    815.77,
+                    1596.21
+                ],
+                "counts_a": [
+                    73065,
+                    102141,
+                    36535,
+                    67873
+                ],
+                "counts_b": [
+                    72703,
+                    102923,
+                    36496,
+                    67026
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    328.76,
+                    328.76,
+                    815.77,
+                    487.02
+                ],
+                "E_gamma2": [
+                    487.02,
+                    1596.21,
+                    1596.21,
+                    1596.21
+                ],
+                "counts_a1b2": [
+                    1808,
+                    577,
+                    285,
+                    774
+                ],
+                "counts_a2b1": [
+                    1747,
+                    553,
+                    269,
+                    841
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
     "3eb6a2c0-7d72-4493-ab02-a6f6fe4eb5bf": {
         "filename": "3eb6a2c0-7d72-4493-ab02-a6f6fe4eb5bf.root",
         "file_size": 19365071,
@@ -2297,6 +2589,226 @@
                 ],
                 "counts_a2b1": [
                     8070
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "127cd89d-057c-449a-9d01-467300ce3440": {
+        "filename": "127cd89d-057c-449a-9d01-467300ce3440.root",
+        "file_size": 10937500,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 42,
+            "A": 99,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 5.472588797410329,
+            "throughput": 1903.4257921216213
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    739.5,
+                    181.07
+                ],
+                "counts_a": [
+                    11079,
+                    28770
+                ],
+                "counts_b": [
+                    11290,
+                    28862
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    739.5
+                ],
+                "E_gamma2": [
+                    181.07
+                ],
+                "counts_a1b2": [
+                    308
+                ],
+                "counts_a2b1": [
+                    339
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "42b87fda-09e0-45d4-b4eb-473472cd3c5f": {
+        "filename": "42b87fda-09e0-45d4-b4eb-473472cd3c5f.root",
+        "file_size": 13275862,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 42,
+            "A": 99,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 5.590291770299276,
+            "throughput": 1863.3493732848601
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    739.5,
+                    181.07
+                ],
+                "counts_a": [
+                    15928,
+                    35178
+                ],
+                "counts_b": [
+                    15674,
+                    35179
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    739.5
+                ],
+                "E_gamma2": [
+                    181.07
+                ],
+                "counts_a1b2": [
+                    500
+                ],
+                "counts_a2b1": [
+                    545
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "7943fcdf-33a6-4815-bb4a-1063f2c2f255": {
+        "filename": "7943fcdf-33a6-4815-bb4a-1063f2c2f255.root",
+        "file_size": 13664776,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 42,
+            "A": 99,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 3.923945665359497,
+            "throughput": 2654.6409035743695
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    739.5,
+                    181.07
+                ],
+                "counts_a": [
+                    12233,
+                    35690
+                ],
+                "counts_b": [
+                    12462,
+                    35850
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    739.5
+                ],
+                "E_gamma2": [
+                    181.07
+                ],
+                "counts_a1b2": [
+                    446
+                ],
+                "counts_a2b1": [
+                    443
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "7c019ddf-b498-4b88-9a82-2e9e950bdb1e": {
+        "filename": "7c019ddf-b498-4b88-9a82-2e9e950bdb1e.root",
+        "file_size": 16457198,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 42,
+            "A": 99,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 3.97470387617747,
+            "throughput": 2620.740309510686
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    739.5,
+                    181.07
+                ],
+                "counts_a": [
+                    17503,
+                    43790
+                ],
+                "counts_b": [
+                    17286,
+                    43608
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    739.5
+                ],
+                "E_gamma2": [
+                    181.07
+                ],
+                "counts_a1b2": [
+                    748
+                ],
+                "counts_a2b1": [
+                    793
                 ],
                 "ROI_type": "standard_square",
                 "ROI": 5
@@ -3467,6 +3979,266 @@
                 "counts_a2b1": [
                     2,
                     7349
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "10df4df3-aeee-4d7b-92f4-fa43713d3131": {
+        "filename": "10df4df3-aeee-4d7b-92f4-fa43713d3131.root",
+        "file_size": 4970807,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 56,
+            "A": 140,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 4.230629841486613,
+            "throughput": 2462.202333212476
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    537.26,
+                    304.85,
+                    162.66,
+                    29.97
+                ],
+                "counts_a": [
+                    35169,
+                    12769,
+                    33932,
+                    3079
+                ],
+                "counts_b": [
+                    34980,
+                    12764,
+                    33925,
+                    3026
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    537.26,
+                    304.85
+                ],
+                "E_gamma2": [
+                    29.97,
+                    162.66
+                ],
+                "counts_a1b2": [
+                    0,
+                    505
+                ],
+                "counts_a2b1": [
+                    0,
+                    465
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "735de11b-94f8-4330-baff-22ffff08ec4d": {
+        "filename": "735de11b-94f8-4330-baff-22ffff08ec4d.root",
+        "file_size": 6122757,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 56,
+            "A": 140,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 4.28281242052714,
+            "throughput": 2432.202404368799
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    537.26,
+                    304.85,
+                    162.66,
+                    29.97
+                ],
+                "counts_a": [
+                    49738,
+                    16587,
+                    41525,
+                    3463
+                ],
+                "counts_b": [
+                    49560,
+                    16280,
+                    41421,
+                    3449
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    537.26,
+                    304.85
+                ],
+                "E_gamma2": [
+                    29.97,
+                    162.66
+                ],
+                "counts_a1b2": [
+                    0,
+                    851
+                ],
+                "counts_a2b1": [
+                    0,
+                    791
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "d65108ad-3b98-49a8-9bf9-2b24c1199627": {
+        "filename": "d65108ad-3b98-49a8-9bf9-2b24c1199627.root",
+        "file_size": 6481166,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 56,
+            "A": 140,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 3.315439558029175,
+            "throughput": 3141.8659530197365
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    537.26,
+                    304.85,
+                    162.66,
+                    29.97
+                ],
+                "counts_a": [
+                    40431,
+                    14649,
+                    42125,
+                    61120
+                ],
+                "counts_b": [
+                    40307,
+                    14554,
+                    42085,
+                    61023
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    537.26,
+                    304.85
+                ],
+                "E_gamma2": [
+                    29.97,
+                    162.66
+                ],
+                "counts_a1b2": [
+                    275,
+                    707
+                ],
+                "counts_a2b1": [
+                    244,
+                    713
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "361df8ad-7255-429f-97b5-dca82ae05f31": {
+        "filename": "361df8ad-7255-429f-97b5-dca82ae05f31.root",
+        "file_size": 7949125,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 56,
+            "A": 140,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 3.415493174393972,
+            "throughput": 3049.8279852410915
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    537.26,
+                    304.85,
+                    162.66,
+                    29.97
+                ],
+                "counts_a": [
+                    56866,
+                    18715,
+                    51062,
+                    74573
+                ],
+                "counts_b": [
+                    56694,
+                    18451,
+                    51295,
+                    74700
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    537.26,
+                    304.85
+                ],
+                "E_gamma2": [
+                    29.97,
+                    162.66
+                ],
+                "counts_a1b2": [
+                    423,
+                    1193
+                ],
+                "counts_a2b1": [
+                    415,
+                    1130
                 ],
                 "ROI_type": "standard_square",
                 "ROI": 5
@@ -4781,6 +5553,298 @@
                     212,
                     4584,
                     212
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "2515dbd8-9d5f-4fa7-87f5-d7d751da6f3a": {
+        "filename": "2515dbd8-9d5f-4fa7-87f5-d7d751da6f3a.root",
+        "file_size": 10869068,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 52,
+            "A": 132,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 3.8942121704419455,
+            "throughput": 2674.9098946718414
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    116.3,
+                    228.16,
+                    111.76,
+                    49.72
+                ],
+                "counts_a": [
+                    17727,
+                    338011,
+                    17860,
+                    20853
+                ],
+                "counts_b": [
+                    17542,
+                    337685,
+                    18038,
+                    20981
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    116.3,
+                    116.3,
+                    228.16,
+                    111.76
+                ],
+                "E_gamma2": [
+                    111.76,
+                    49.72,
+                    49.72,
+                    49.72
+                ],
+                "counts_a1b2": [
+                    797,
+                    40,
+                    495,
+                    27
+                ],
+                "counts_a2b1": [
+                    789,
+                    33,
+                    464,
+                    30
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "1ce61494-6776-42f6-bc1b-a29afe667256": {
+        "filename": "1ce61494-6776-42f6-bc1b-a29afe667256.root",
+        "file_size": 13208372,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 52,
+            "A": 132,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 3.9965118646621702,
+            "throughput": 2606.4395701593144
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    116.3,
+                    228.16,
+                    111.76,
+                    49.72
+                ],
+                "counts_a": [
+                    21609,
+                    435027,
+                    21605,
+                    24786
+                ],
+                "counts_b": [
+                    21469,
+                    433873,
+                    21689,
+                    24813
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    116.3,
+                    116.3,
+                    228.16,
+                    111.76
+                ],
+                "E_gamma2": [
+                    111.76,
+                    49.72,
+                    49.72,
+                    49.72
+                ],
+                "counts_a1b2": [
+                    1227,
+                    53,
+                    732,
+                    49
+                ],
+                "counts_a2b1": [
+                    1178,
+                    51,
+                    735,
+                    53
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "6f1d23cd-099a-4f8a-97bd-1af370b79c4e": {
+        "filename": "6f1d23cd-099a-4f8a-97bd-1af370b79c4e.root",
+        "file_size": 19026966,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 52,
+            "A": 132,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 2.6234706242879233,
+            "throughput": 3970.567297468412
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    116.3,
+                    228.16,
+                    111.76,
+                    49.72
+                ],
+                "counts_a": [
+                    21455,
+                    388420,
+                    21724,
+                    88851
+                ],
+                "counts_b": [
+                    21284,
+                    388712,
+                    21857,
+                    89201
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    116.3,
+                    116.3,
+                    228.16,
+                    111.76
+                ],
+                "E_gamma2": [
+                    111.76,
+                    49.72,
+                    49.72,
+                    49.72
+                ],
+                "counts_a1b2": [
+                    1396,
+                    201,
+                    3458,
+                    181
+                ],
+                "counts_a2b1": [
+                    1351,
+                    175,
+                    3543,
+                    182
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "f62b9e63-5ab1-4e36-82ee-d7ebedd3de21": {
+        "filename": "f62b9e63-5ab1-4e36-82ee-d7ebedd3de21.root",
+        "file_size": 23266080,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 52,
+            "A": 132,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 2.696382550398509,
+            "throughput": 3863.200592633693
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    116.3,
+                    228.16,
+                    111.76,
+                    49.72
+                ],
+                "counts_a": [
+                    25458,
+                    493007,
+                    25900,
+                    104391
+                ],
+                "counts_b": [
+                    25318,
+                    491783,
+                    25869,
+                    104533
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    116.3,
+                    116.3,
+                    228.16,
+                    111.76
+                ],
+                "E_gamma2": [
+                    111.76,
+                    49.72,
+                    49.72,
+                    49.72
+                ],
+                "counts_a1b2": [
+                    2031,
+                    233,
+                    5485,
+                    246
+                ],
+                "counts_a2b1": [
+                    2012,
+                    257,
+                    5342,
+                    248
                 ],
                 "ROI_type": "standard_square",
                 "ROI": 5
@@ -6695,6 +7759,430 @@
             }
         }
     },
+    "49dbba90-4225-4cea-9f58-fecd46a72f48": {
+        "filename": "49dbba90-4225-4cea-9f58-fecd46a72f48.root",
+        "file_size": 34239620,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 132,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 6.0877774635950725,
+            "throughput": 1711.078752296444
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1398.57,
+                    954.55,
+                    812.0,
+                    522.65,
+                    772.6,
+                    630.19,
+                    667.71
+                ],
+                "counts_a": [
+                    3488,
+                    12645,
+                    7651,
+                    25916,
+                    64011,
+                    16893,
+                    102980
+                ],
+                "counts_b": [
+                    3397,
+                    12887,
+                    7445,
+                    26342,
+                    63918,
+                    16725,
+                    102838
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    1398.57,
+                    1398.57,
+                    954.55,
+                    954.55,
+                    812.0,
+                    812.0,
+                    522.65,
+                    522.65,
+                    772.6,
+                    630.19
+                ],
+                "E_gamma2": [
+                    772.6,
+                    667.71,
+                    772.6,
+                    667.71,
+                    630.19,
+                    667.71,
+                    772.6,
+                    667.71,
+                    667.71,
+                    667.71
+                ],
+                "counts_a1b2": [
+                    27,
+                    35,
+                    109,
+                    118,
+                    54,
+                    72,
+                    204,
+                    288,
+                    785,
+                    169
+                ],
+                "counts_a2b1": [
+                    34,
+                    36,
+                    128,
+                    133,
+                    45,
+                    75,
+                    198,
+                    244,
+                    813,
+                    186
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "06c30b87-e317-480f-86a5-a4c816593ebe": {
+        "filename": "06c30b87-e317-480f-86a5-a4c816593ebe.root",
+        "file_size": 43358436,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 132,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 6.598798445860544,
+            "throughput": 1578.5702127636716
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1398.57,
+                    954.55,
+                    812.0,
+                    522.65,
+                    772.6,
+                    630.19,
+                    667.71
+                ],
+                "counts_a": [
+                    4991,
+                    17892,
+                    10511,
+                    34731,
+                    89107,
+                    22728,
+                    141517
+                ],
+                "counts_b": [
+                    5115,
+                    17662,
+                    10533,
+                    34371,
+                    88740,
+                    22841,
+                    141110
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    1398.57,
+                    1398.57,
+                    954.55,
+                    954.55,
+                    812.0,
+                    812.0,
+                    522.65,
+                    522.65,
+                    772.6,
+                    630.19
+                ],
+                "E_gamma2": [
+                    772.6,
+                    667.71,
+                    772.6,
+                    667.71,
+                    630.19,
+                    667.71,
+                    772.6,
+                    667.71,
+                    667.71,
+                    667.71
+                ],
+                "counts_a1b2": [
+                    69,
+                    63,
+                    236,
+                    284,
+                    123,
+                    177,
+                    401,
+                    478,
+                    1553,
+                    320
+                ],
+                "counts_a2b1": [
+                    59,
+                    78,
+                    233,
+                    273,
+                    128,
+                    129,
+                    381,
+                    530,
+                    1464,
+                    327
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "ed93416d-b7c5-45e9-9c18-adb9270518eb": {
+        "filename": "ed93416d-b7c5-45e9-9c18-adb9270518eb.root",
+        "file_size": 38130247,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 132,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 2.611561409632365,
+            "throughput": 3988.673836367127
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1398.57,
+                    954.55,
+                    812.0,
+                    522.65,
+                    772.6,
+                    630.19,
+                    667.71
+                ],
+                "counts_a": [
+                    3959,
+                    14236,
+                    8698,
+                    29501,
+                    71940,
+                    19093,
+                    116608
+                ],
+                "counts_b": [
+                    3832,
+                    14527,
+                    8543,
+                    29920,
+                    72171,
+                    18918,
+                    116660
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    1398.57,
+                    1398.57,
+                    954.55,
+                    954.55,
+                    812.0,
+                    812.0,
+                    522.65,
+                    522.65,
+                    772.6,
+                    630.19
+                ],
+                "E_gamma2": [
+                    772.6,
+                    667.71,
+                    772.6,
+                    667.71,
+                    630.19,
+                    667.71,
+                    772.6,
+                    667.71,
+                    667.71,
+                    667.71
+                ],
+                "counts_a1b2": [
+                    38,
+                    42,
+                    142,
+                    159,
+                    66,
+                    99,
+                    273,
+                    380,
+                    1016,
+                    219
+                ],
+                "counts_a2b1": [
+                    46,
+                    34,
+                    170,
+                    176,
+                    62,
+                    101,
+                    273,
+                    341,
+                    1022,
+                    211
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "1ad766f0-3fab-4a03-aa5d-a77ae8288cd0": {
+        "filename": "1ad766f0-3fab-4a03-aa5d-a77ae8288cd0.root",
+        "file_size": 47929098,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 132,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 2.7967596888542174,
+            "throughput": 3724.54834363484
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1398.57,
+                    954.55,
+                    812.0,
+                    522.65,
+                    772.6,
+                    630.19,
+                    667.71
+                ],
+                "counts_a": [
+                    5610,
+                    20061,
+                    11846,
+                    39263,
+                    99852,
+                    25290,
+                    159206
+                ],
+                "counts_b": [
+                    5805,
+                    19865,
+                    11762,
+                    38841,
+                    99886,
+                    25469,
+                    159257
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    1398.57,
+                    1398.57,
+                    954.55,
+                    954.55,
+                    812.0,
+                    812.0,
+                    522.65,
+                    522.65,
+                    772.6,
+                    630.19
+                ],
+                "E_gamma2": [
+                    772.6,
+                    667.71,
+                    772.6,
+                    667.71,
+                    630.19,
+                    667.71,
+                    772.6,
+                    667.71,
+                    667.71,
+                    667.71
+                ],
+                "counts_a1b2": [
+                    75,
+                    110,
+                    317,
+                    374,
+                    136,
+                    209,
+                    537,
+                    613,
+                    1967,
+                    432
+                ],
+                "counts_a2b1": [
+                    91,
+                    98,
+                    295,
+                    352,
+                    164,
+                    187,
+                    486,
+                    688,
+                    1912,
+                    422
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
     "c903cf02-d928-410a-b954-bd0b367bd204": {
         "filename": "c903cf02-d928-410a-b954-bd0b367bd204.root",
         "file_size": 20444200,
@@ -7787,6 +9275,250 @@
                 ],
                 "counts_a2b1": [
                     3900
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "b7531c56-a373-4e32-8ffd-feed9d59839d": {
+        "filename": "b7531c56-a373-4e32-8ffd-feed9d59839d.root",
+        "file_size": 12049654,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 131,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 2.3929516156514485,
+            "throughput": 4353.0619668759455
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    636.99,
+                    284.31,
+                    364.49,
+                    80.19
+                ],
+                "counts_a": [
+                    8311,
+                    20102,
+                    181762,
+                    17944
+                ],
+                "counts_b": [
+                    8440,
+                    20199,
+                    181493,
+                    18061
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    284.31
+                ],
+                "E_gamma2": [
+                    80.19
+                ],
+                "counts_a1b2": [
+                    313
+                ],
+                "counts_a2b1": [
+                    355
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "b73f53f4-566c-44a1-a2f4-361984a9e447": {
+        "filename": "b73f53f4-566c-44a1-a2f4-361984a9e447.root",
+        "file_size": 14816729,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 131,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 2.525018397967021,
+            "throughput": 4125.382482382498
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    636.99,
+                    284.31,
+                    364.49,
+                    80.19
+                ],
+                "counts_a": [
+                    12100,
+                    26351,
+                    246032,
+                    21429
+                ],
+                "counts_b": [
+                    11939,
+                    26089,
+                    245701,
+                    21307
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    284.31
+                ],
+                "E_gamma2": [
+                    80.19
+                ],
+                "counts_a1b2": [
+                    554
+                ],
+                "counts_a2b1": [
+                    505
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "b26665a3-622b-4ab1-a73d-dc79df401607": {
+        "filename": "b26665a3-622b-4ab1-a73d-dc79df401607.root",
+        "file_size": 14106849,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 131,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 1.416729704538981,
+            "throughput": 7352.614004840366
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    636.99,
+                    284.31,
+                    364.49,
+                    80.19
+                ],
+                "counts_a": [
+                    9658,
+                    22260,
+                    214163,
+                    27773
+                ],
+                "counts_b": [
+                    9743,
+                    22246,
+                    213679,
+                    27863
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    284.31
+                ],
+                "E_gamma2": [
+                    80.19
+                ],
+                "counts_a1b2": [
+                    743
+                ],
+                "counts_a2b1": [
+                    752
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "78fa994c-2bfd-462c-8692-d878905747df": {
+        "filename": "78fa994c-2bfd-462c-8692-d878905747df.root",
+        "file_size": 17237956,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 131,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 1.4535467863082885,
+            "throughput": 7166.378657217405
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    636.99,
+                    284.31,
+                    364.49,
+                    80.19
+                ],
+                "counts_a": [
+                    13864,
+                    28531,
+                    289114,
+                    32804
+                ],
+                "counts_b": [
+                    13583,
+                    28405,
+                    288468,
+                    32372
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    284.31
+                ],
+                "E_gamma2": [
+                    80.19
+                ],
+                "counts_a1b2": [
+                    1177
+                ],
+                "counts_a2b1": [
+                    1118
                 ],
                 "ROI_type": "standard_square",
                 "ROI": 5
@@ -8993,6 +10725,274 @@
                 ],
                 "counts_a2b1": [
                     1167
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "af5f02af-ab3c-4f86-b9c3-f5c3791a0dd1": {
+        "filename": "af5f02af-ab3c-4f86-b9c3-f5c3791a0dd1.root",
+        "file_size": 12274146,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 133,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 2.812653386592865,
+            "throughput": 3703.5017241441888
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1298.22,
+                    706.58,
+                    1236.44,
+                    875.33,
+                    510.53,
+                    529.87
+                ],
+                "counts_a": [
+                    1322,
+                    1743,
+                    919,
+                    3938,
+                    3620,
+                    123805
+                ],
+                "counts_b": [
+                    1375,
+                    1631,
+                    961,
+                    4044,
+                    3642,
+                    124692
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    706.58
+                ],
+                "E_gamma2": [
+                    529.87
+                ],
+                "counts_a1b2": [
+                    20
+                ],
+                "counts_a2b1": [
+                    29
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "5cdcb096-c506-48d6-95d0-dc179c4c1dc0": {
+        "filename": "5cdcb096-c506-48d6-95d0-dc179c4c1dc0.root",
+        "file_size": 15298610,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 133,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 2.9661484281222026,
+            "throughput": 3511.8494300237053
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1298.22,
+                    706.58,
+                    1236.44,
+                    875.33,
+                    510.53,
+                    529.87
+                ],
+                "counts_a": [
+                    2045,
+                    2380,
+                    1509,
+                    5647,
+                    5026,
+                    173075
+                ],
+                "counts_b": [
+                    2143,
+                    2373,
+                    1424,
+                    5619,
+                    4819,
+                    174113
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    706.58
+                ],
+                "E_gamma2": [
+                    529.87
+                ],
+                "counts_a1b2": [
+                    43
+                ],
+                "counts_a2b1": [
+                    47
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "df70e9cb-cd1b-4c4f-b41b-df390a7c42c9": {
+        "filename": "df70e9cb-cd1b-4c4f-b41b-df390a7c42c9.root",
+        "file_size": 14094020,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 133,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 1.6331477046012879,
+            "throughput": 6378.275913022676
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1298.22,
+                    706.58,
+                    1236.44,
+                    875.33,
+                    510.53,
+                    529.87
+                ],
+                "counts_a": [
+                    1499,
+                    2033,
+                    1048,
+                    4515,
+                    4123,
+                    143681
+                ],
+                "counts_b": [
+                    1567,
+                    1920,
+                    1103,
+                    4632,
+                    4081,
+                    144350
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    706.58
+                ],
+                "E_gamma2": [
+                    529.87
+                ],
+                "counts_a1b2": [
+                    41
+                ],
+                "counts_a2b1": [
+                    40
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "0f92c60a-7616-4910-b66e-d301477f7e58": {
+        "filename": "0f92c60a-7616-4910-b66e-d301477f7e58.root",
+        "file_size": 17424408,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 133,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 1.6992977738380433,
+            "throughput": 6129.983118343954
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1298.22,
+                    706.58,
+                    1236.44,
+                    875.33,
+                    510.53,
+                    529.87
+                ],
+                "counts_a": [
+                    2325,
+                    2725,
+                    1681,
+                    6424,
+                    5663,
+                    200104
+                ],
+                "counts_b": [
+                    2419,
+                    2677,
+                    1634,
+                    6357,
+                    5341,
+                    201144
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    706.58
+                ],
+                "E_gamma2": [
+                    529.87
+                ],
+                "counts_a1b2": [
+                    56
+                ],
+                "counts_a2b1": [
+                    69
                 ],
                 "ROI_type": "standard_square",
                 "ROI": 5
@@ -10259,6 +12259,286 @@
             }
         }
     },
+    "bdcf0bea-0db3-437e-b72c-214fd3ddc970": {
+        "filename": "bdcf0bea-0db3-437e-b72c-214fd3ddc970.root",
+        "file_size": 15296865,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 135,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 4.089833652973175,
+            "throughput": 2546.9658549789897
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1791.2,
+                    546.56,
+                    1678.03,
+                    1038.76,
+                    1457.56,
+                    1260.41,
+                    1131.51
+                ],
+                "counts_a": [
+                    3367,
+                    11158,
+                    4549,
+                    7417,
+                    5105,
+                    17325,
+                    14713
+                ],
+                "counts_b": [
+                    3324,
+                    11024,
+                    4536,
+                    7439,
+                    4985,
+                    17442,
+                    14868
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    546.56
+                ],
+                "E_gamma2": [
+                    1131.51
+                ],
+                "counts_a1b2": [
+                    75
+                ],
+                "counts_a2b1": [
+                    62
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "9afabe30-e530-4f6e-b549-0e65c24eaf98": {
+        "filename": "9afabe30-e530-4f6e-b549-0e65c24eaf98.root",
+        "file_size": 19325543,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 135,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 4.3325909296671545,
+            "throughput": 2404.2580607689433
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1791.2,
+                    546.56,
+                    1678.03,
+                    1038.76,
+                    1457.56,
+                    1260.41,
+                    1131.51
+                ],
+                "counts_a": [
+                    5004,
+                    14975,
+                    6901,
+                    10241,
+                    7271,
+                    26054,
+                    21439
+                ],
+                "counts_b": [
+                    5057,
+                    15022,
+                    6920,
+                    10607,
+                    7438,
+                    25829,
+                    21564
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    546.56
+                ],
+                "E_gamma2": [
+                    1131.51
+                ],
+                "counts_a1b2": [
+                    130
+                ],
+                "counts_a2b1": [
+                    147
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "117888b0-5e93-47c3-9252-deb726d55f2d": {
+        "filename": "117888b0-5e93-47c3-9252-deb726d55f2d.root",
+        "file_size": 17500334,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 135,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 1.891513721148173,
+            "throughput": 5507.053187192117
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1791.2,
+                    546.56,
+                    1678.03,
+                    1038.76,
+                    1457.56,
+                    1260.41,
+                    1131.51
+                ],
+                "counts_a": [
+                    3755,
+                    12701,
+                    5150,
+                    8412,
+                    5710,
+                    19659,
+                    16645
+                ],
+                "counts_b": [
+                    3753,
+                    12533,
+                    5059,
+                    8439,
+                    5713,
+                    19681,
+                    16834
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    546.56
+                ],
+                "E_gamma2": [
+                    1131.51
+                ],
+                "counts_a1b2": [
+                    87
+                ],
+                "counts_a2b1": [
+                    80
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "ec5c91b9-0592-41e4-a84f-2046f06814f4": {
+        "filename": "ec5c91b9-0592-41e4-a84f-2046f06814f4.root",
+        "file_size": 21941728,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 53,
+            "A": 135,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 1.9615956743558247,
+            "throughput": 5310.302629050929
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    1791.2,
+                    546.56,
+                    1678.03,
+                    1038.76,
+                    1457.56,
+                    1260.41,
+                    1131.51
+                ],
+                "counts_a": [
+                    5620,
+                    17072,
+                    7771,
+                    11560,
+                    8207,
+                    29197,
+                    23942
+                ],
+                "counts_b": [
+                    5613,
+                    17085,
+                    7841,
+                    11935,
+                    8303,
+                    28847,
+                    24120
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    546.56
+                ],
+                "E_gamma2": [
+                    1131.51
+                ],
+                "counts_a1b2": [
+                    170
+                ],
+                "counts_a2b1": [
+                    171
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
     "1c42f1fb-b90f-47b0-ba89-fcbe1dfc0a4c": {
         "filename": "1c42f1fb-b90f-47b0-ba89-fcbe1dfc0a4c.root",
         "file_size": 28826545,
@@ -11495,6 +13775,282 @@
                     10536,
                     12251,
                     42091
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "d2469edf-795c-4b3f-a507-15709cfcae3b": {
+        "filename": "d2469edf-795c-4b3f-a507-15709cfcae3b.root",
+        "file_size": 13967140,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 93,
+            "A": 239,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 5.411504860719045,
+            "throughput": 1924.911264938339
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    106.12,
+                    228.18,
+                    277.6,
+                    103.74
+                ],
+                "counts_a": [
+                    289610,
+                    47992,
+                    45924,
+                    296947
+                ],
+                "counts_b": [
+                    289298,
+                    47811,
+                    45718,
+                    296921
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    106.12,
+                    106.12,
+                    106.12
+                ],
+                "E_gamma2": [
+                    228.18,
+                    277.6,
+                    103.74
+                ],
+                "counts_a1b2": [
+                    955,
+                    966,
+                    5471
+                ],
+                "counts_a2b1": [
+                    944,
+                    956,
+                    5488
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "598d2e5c-fa23-42c2-a8e2-01ce1cde04b0": {
+        "filename": "598d2e5c-fa23-42c2-a8e2-01ce1cde04b0.root",
+        "file_size": 17008233,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 93,
+            "A": 239,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": false,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 5.578313891092936,
+            "throughput": 1867.3503983523185
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    106.12,
+                    228.18,
+                    277.6,
+                    103.74
+                ],
+                "counts_a": [
+                    348868,
+                    61456,
+                    60392,
+                    357920
+                ],
+                "counts_b": [
+                    348712,
+                    61450,
+                    60372,
+                    357636
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    106.12,
+                    106.12,
+                    106.12
+                ],
+                "E_gamma2": [
+                    228.18,
+                    277.6,
+                    103.74
+                ],
+                "counts_a1b2": [
+                    1546,
+                    1626,
+                    7946
+                ],
+                "counts_a2b1": [
+                    1495,
+                    1591,
+                    7971
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "22a1ef18-d303-4f21-9926-3e0fe7722e55": {
+        "filename": "22a1ef18-d303-4f21-9926-3e0fe7722e55.root",
+        "file_size": 20145416,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 93,
+            "A": 239,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 3.906749355792999,
+            "throughput": 2666.325816684565
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    106.12,
+                    228.18,
+                    277.6,
+                    103.74
+                ],
+                "counts_a": [
+                    412819,
+                    57003,
+                    54044,
+                    419714
+                ],
+                "counts_b": [
+                    412677,
+                    56691,
+                    53445,
+                    419707
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    106.12,
+                    106.12,
+                    106.12
+                ],
+                "E_gamma2": [
+                    228.18,
+                    277.6,
+                    103.74
+                ],
+                "counts_a1b2": [
+                    1630,
+                    1661,
+                    11241
+                ],
+                "counts_a2b1": [
+                    1658,
+                    1632,
+                    11243
+                ],
+                "ROI_type": "standard_square",
+                "ROI": 5
+            }
+        }
+    },
+    "ddba9d47-cff8-4e64-8d96-5f36c0a26429": {
+        "filename": "ddba9d47-cff8-4e64-8d96-5f36c0a26429.root",
+        "file_size": 24386448,
+        "type": "radionuclides",
+        "properties": {
+            "model": "coaxial_v2",
+            "Z": 93,
+            "A": 239,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "select_n_type_instead_of_ptype": true,
+            "select_filter_source": true,
+            "source_type": "FOI_filter_v1",
+            "source_SURE_radius": null,
+            "runs": 10000000.0,
+            "threads": 16,
+            "time": 3.9175293684005736,
+            "throughput": 2658.988787854199
+        },
+        "peakdata": {
+            "singles": {
+                "E_gamma": [
+                    106.12,
+                    228.18,
+                    277.6,
+                    103.74
+                ],
+                "counts_a": [
+                    492198,
+                    72484,
+                    70120,
+                    500177
+                ],
+                "counts_b": [
+                    491260,
+                    72622,
+                    69762,
+                    499223
+                ],
+                "ROI_type": "standard",
+                "ROI": 5
+            },
+            "coincidences": {
+                "E_gamma1": [
+                    106.12,
+                    106.12,
+                    106.12
+                ],
+                "E_gamma2": [
+                    228.18,
+                    277.6,
+                    103.74
+                ],
+                "counts_a1b2": [
+                    2635,
+                    2713,
+                    15854
+                ],
+                "counts_a2b1": [
+                    2558,
+                    2694,
+                    15823
                 ],
                 "ROI_type": "standard_square",
                 "ROI": 5
