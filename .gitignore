@@ -4,4 +4,5 @@ geant4/output_pelle/*
 geant4/output_radionuclides/*
 geant4/output_background_n/*
 geant4/output_background_p/*
+geant4/output_background_p_corrupted/*
 python/metadata_peakinfo.json

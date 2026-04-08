@@ -29,7 +29,7 @@ source_type = 2 # 0=point, 1=filter, 2=SURE
 source_SURE_radius = None
 
 # Number of events per run
-runs_per_background = 1e9
+events_per_background = 1e9
 # 1e8 = 10 min pelle 20t
 
 build_folder = "build/"
@@ -47,7 +47,7 @@ print("\tdetector lengths: " + str(detector_lengths))
 print("\tsource distances: " + str(source_distances))
 print("\tn-type (True) or p-type (False): " + str(select_n_type_instead_of_p_type))
 print("\tfilter source (True) or point source (False): " + str(select_filter_source))
-print("\truns per background: " + str(int(runs_per_background)))
+print("\truns per background: " + str(int(events_per_background)))
 
 start_time = time.time()
 time_interval = start_time
@@ -83,7 +83,7 @@ for i_s, (background_filename, diameter, length, distance) in enumerate(settings
     if source_type == 2:
         source_SURE_radius = calc_source_radius(diameter, length, select_filter_source)
     
-    pseudo_time = runs_per_background / (source_SURE_radius**2 * np.pi * background_total_flux)
+    pseudo_time = events_per_background / (source_SURE_radius**2 * np.pi * background_total_flux)
 
     settings_name = "_background_"
     settings_name += "_dia_" + str(diameter) + "_len_" + str(length) + "_dis_" + str(distance)
@@ -109,8 +109,8 @@ for i_s, (background_filename, diameter, length, distance) in enumerate(settings
     macro_content += "/E_source/sourceType " + str(source_type) + "\n"
     macro_content += "/E_source/sourceRadiusSURE " + str(source_SURE_radius) + "\n"
 
-    macro_content += "/run/printProgress " + str(int(runs_per_background/10)) + "\n"
-    macro_content += "/run/beamOn " + str(int(runs_per_background))
+    macro_content += "/run/printProgress " + str(int(events_per_background/10)) + "\n"
+    macro_content += "/run/beamOn " + str(int(events_per_background))
 
     print("\tWriting macro file...")
 
@@ -159,10 +159,10 @@ for i_s, (background_filename, diameter, length, distance) in enumerate(settings
             "SURE_background_total_flux":background_total_flux,
             "SURE_pseudo_time":pseudo_time,
             "source_type":"FOI_filter_v1",
-            "runs":runs_per_background,
+            "runs":events_per_background,
             "threads":number_of_threads,
             "time":simulated_minutes,
-            "throughput":runs_per_background/(simulated_minutes*60*number_of_threads),
+            "throughput":events_per_background/(simulated_minutes*60*number_of_threads),
             },
         }
     with open(output_folder + "metadata.json", "w") as f:

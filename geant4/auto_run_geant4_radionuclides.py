@@ -21,7 +21,7 @@ source_type = 1 # 0=point, 1=filter, 2=SURE
 source_SURE_radius = None
 
 # Number of events per run
-runs_per_radionuclide = 1e7
+events_per_radionuclide = 1e7
 # 1e7 = 8 min per ZA pelle 20t
 
 build_folder = "build/"
@@ -39,7 +39,7 @@ print("\tdetector lengths: " + str(detector_lengths))
 print("\tsource distances: " + str(source_distances))
 print("\tn-type (True) or p-type (False): " + str(select_n_type_instead_of_p_type))
 print("\tfilter source (True) or point source (False): " + str(select_filter_source))
-print("\truns per radionuclide: " + str(int(runs_per_radionuclide)))
+print("\truns per radionuclide: " + str(int(events_per_radionuclide)))
 
 start_time = time.time()
 time_interval = start_time
@@ -92,8 +92,8 @@ for i_s, (ZA, diameter, length, distance) in enumerate(settings):
     macro_content += "/E_source/sourceType " + str(source_type) + "\n"
     # macro_content += "/E_source/sourceRadiusSURE " + XXX + "\n"
 
-    macro_content += "/run/printProgress " + str(int(runs_per_radionuclide/10)) + "\n"
-    macro_content += "/run/beamOn " + str(int(runs_per_radionuclide))
+    macro_content += "/run/printProgress " + str(int(events_per_radionuclide/10)) + "\n"
+    macro_content += "/run/beamOn " + str(int(events_per_radionuclide))
 
     print("\tWriting macro file...")
 
@@ -141,10 +141,10 @@ for i_s, (ZA, diameter, length, distance) in enumerate(settings):
             "source_type":source_type,
             "source_SURE_radius":source_SURE_radius,
             "source_type":"FOI_filter_v1",
-            "runs":runs_per_radionuclide,
+            "runs":events_per_radionuclide,
             "threads":number_of_threads,
             "time":simulated_minutes,
-            "throughput":runs_per_radionuclide/(simulated_minutes*60*number_of_threads),
+            "throughput":events_per_radionuclide/(simulated_minutes*60*number_of_threads),
             },
         }
     with open(output_folder + "metadata.json", "w") as f:
