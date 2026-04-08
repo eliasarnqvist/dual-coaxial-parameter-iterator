@@ -141,7 +141,7 @@ for i_s, (ZA, diameter, length, distance) in enumerate(settings):
             "source_type":source_type,
             "source_SURE_radius":source_SURE_radius,
             "source_type":"FOI_filter_v1",
-            "runs":events_per_radionuclide,
+            "events":events_per_radionuclide,
             "threads":number_of_threads,
             "time":simulated_minutes,
             "throughput":events_per_radionuclide/(simulated_minutes*60*number_of_threads),

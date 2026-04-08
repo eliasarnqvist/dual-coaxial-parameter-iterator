@@ -159,7 +159,7 @@ for i_s, (background_filename, diameter, length, distance) in enumerate(settings
             "SURE_background_total_flux":background_total_flux,
             "SURE_pseudo_time":pseudo_time,
             "source_type":"FOI_filter_v1",
-            "runs":events_per_background,
+            "events":events_per_background,
             "threads":number_of_threads,
             "time":simulated_minutes,
             "throughput":events_per_background/(simulated_minutes*60*number_of_threads),

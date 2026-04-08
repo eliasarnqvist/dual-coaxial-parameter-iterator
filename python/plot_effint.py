@@ -39,7 +39,7 @@ def plot_singles(metadata_peakfinfo, datacut):
             # Data values for this energy
             x_val = value["properties"][plot_on_x]
             counts = peakdata["counts_a"][k] + peakdata["counts_b"][k]
-            events = value["properties"]["runs"]
+            events = value["properties"]["events"]
             y_val = counts / events
             # Use Binomial statistics here instead of Poisson
             dy_val = np.sqrt(counts * (1 - counts/events)) / events
@@ -121,7 +121,7 @@ def plot_coincidences(metadata_peakfinfo, datacut):
             E_gamma1 = peakdata["E_gamma1"][k]
             E_gamma2 = peakdata["E_gamma2"][k]
             counts = peakdata["counts_a1b2"][k] + peakdata["counts_a2b1"][k]
-            events = value["properties"]["runs"]
+            events = value["properties"]["events"]
             y_val = counts / events
             # Use Binomial statistics here instead of Poisson
             dy_val = np.sqrt(counts * (1 - counts/events)) / events
