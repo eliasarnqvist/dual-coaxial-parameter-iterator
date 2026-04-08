@@ -4,12 +4,12 @@ import json
 import numpy as np
 
 
-def plot_singles(metadata_peakfinfo, datacut):
+def plot_singles(metadata_peakinfo, datacut):
     fig, ax = plt.subplots(1, 1, figsize=(88/inch_to_mm, 60/inch_to_mm))
 
     effint = {}
 
-    for i, (key, value) in enumerate(metadata_peakfinfo.items()):
+    for i, (key, value) in enumerate(metadata_peakinfo.items()):
 
         # Make sure we only plot the data specified in datacut
         cut_included = True
@@ -83,12 +83,12 @@ def plot_singles(metadata_peakfinfo, datacut):
     plt.savefig(save_name + ".jpg", dpi=300)
 
 
-def plot_coincidences(metadata_peakfinfo, datacut):
+def plot_coincidences(metadata_peakinfo, datacut):
     fig, ax = plt.subplots(1, 1, figsize=(88/inch_to_mm, 60/inch_to_mm))
 
     effint = {}
 
-    for i, (key, value) in enumerate(metadata_peakfinfo.items()):
+    for i, (key, value) in enumerate(metadata_peakinfo.items()):
 
         # Make sure we only plot the data specified in datacut
         cut_included = True
@@ -176,9 +176,9 @@ parser.add_argument("-mp", "--metadata_peakinfo", type=str, required=False, defa
 args = parser.parse_args()
 
 # Get the metadata and peak counts
-metadata_peakfinfo_filepath = args.metadata_peakinfo
-with open(metadata_peakfinfo_filepath, "r") as f:
-    metadata_peakfinfo = json.load(f)
+metadata_peakinfo_filepath = args.metadata_peakinfo
+with open(metadata_peakinfo_filepath, "r") as f:
+    metadata_peakinfo = json.load(f)
 
 # Get the information of how to select what to plot
 datacut_filepath = args.datacut
@@ -189,5 +189,5 @@ with open(datacut_filepath, "r") as f:
 plt.close('all')
 inch_to_mm = 25.4
 
-plot_singles(metadata_peakfinfo, datacut)
-plot_coincidences(metadata_peakfinfo, datacut)
+plot_singles(metadata_peakinfo, datacut)
+plot_coincidences(metadata_peakinfo, datacut)
