@@ -9,6 +9,7 @@
     "select_n_type_instead_of_ptype": false,
     "select_filter_source": true,
     "source_type": "FOI_filter_v1",
+    "background_file": "source_flux_avg_unshielded.csv",
     "plot": {
         "x_plot": "detector_diameter",
         "x_label": "$d=l$ (mm)",

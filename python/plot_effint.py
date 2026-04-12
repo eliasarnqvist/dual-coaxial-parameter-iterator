@@ -17,7 +17,7 @@ def plot_singles(metadata_peakinfo, datacut):
             if key2 == "plot":
                 continue
             elif key2 == "type":
-                this_check = (value[key2] == value2)
+                this_check = (value[key2] == "radionuclides")
                 cut_included *= this_check
             else:
                 if value2 == "any":
