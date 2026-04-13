@@ -5,7 +5,7 @@ import numpy as np
 
 
 def plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=True):
-    fig, ax = plt.subplots(3, 1, figsize=(88/inch_to_mm, 140/inch_to_mm), sharex=True, gridspec_kw={"height_ratios": [2, 1, 1]})
+    fig, ax = plt.subplots(3, 1, figsize=(88/inch_to_mm, 130/inch_to_mm), sharex=True, gridspec_kw={"height_ratios": [2, 1, 1]})
 
     measurement_time = 1*24*60*60
 
@@ -46,28 +46,40 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=Tr
             # Look at peak data and back data
             if plot_coincidences:
                 gamma_category = "coincidences"
+                gamma_name = "E_gamma1"
             else:
                 gamma_category = "singles"
+                gamma_name = "E_gamma"
             
             if info_dictionary == metadata_peakinfo:
                 peakdata = value["peakdata"][gamma_category]
-                gamma_iterator = range(len(peakdata["E_gamma1"]))
+                gamma_iterator = range(len(peakdata[gamma_name]))
             elif info_dictionary == metadata_backinfo:
                 backdata = value["backdata"]["Z" + str(Z) + "_A" + str(A)][gamma_category]
-                gamma_iterator = range(len(backdata["E_gamma1"]))
+                gamma_iterator = range(len(backdata[gamma_name]))
 
             # What to plot on the x-axis
             plot_on_x = datacut["plot"]["x_plot"]
 
             for k in gamma_iterator:
                 if info_dictionary == metadata_peakinfo:
-                    # Coincident energies
-                    E_gamma1 = peakdata["E_gamma1"][k]
-                    E_gamma2 = peakdata["E_gamma2"][k]
+                    if plot_coincidences:
+                        # Coincident energies
+                        E_gamma1 = peakdata["E_gamma1"][k]
+                        E_gamma2 = peakdata["E_gamma2"][k]
+                    else:
+                        # Single energies
+                        E_gamma1 = peakdata["E_gamma"][k]
+                        E_gamma2 = 0
                 elif info_dictionary == metadata_backinfo:
-                    # Coincident energies
-                    E_gamma1 = backdata["E_gamma1"][k]
-                    E_gamma2 = backdata["E_gamma2"][k]
+                    if plot_coincidences:
+                        # Coincident energies
+                        E_gamma1 = backdata["E_gamma1"][k]
+                        E_gamma2 = backdata["E_gamma2"][k]
+                    else:
+                        # Single energies
+                        E_gamma1 = peakdata["E_gamma"][k]
+                        E_gamma2 = 0
 
                 # Data values for this energy
                 x_val = value["properties"][plot_on_x]
@@ -77,7 +89,10 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=Tr
 
                 if info_dictionary == metadata_peakinfo:
                     # Effint
-                    counts = peakdata["counts_a1b2"][k] + peakdata["counts_a2b1"][k]
+                    if plot_coincidences:
+                        counts = peakdata["counts_a1b2"][k] + peakdata["counts_a2b1"][k]
+                    else:
+                        counts = peakdata["counts_a"][k] + peakdata["counts_b"][k]
                     events = value["properties"]["events"]
                     y_val = counts / events * 1e2 # in units of percent
                     dy_val = np.sqrt(counts * (1 - counts/events)) / events * 1e2 # in untis of percent
@@ -87,7 +102,10 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=Tr
                     entry["deffint"].append(dy_val)
                 elif info_dictionary == metadata_backinfo:                    
                     # Back
-                    counts = backdata["counts_a1b2"][k] + backdata["counts_a2b1"][k]
+                    if plot_coincidences:
+                        counts = backdata["counts_a1b2"][k] + backdata["counts_a2b1"][k]
+                    else:
+                        counts = backdata["counts_a"][k] + backdata["counts_b"][k]
                     events = value["properties"]["events"]
                     pseudo_time = value["properties"]["SURE_pseudo_time"]
                     b = counts / pseudo_time # background count rate
@@ -125,7 +143,10 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=Tr
         dmda = np.sqrt((1/(effint_sorted*measurement_time) * dld_sorted)**2 + (ld_sorted/(effint_sorted**2*measurement_time) * deffint_sorted)**2)
 
         # Generally 2 decimals for ENSDF data, but check for your case!
-        line_label = f"{E_gamma1:.2f}, {E_gamma2:.2f}"
+        if plot_coincidences:
+            line_label = f"{E_gamma1:.2f}, {E_gamma2:.2f}"
+        else:
+            line_label = f"{E_gamma1:.2f}"
 
         ax[0].errorbar(x_effint_sorted, mda, yerr=dmda, fmt=".", ls="-", 
                         markersize=4, lw=1, capsize=2, capthick=1, 
@@ -147,15 +168,25 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=Tr
     x_label = datacut["plot"]["x_label"]
     ax[2].set_xlabel(x_label)
     ax[0].set_ylabel("MDA (Bq)")
-    ax[1].set_ylabel(r"$I_{\gamma \gamma} \, \varepsilon_{\gamma \gamma}$ (%)")
+    if plot_coincidences:
+        ax[1].set_ylabel(r"$I_{\gamma \gamma} \, \varepsilon_{\gamma \gamma}$ (%)")
+        legend_title = datacut["plot"]["nuclide"] + str(" (keV, keV)")
+        save_name = "figures/" + datacut["plot"]["save_name"] + "_coincidences"
+    else:
+        ax[1].set_ylabel(r"$I_{\gamma} \, \varepsilon_{\gamma}$ (%)")
+        legend_title = datacut["plot"]["nuclide"] + str(" (keV)")
+        save_name = "figures/" + datacut["plot"]["save_name"] + "_singles"
     ax[2].set_ylabel(r"$L_D$")
-    legend_title = datacut["plot"]["nuclide"] + str(" (keV, keV)")
     ax[0].legend(frameon=False, fontsize=8, title=legend_title, title_fontsize=8)
 
-    save_name = "figures/" + datacut["plot"]["save_name"] + "_coincidences"
     plt.tight_layout(pad = 0.2)
     fig.subplots_adjust(hspace=0, wspace=0)
     plt.savefig(save_name + ".jpg", dpi=300)
+
+
+
+
+
 
 # Parser for adding arguments
 parser = argparse.ArgumentParser(prog="plot_mda",
@@ -190,5 +221,5 @@ inch_to_mm = 25.4
 # plot_coincidences(metadata_backinfo, datacut)
 
 plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=True)
-# plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=False)
+plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=False)
 

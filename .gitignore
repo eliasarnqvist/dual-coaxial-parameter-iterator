@@ -6,3 +6,5 @@ geant4/output_background/*
 geant4/output_background_p_corrupted/*
 python/metadata_peakinfo.json
 python/metadata_backinfo.json
+python/datacuts/*
+python/figures/*
