@@ -69,18 +69,18 @@ def analyze_single_and_coincidence(ZAs, data_filename):
         counts_single_a = []
         counts_single_b = []
         for E_gamma in gammas_single:
-            counts_a = count_1d(events_single_a, E_gamma, ROI_standard)
+            counts_a = count_1d(events_single_a, E_gamma, ROI_standard_1d)
             counts_single_a.append(float(counts_a))
-            counts_b = count_1d(events_single_b, E_gamma, ROI_standard)
+            counts_b = count_1d(events_single_b, E_gamma, ROI_standard_1d)
             counts_single_b.append(float(counts_b))
 
         # Coincidence counts
         counts_coincidence_a1b2 = []
         counts_coincidence_a2b1 = []
         for E_gamma1, E_gamma2 in zip(gammas_coincidence_1, gammas_coincidence_2):
-            counts_a1b2 = count_2d(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_standard)
+            counts_a1b2 = count_2d(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_standard_2d)
             counts_coincidence_a1b2.append(float(counts_a1b2))
-            counts_a2b1 = count_2d(events_coincidence_a, events_coincidence_b, E_gamma2, E_gamma1, ROI_standard)
+            counts_a2b1 = count_2d(events_coincidence_a, events_coincidence_b, E_gamma2, E_gamma1, ROI_standard_2d)
             counts_coincidence_a2b1.append(float(counts_a2b1))
 
         ZA_peak_data = {
@@ -89,15 +89,15 @@ def analyze_single_and_coincidence(ZAs, data_filename):
                 "counts_a" : counts_single_a,
                 "counts_b" : counts_single_b,
                 "ROI_type" : "standard",
-                "ROI" : ROI_standard,
+                "ROI" : ROI_standard_1d,
             },
             "coincidences" : {
                 "E_gamma1" : gammas_coincidence_1,
                 "E_gamma2" : gammas_coincidence_2,
                 "counts_a1b2" : counts_coincidence_a1b2,
                 "counts_a2b1" : counts_coincidence_a2b1,
-                "ROI_type" : "quadruple_square",
-                "ROI" : ROI_standard,
+                "ROI_type" : "standard_square",
+                "ROI" : ROI_standard_2d,
             },
         }
 
@@ -117,29 +117,29 @@ def count_1d(events, Eg, ROI):
     return counts
 
 
-# def count_2d(events_a, events_b, Eg1, Eg2, ROI):
-#     # Energy distance is half of the ROI size
-#     dE = ROI/2
-
-#     # Count peak counts
-#     cond_1 = np.logical_and(events_a > Eg1-dE, events_a < Eg1+dE)
-#     cond_2 = np.logical_and(events_b > Eg2-dE, events_b < Eg2+dE)
-#     cond = np.logical_and(cond_1, cond_2)
-#     counts = cond.sum()
-#     return counts
-
-
 def count_2d(events_a, events_b, Eg1, Eg2, ROI):
     # Energy distance is half of the ROI size
-    dE = 4 * ROI/2
+    dE = ROI/2
 
     # Count peak counts
     cond_1 = np.logical_and(events_a > Eg1-dE, events_a < Eg1+dE)
     cond_2 = np.logical_and(events_b > Eg2-dE, events_b < Eg2+dE)
     cond = np.logical_and(cond_1, cond_2)
     counts = cond.sum()
-    counts /= (4**2)
     return counts
+
+
+# def count_2d(events_a, events_b, Eg1, Eg2, ROI):
+#     # Energy distance is half of the ROI size
+#     dE = 4 * ROI/2
+
+#     # Count peak counts
+#     cond_1 = np.logical_and(events_a > Eg1-dE, events_a < Eg1+dE)
+#     cond_2 = np.logical_and(events_b > Eg2-dE, events_b < Eg2+dE)
+#     cond = np.logical_and(cond_1, cond_2)
+#     counts = cond.sum()
+#     counts /= (4**2)
+#     return counts
 
 
 # Parser for adding arguments
@@ -155,7 +155,9 @@ parser.add_argument("-g", "--gammas", type=str, required=False, default="gammas.
 parser.add_argument("-o", "--output", type=str, required=False, default="metadata_backinfo.json", help="Path to save output data")
 args = parser.parse_args()
 
-ROI_standard = 5
+# Make the coincidence ROI large to get better statistics
+ROI_standard_1d = 5
+ROI_standard_2d = ROI_standard_1d * 4
 
 # Open gamma ray data file
 gammas_filepath = args.gammas

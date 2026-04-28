@@ -138,7 +138,8 @@ parser.add_argument("-g", "--gammas", type=str, required=False, default="gammas.
 parser.add_argument("-o", "--output", type=str, required=False, default="metadata_peakinfo.json", help="Path to save output data")
 args = parser.parse_args()
 
-ROI_standard = 5
+# For the efficiency and intensity we will use a smaller ROI to avoid counting close peaks
+ROI_standard = 2
 
 # Open gamma ray data file
 gammas_filepath = args.gammas
