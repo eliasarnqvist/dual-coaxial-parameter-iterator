@@ -184,10 +184,6 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=Tr
     plt.savefig(save_name + ".jpg", dpi=300)
 
 
-
-
-
-
 # Parser for adding arguments
 parser = argparse.ArgumentParser(prog="plot_mda",
                                  description="Plot the minimum detectable activity",
@@ -222,4 +218,3 @@ inch_to_mm = 25.4
 
 plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=True)
 plot_mda(metadata_peakinfo, metadata_backinfo, datacut, plot_coincidences=False)
-
