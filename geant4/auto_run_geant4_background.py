@@ -158,7 +158,7 @@ for i_s, (background_filename, diameter, length, distance) in enumerate(settings
             "select_filter_source":select_filter_source,
             "source_type":source_type,
             "source_SURE_radius":source_SURE_radius,
-            "SURE_background_total_flux":background_total_flux,
+            "SURE_background_total_flux":background_total_flux/100, # convert to mm^-2 s^-1
             "SURE_pseudo_time":pseudo_time,
             "source_type":"FOI_filter_v1",
             "events":events_per_background,
