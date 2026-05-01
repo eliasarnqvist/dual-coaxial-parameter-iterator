@@ -154,7 +154,7 @@ for i_s, (background_filename, diameter, length, distance) in enumerate(settings
             "detector_diameter":diameter,
             "detector_length":length,
             "source_distance":distance,
-            "select_n_type_instead_of_ptype":select_n_type_instead_of_p_type,
+            "select_ntype_instead_of_ptype":select_n_type_instead_of_p_type,
             "select_filter_source":select_filter_source,
             "source_type":source_type,
             "source_SURE_radius":source_SURE_radius,
