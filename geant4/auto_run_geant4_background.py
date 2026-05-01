@@ -83,7 +83,9 @@ for i_s, (background_filename, diameter, length, distance) in enumerate(settings
     if source_type == 2:
         source_SURE_radius = calc_source_radius(diameter, length, select_filter_source)
     
-    pseudo_time = events_per_background / (source_SURE_radius**2 * np.pi * background_total_flux)
+    # Note flux conversion from cm^-2 to mm^-2 to be compatible with sure radius in mm
+    # Or an equivalent would be to convert radius from mm to cm here
+    pseudo_time = events_per_background / (source_SURE_radius**2 * np.pi * (background_total_flux / 100))
 
     settings_name = "_background_"
     settings_name += "_dia_" + str(diameter) + "_len_" + str(length) + "_dis_" + str(distance)
