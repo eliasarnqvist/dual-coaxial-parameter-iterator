@@ -144,7 +144,7 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut):
                     if ROI != ROI_standard:
                         counts_raw = backdata["counts_a1b2"][index] + backdata["counts_a2b1"][index]
                         counts = counts_raw / ((ROI/ROI_standard)**2)
-                        counts_raw_unc = np.sqrt(counts * (1 - counts/events))
+                        counts_raw_unc = np.sqrt(counts_raw * (1 - counts_raw/events))
                         counts_unc = counts_raw_unc / ((ROI/ROI_standard)**2)
                     else:
                         counts = backdata["counts_a1b2"][index] + backdata["counts_a2b1"][index]
@@ -245,7 +245,7 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut):
     ax[2].set_zorder(1)
 
     ax[0].set_ylabel("MDA (Bq)")
-    ax[1].set_ylabel(r"$I_{\gamma \gamma} \, \varepsilon_{\gamma \gamma}$ or $I_{\gamma} \, \varepsilon_{\gamma}$ (%)")
+    ax[1].set_ylabel(r"$I_{\gamma \gamma} \, \varepsilon_{\gamma \gamma}$, $I_{\gamma} \, \varepsilon_{\gamma}$ (%)")
     ax[2].set_ylabel(r"$L_D$")
     x_label = datacut["plot_settings"]["x_label"]
     ax[2].set_xlabel(x_label)
@@ -256,16 +256,6 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut):
     ax[0].set_yscale("log")
     ax[1].set_yscale("log")
     ax[2].set_yscale("log")
-
-    # if plot_coincidences:
-    #     ax[1].set_ylabel(r"$I_{\gamma \gamma} \, \varepsilon_{\gamma \gamma}$ (%)")
-    #     legend_title = datacut["plot"]["nuclide"] + str(" (keV, keV)")
-    #     save_name = "figures/" + datacut["plot"]["save_name"] + "_coincidences"
-    # else:
-    #     ax[1].set_ylabel(r"$I_{\gamma} \, \varepsilon_{\gamma}$ (%)")
-    #     legend_title = datacut["plot"]["nuclide"] + str(" (keV)")
-    #     save_name = "figures/" + datacut["plot"]["save_name"] + "_singles"
-    # 
 
     save_name = "figures/" + datacut["plot_settings"]["save_name"] + "_singles"
     plt.tight_layout(pad = 0.2)
