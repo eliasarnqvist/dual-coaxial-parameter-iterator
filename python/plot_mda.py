@@ -250,7 +250,7 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut):
     x_label = datacut["plot_settings"]["x_label"]
     ax[2].set_xlabel(x_label)
 
-    legend_title = datacut["plot_settings"]["nuclide"] + str( "(keV)")
+    legend_title = datacut["plot_settings"]["nuclide"] + str(" (keV)")
     ax[0].legend(frameon=False, fontsize=8, title=legend_title, title_fontsize=8)
 
     ax[0].set_yscale("log")
