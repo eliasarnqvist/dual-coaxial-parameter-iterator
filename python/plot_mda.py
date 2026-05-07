@@ -125,9 +125,15 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut):
                     plot_on_x = datacut["plot_settings"]["x_plot"]
                     x_val = value["properties"][plot_on_x]
 
+                    # if value["properties"]["select_ntype_instead_of_ptype"] == True:
+                    #     label = f"n-type HPGe"
+                    # elif value["properties"]["select_ntype_instead_of_ptype"] == False:
+                    #     label = f"p-type HPGe"
+                    label = f"{E_gamma1:.2f}, {E_gamma2:.2f}"
+                    
                     entry = {"type": "radionuclides",
                              "detector": "coincidences",
-                             "label": f"{E_gamma1:.2f}, {E_gamma2:.2f}",
+                             "label": label,
                              "x_val": x_val,
                              "effint": y_val,
                              "effint_unc": dy_val}
@@ -162,9 +168,15 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut):
                     plot_on_x = datacut["plot_settings"]["x_plot"]
                     x_val = value["properties"][plot_on_x]
 
+                    # if value["properties"]["select_ntype_instead_of_ptype"] == True:
+                    #     label = f"n-type HPGe"
+                    # elif value["properties"]["select_ntype_instead_of_ptype"] == False:
+                    #     label = f"p-type HPGe"
+                    label = f"{E_gamma1:.2f}, {E_gamma2:.2f}"
+
                     entry = {"type": "background",
                              "detector": "coincidences",
-                             "label": f"{E_gamma1:.2f}, {E_gamma2:.2f}",
+                             "label": label,
                              "x_val": x_val,
                              "LD": y_val,
                              "LD_unc": dy_val}
@@ -250,14 +262,14 @@ def plot_mda(metadata_peakinfo, metadata_backinfo, datacut):
     x_label = datacut["plot_settings"]["x_label"]
     ax[2].set_xlabel(x_label)
 
-    legend_title = datacut["plot_settings"]["nuclide"] + str(" (keV)")
+    legend_title = datacut["plot_settings"]["nuclide"]
     ax[0].legend(frameon=False, fontsize=8, title=legend_title, title_fontsize=8)
 
     ax[0].set_yscale("log")
     ax[1].set_yscale("log")
     ax[2].set_yscale("log")
 
-    save_name = "figures/" + datacut["plot_settings"]["save_name"] + "_singles"
+    save_name = "figures/" + datacut["plot_settings"]["save_name"]
     plt.tight_layout(pad = 0.2)
     fig.subplots_adjust(hspace=0, wspace=0)
     plt.savefig(save_name + ".jpg", dpi=300)
