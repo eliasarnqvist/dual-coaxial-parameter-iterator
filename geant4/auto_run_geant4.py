@@ -2,20 +2,35 @@ import argparse
 import json
 import time
 
-def iterate_geometry():
-    
-    settings = [(ZA, dia, len, dis) 
-                for ZA in ZAs
-                for dia in detector_diameters
-                for len in detector_lengths
-                for dis in source_distances]
 
-    # Iterate over radionuclides
-    for i_s, (ZA, diameter, length, distance) in enumerate(settings):
-        # Optional: skip some iterations
-        # if i_s <= 2:
-        #     continue
-        pass
+
+
+def run_geometry(geometry, Z=0, A=0):
+    detector_type = geometry["detector_type"]
+    detector_diameter = geometry["detector_diameter"]
+    detector_length = geometry["detector_length"]
+    detector_source_distance = geometry["detector_source_distance"]
+
+    if len(detector_length) == 1 and type(detector_length[0]) == str:
+        detector_length = geometry[detector_length[0]]
+
+    # Combine all geometry to iterate over
+    settings = [(det_type, det_diam, det_leng, det_sdis) 
+                for det_type in detector_type
+                for det_diam in detector_diameter
+                for det_leng in detector_length
+                for det_sdis in detector_source_distance]
+
+    for i_s, (det_type, det_diam, det_leng, det_sdis) in enumerate(settings):
+        print(f"\t\tRunning: detector_type={det_type}, detector_diameter={det_diam}, detector_length={det_leng}, detector_source_distance={det_sdis}")
+        # print(det_type, det_diam, det_leng, det_sdis)
+
+    # # Iterate over radionuclides
+    # for i_s, (ZA, diameter, length, distance) in enumerate(settings):
+    #     # Optional: skip some iterations
+    #     # if i_s <= 2:
+    #     #     continue
+    #     pass
 
 
 def run_radionuclides(radionuclides, geometry):
@@ -23,6 +38,12 @@ def run_radionuclides(radionuclides, geometry):
         return
     
     ZAs = radionuclides["ZAs"]
+    for Z, A in ZAs:
+        print(f"\tRunning: Z={Z}, A={A}")
+
+        run_geometry(geometry, Z=Z, A=A)
+
+
 
 
 def run_background(background, geometry):
