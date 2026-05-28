@@ -45,8 +45,8 @@ def run_geometry(geometry, run_dict, run_type):
         macro_content += "/E_detector/detectorDiameter " + str(det_diam) + "\n"
         macro_content += "/E_detector/detectorLength " + str(det_leng) + "\n"
         macro_content += "/E_detector/sourceDistance " + str(det_sdis) + "\n"
-        macro_content += "/E_detector/detectorType " + str(det_type) + "\n" # MUST IMPLEMENT THIS in G4
-        macro_content += "/E_detector/sourceType " + str(det_styp) + "\n" # MUST IMPLEMENT THIS in G4
+        macro_content += "/E_detector/detectorType " + str(det_type) + "\n" # TODO MUST IMPLEMENT THIS in G4
+        macro_content += "/E_detector/sourceType " + str(det_styp) + "\n" # TODO MUST IMPLEMENT THIS in G4
 
         # General settings
         macro_content += "/run/reinitializeGeometry" + "\n"
@@ -66,6 +66,11 @@ def run_geometry(geometry, run_dict, run_type):
         elif run_type == "background":
 
             #TODO Implement sure radius calculation depending on detector type and size
+
+            # "source_type":source_type,
+            # "source_SURE_radius":source_SURE_radius,
+            # "SURE_background_total_flux":background_total_flux/100, # convert to mm^-2 s^-1
+            # "SURE_pseudo_time":pseudo_time,
 
             # The sure model must be used with a specified SURE radius
             macro_content += "/E_source/sourceType " + str(det_styp) + "\n"
@@ -117,31 +122,42 @@ def run_geometry(geometry, run_dict, run_type):
             metadata = json.load(f)
         # Add the run information to the metadata
         # Properties will depend on what type of run this is
-        properties = {}
+        properties = {
+            # Properties related to the detector and source type
+            "detector_type":det_type,
+            "detector_diameter":det_diam,
+            "detector_length":det_leng,
+            "source_distance":det_sdis,
+            "source_type":det_styp,
+            # Properties related to the simulation
+            "events":events,
+            "threads":threads,
+            "time_minutes":simulated_minutes,
+            "throughput":events/(simulated_minutes*60*threads),}
         if run_type == "radionuclides":
-            properties = {}
+            Z, A = run_dict["ZA"]
+            properties["Z"] = Z
+            properties["A"] = A
+        elif run_type == "background":
+            properties["background_file"] = run_dict["source_spectrum"]
+
+            # TODO 
+            # "source_SURE_radius":source_SURE_radius,
+            # "SURE_background_total_flux":background_total_flux/100, # convert to mm^-2 s^-1
+            # "SURE_pseudo_time":pseudo_time,
+
+        elif run_type == "filter":
+            Z, A = run_dict["ZA"]
+            properties["Z"] = Z
+            properties["A"] = A
 
         metadata[run_id] = {
+            # General metadata first
             "filename":(run_id + ".root"),
             "file_size":os.path.getsize(output_file),
-            "type":"radionuclides",
-            "properties":{
-                "model":"coaxial_v2",
-                "Z":Z,
-                "A":A,
-                "detector_diameter":diameter,
-                "detector_length":length,
-                "source_distance":distance,
-                "select_ntype_instead_of_ptype":select_n_type_instead_of_p_type,
-                "select_filter_source":select_filter_source,
-                "source_type":source_type,
-                "source_SURE_radius":source_SURE_radius,
-                "source_type":"FOI_filter_v1",
-                "events":events_per_radionuclide,
-                "threads":number_of_threads,
-                "time":simulated_minutes,
-                "throughput":events_per_radionuclide/(simulated_minutes*60*number_of_threads),
-                },
+            "type":run_type,
+            # Properties from above
+            "properties":properties
             }
         # Write the updated metadata
         with open(output_folder + "metadata.json", "w") as f:
@@ -158,31 +174,33 @@ def run_geometry(geometry, run_dict, run_type):
         time_interval = partial_time
 
 
-
-
-
-
-
-
-
 def run_radionuclides(radionuclides, geometry):
     if radionuclides["active"] == False:
         return
-    
-    ZAs = radionuclides["ZAs"]
-    for i_ZA, (Z, A) in enumerate(ZAs):
-        print(f"\tRunning: Z={Z}, A={A} ({i_ZA+1} out of {len(ZAs)})")
+    else:
+        ZAs = radionuclides["ZAs"]
+        for i_ZA, (Z, A) in enumerate(ZAs):
+            print(f"\tRunning: Z={Z}, A={A} ({i_ZA+1} out of {len(ZAs)})")
 
-        radionuclides["ZA"] = [Z, A]
-        run_geometry(geometry, run_dict=radionuclides, run_type="radionuclides")
+            radionuclides["ZA"] = [Z, A]
+            run_geometry(geometry, run_dict=radionuclides, run_type="radionuclides")
 
 
 def run_background(background, geometry):
-    return
+    if background["active"] == False:
+        return
+    else:
+        source_spectra = background["source_spectra"]
+        for i_source_spectrum, source_spectrum in enumerate(source_spectra):
+            print(f"\tRunning: source_spectrum={source_spectrum} ({i_source_spectrum+1} out of {len(source_spectra)})")
+
+            background["source_spectrum"] = source_spectrum
+            run_geometry(geometry, run_dict=background, run_type="background")
 
 
 def run_filter(filter, geometry):
     return
+# TODO fix this function
 
 
 def run(runcard):
