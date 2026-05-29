@@ -6,7 +6,9 @@ EPrimaryGenerator::EPrimaryGenerator()
     fMessengerSource->DeclareProperty("sourceType", sourceType, "Select the type of source to use: 0 = point source, 1 = filter source, 2 = SURE source");
     fMessengerSource->DeclareProperty("sourceRadiusSURE", sourceRadiusSURER, "Radius of the SURE source, if the SURE source is used (mm)");
     
+    // Source types: 0=point source, 1=FOI filter source, 2=SURE source
     sourceType = 1;
+    
     sourceRadiusSURER = 104.;
 
     G4int n_particle = 1;
