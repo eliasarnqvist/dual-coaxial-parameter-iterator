@@ -9,14 +9,14 @@ EDetectorConstruction::EDetectorConstruction()
     fMessengerDetector->DeclareProperty("detectorType", detectorType, "The type of detector to be simulated (integer)");
     fMessengerDetector->DeclareProperty("sourceType", sourceType, "The type of source to be simulated (integer)");
 
-    detectorDiameterR = 60.;
+    detectorDiameterR = 90.;
     detectorLengthR = 30.;
-    sourceDistanceR = 30.;
+    sourceDistanceR = 0.;
 
     // Detector types: 0=p-type coaxial, 1=n-type coaxial, 2=BEGe planar
     detectorType = 2;
     // Source types: 0=point source, 1=FOI filter source
-    sourceType = 0;
+    sourceType = 1;
 }
 
 EDetectorConstruction::~EDetectorConstruction()
@@ -442,45 +442,45 @@ G4LogicalVolume *EDetectorConstruction::ConstructHPGePlanar(G4LogicalVolume* log
     G4LogicalVolume *logicDetector = new G4LogicalVolume(munionDetector, MatGe, "logicDetector");
     G4VPhysicalVolume *physDetector = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (- detectorLength)), logicDetector, "physDetector", logicCrystal, false, 0, checkOverlaps);
 
-    // // Crystal (only outside dead layer)
-    // G4Tubs *solidCrystalOuter1 = new G4Tubs("solidCrystalOuter1", 0. * mm, 0.5 * detectorDiameter, 0.5 * detectorLength, 0. * deg, sliceAngle);
-    // G4Tubs *solidCrystalOuter2 = new G4Tubs("solidCrystalOuter2", 0.5 * detectorReadSpaceDiameter, 0.5 * detectorDiameter - detectorOuterDeadLayer, 0.5 * detectorOuterDeadLayer, 0. * deg, sliceAngle);
-    // G4MultiUnion* munionCrystalOuter = new G4MultiUnion("munionCrystalOuter");
-    // munionCrystalOuter->AddNode(*solidCrystalOuter1, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., 0.)));
-    // munionCrystalOuter->AddNode(*solidCrystalOuter2, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., detectorLength - 0.5 * detectorOuterDeadLayer)));
-    // munionCrystalOuter->Voxelize();
-    // G4LogicalVolume *logicCrystalOuter = new G4LogicalVolume(munionCrystalOuter, MatGe, "logicCrystalOuter");
-    // G4VPhysicalVolume *physCrystalOuter = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicCrystalOuter, "physCrystalOuter", logicCrystal, false, 0, checkOverlaps);
+    // Crystal (only outside dead layer)
+    G4Tubs *solidCrystalOuter1 = new G4Tubs("solidCrystalOuter1", 0.5 * detectorInternalDiameter, 0.5 * detectorDiameter, 0.5 * detectorLength, 0. * deg, sliceAngle);
+    G4Tubs *solidCrystalOuter2 = new G4Tubs("solidCrystalOuter2", 0.5 * detectorReadSpaceDiameter, 0.5 * detectorDiameter - detectorOuterDeadLayer, 0.5 * detectorOuterDeadLayer, 0. * deg, sliceAngle);
+    G4MultiUnion* munionCrystalOuter = new G4MultiUnion("munionCrystalOuter");
+    munionCrystalOuter->AddNode(*solidCrystalOuter1, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., 0.)));
+    munionCrystalOuter->AddNode(*solidCrystalOuter2, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., 0.5 * (detectorLength - detectorOuterDeadLayer))));
+    munionCrystalOuter->Voxelize();
+    G4LogicalVolume *logicCrystalOuter = new G4LogicalVolume(munionCrystalOuter, MatGe, "logicCrystalOuter");
+    G4VPhysicalVolume *physCrystalOuter = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicCrystalOuter, "physCrystalOuter", logicCrystal, false, 0, checkOverlaps);
 
-    // // Holder (made from Cu)
-    // G4Tubs *solidHolderSides = new G4Tubs("solidHolderSides", 0.5 * detectorDiameter, 0.5 * holderOuterDiameter, 0.5 * holderLength, 0. * deg, sliceAngle);
-    // G4Tubs *solidHolderTopRing = new G4Tubs("solidHolderTopRing", 0.5 * detectorDiameter, 0.5 * holderRingOuterDiameter, 0.5 * holderRingLength, 0. * deg, sliceAngle);
-    // G4Tubs *solidHolderBottom = new G4Tubs("solidHolderBottom", 0. * mm, 0.5 * detectorDiameter, 0.5 * holderBottomThickness, 0. * deg, sliceAngle);
-    // G4MultiUnion* munionHolder = new G4MultiUnion("munionHolder");
-    // munionHolder->AddNode(*solidHolderSides, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., vacFrontSpace + 0.5 * holderLength)));
-    // munionHolder->AddNode(*solidHolderTopRing, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., vacFrontSpace + 0.5 * holderRingLength)));
-    // munionHolder->AddNode(*solidHolderBottom, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., vacFrontSpace + holderLength - 0.5 * holderBottomThickness)));
-    // munionHolder->Voxelize();
-    // G4LogicalVolume *logicHolder = new G4LogicalVolume(munionHolder, MatCu, "logicHolder");
-    // G4VPhysicalVolume *physHolder = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (- vacLength)), logicHolder, "physHolder", logicVacuum, false, 0, checkOverlaps);
+    // Holder (made from Cu)
+    G4Tubs *solidHolderSides = new G4Tubs("solidHolderSides", 0.5 * detectorDiameter, 0.5 * holderOuterDiameter, 0.5 * holderLength, 0. * deg, sliceAngle);
+    G4Tubs *solidHolderTopRing = new G4Tubs("solidHolderTopRing", 0.5 * detectorDiameter, 0.5 * holderRingOuterDiameter, 0.5 * holderRingLength, 0. * deg, sliceAngle);
+    G4Tubs *solidHolderBottom = new G4Tubs("solidHolderBottom", 0. * mm, 0.5 * detectorDiameter, 0.5 * holderBottomThickness, 0. * deg, sliceAngle);
+    G4MultiUnion* munionHolder = new G4MultiUnion("munionHolder");
+    munionHolder->AddNode(*solidHolderSides, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., vacFrontSpace + 0.5 * holderLength)));
+    munionHolder->AddNode(*solidHolderTopRing, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., vacFrontSpace + 0.5 * holderRingLength)));
+    munionHolder->AddNode(*solidHolderBottom, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., vacFrontSpace + holderLength - 0.5 * holderBottomThickness)));
+    munionHolder->Voxelize();
+    G4LogicalVolume *logicHolder = new G4LogicalVolume(munionHolder, MatCu, "logicHolder");
+    G4VPhysicalVolume *physHolder = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (- vacLength)), logicHolder, "physHolder", logicVacuum, false, 0, checkOverlaps);
 
-    // // Cold finger
-    // G4Tubs *solidColdfinger = new G4Tubs("solidColdfinger", 0. * mm, 0.5 * coldfingerDiameter, 0.5 * coldfingerLength, 0. * deg, sliceAngle);
-    // G4LogicalVolume *logicColdfinger = new G4LogicalVolume(solidColdfinger, MatCu, "logicColdfinger");
-    // G4VPhysicalVolume *physColdfinger = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (vacLength - coldfingerLength)), logicColdfinger, "physColdfinger", logicVacuum, false, 0, checkOverlaps);
+    // Cold finger
+    G4Tubs *solidColdfinger = new G4Tubs("solidColdfinger", 0. * mm, 0.5 * coldfingerDiameter, 0.5 * coldfingerLength, 0. * deg, sliceAngle);
+    G4LogicalVolume *logicColdfinger = new G4LogicalVolume(solidColdfinger, MatCu, "logicColdfinger");
+    G4VPhysicalVolume *physColdfinger = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (vacLength - coldfingerLength)), logicColdfinger, "physColdfinger", logicVacuum, false, 0, checkOverlaps);
 
-    // // Set appropriate range cuts by assigning logic volumes to regions
-    // logicCrystal->SetRegion(regionThinDeadLayer);
-    // regionThinDeadLayer->AddRootLogicalVolume(logicCrystal);
+    // Set appropriate range cuts by assigning logic volumes to regions
+    logicCrystal->SetRegion(regionThinDeadLayer);
+    regionThinDeadLayer->AddRootLogicalVolume(logicCrystal);
 
-    // logicCrystalOuter->SetRegion(regionThickDeadLayer);
-    // regionThickDeadLayer->AddRootLogicalVolume(logicCrystalOuter);
+    logicCrystalOuter->SetRegion(regionThickDeadLayer);
+    regionThickDeadLayer->AddRootLogicalVolume(logicCrystalOuter);
 
-    // logicWindow->SetRegion(regionCapWindow);
-    // regionCapWindow->AddRootLogicalVolume(logicWindow);
+    logicWindow->SetRegion(regionCapWindow);
+    regionCapWindow->AddRootLogicalVolume(logicWindow);
     
-    // logicDetector->SetRegion(regionActiveRegion);
-    // regionActiveRegion->AddRootLogicalVolume(logicDetector);
+    logicDetector->SetRegion(regionActiveRegion);
+    regionActiveRegion->AddRootLogicalVolume(logicDetector);
 
     // Show pretty colors in the visualization
     // G4VisAttributes *capVisAtt = new G4VisAttributes(G4Color(1.0, 0.0, 0.0, 0.5));
