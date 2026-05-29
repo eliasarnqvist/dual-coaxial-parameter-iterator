@@ -47,11 +47,15 @@ private:
 
     G4GenericMessenger *fMessengerDetector, *fMessengerSource;
     G4double detectorDiameterR, detectorLengthR, sourceDistanceR;
-    G4bool selectFilterSource, selectNTypeInsteadOfPType;
+    G4int detectorType, sourceType;
 
     virtual void ConstructSDandField();
-    virtual G4LogicalVolume *ConstructHPGe(G4LogicalVolume* logicWorld, G4double detectorDistance, G4double detectorAngle, G4double detectorDiameter, G4double detectorLength, G4bool selectNTypeInsteadOfPType, G4int copyNo, G4bool checkOverlaps);
+
     virtual void ConstructFilterSource(G4LogicalVolume* logicWorld, G4bool checkOverlaps, G4double filterDiameter, G4double filterHeight, G4double beakerThickness);
+
+    virtual G4LogicalVolume *ConstructHPGeCoaxial(G4LogicalVolume* logicWorld, G4double detectorDistance, G4double detectorAngle, G4double detectorDiameter, G4double detectorLength, G4bool selectNTypeInsteadOfPType, G4int copyNo, G4bool checkOverlaps);
+
+    virtual G4LogicalVolume *ConstructHPGePlanar(G4LogicalVolume* logicWorld, G4double detectorDistance, G4double detectorAngle, G4double detectorDiameter, G4double detectorLength, G4int copyNo, G4bool checkOverlaps);
 
     G4Region *regionThinDeadLayer = new G4Region("regionThinDeadLayer");
     G4Region *regionThickDeadLayer = new G4Region("regionThickDeadLayer");

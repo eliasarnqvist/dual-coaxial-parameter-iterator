@@ -6,15 +6,17 @@ EDetectorConstruction::EDetectorConstruction()
     fMessengerDetector->DeclareProperty("detectorDiameter", detectorDiameterR, "Diameter of the detectors (mm)");
     fMessengerDetector->DeclareProperty("detectorLength", detectorLengthR, "Length of the detectors (mm)");
     fMessengerDetector->DeclareProperty("sourceDistance", sourceDistanceR, "Distance from source to detector (mm)");
-    fMessengerDetector->DeclareProperty("selectNTypeInsteadOfPType", selectNTypeInsteadOfPType, "If true: make an n-type HPGe detector, if fasle: make a p-type HPGe detector");
-    fMessengerDetector->DeclareProperty("selectFilterSource", selectFilterSource, "If true: make a filter source, if false: make a point source");
+    fMessengerDetector->DeclareProperty("detectorType", detectorType, "The type of detector to be simulated (integer)");
+    fMessengerDetector->DeclareProperty("sourceType", sourceType, "The type of source to be simulated (integer)");
 
     detectorDiameterR = 60.;
-    detectorLengthR = 60.;
-    sourceDistanceR = 0;
+    detectorLengthR = 30.;
+    sourceDistanceR = 30.;
 
-    selectFilterSource = true;
-    selectNTypeInsteadOfPType = false;
+    // Detector types: 0=p-type coaxial, 1=n-type coaxial, 2=BEGe planar
+    detectorType = 2;
+    // Source types: 0=point source, 1=FOI filter source
+    sourceType = 0;
 }
 
 EDetectorConstruction::~EDetectorConstruction()
@@ -56,23 +58,48 @@ G4VPhysicalVolume *EDetectorConstruction::Construct()
     // G4LogicalVolume *logicSURE = new G4LogicalVolume(solidSURE, MatWorld, "logicSURE");
     // G4VPhysicalVolume *physSURE = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicSURE, "physSURE", logicWorld, false, 0, checkOverlaps);
 
-    if (selectFilterSource)
+    // Check what type of source to simulate
+    G4double detectorFrontPosition = 0.0;
+    if (sourceType == 1) // Filter source
     {
-        // These dimensions need to be changed in EPrimaryGenerator as well!
+        // NOTE: if you modify these dimensions, they need to be changed in EPrimaryGenerator as well!
         G4double filterDiameter = 31.0 * 2 * mm;
         G4double filterHeight = 13.8 * mm;
         G4double beakerThickness = 1.0 * mm;
         ConstructFilterSource(logicWorld, checkOverlaps, filterDiameter, filterHeight, beakerThickness);
 
-        G4double detectorFrontPosition = 0.5 * filterHeight + beakerThickness + sourceDistance;
-        logicDetector_a = ConstructHPGe(logicWorld, detectorFrontPosition, 0. * deg, detectorDiameter, detectorLength, selectNTypeInsteadOfPType, 0, checkOverlaps);
-        logicDetector_b = ConstructHPGe(logicWorld, detectorFrontPosition, 180. * deg, detectorDiameter, detectorLength, selectNTypeInsteadOfPType, 1, checkOverlaps);
+        detectorFrontPosition = 0.5 * filterHeight + beakerThickness + sourceDistance;
+    }
+    else if (sourceType == 0) // Point source
+    {
+        detectorFrontPosition = sourceDistance;
     }
     else
     {
-        logicDetector_a = ConstructHPGe(logicWorld, sourceDistance, 0. * deg, detectorDiameter, detectorLength, selectNTypeInsteadOfPType, 0, checkOverlaps);
-        logicDetector_b = ConstructHPGe(logicWorld, sourceDistance, 180. * deg, detectorDiameter, detectorLength, selectNTypeInsteadOfPType, 1, checkOverlaps);
-        // logicDetector_b = ConstructHPGe(logicWorld, detectorDistance, detectorAngle, detectorDiameter, detectorLength, capWallThickness, 1, checkOverlaps);
+        G4cout << "ERROR: Did not specify a valid sourceType!!!" << G4endl;
+    }
+
+    // Check what type of detector to construct
+    if (detectorType == 0) // p-type coaxial
+    {
+        G4bool selectNTypeInsteadOfPType = false;
+        logicDetector_a = ConstructHPGeCoaxial(logicWorld, detectorFrontPosition, 0. * deg, detectorDiameter, detectorLength, selectNTypeInsteadOfPType, 0, checkOverlaps);
+        logicDetector_b = ConstructHPGeCoaxial(logicWorld, detectorFrontPosition, 180. * deg, detectorDiameter, detectorLength, selectNTypeInsteadOfPType, 1, checkOverlaps);
+    }
+    else if (detectorType == 1) // n-type coaxial
+    {
+        G4bool selectNTypeInsteadOfPType = true;
+        logicDetector_a = ConstructHPGeCoaxial(logicWorld, detectorFrontPosition, 0. * deg, detectorDiameter, detectorLength, selectNTypeInsteadOfPType, 0, checkOverlaps);
+        logicDetector_b = ConstructHPGeCoaxial(logicWorld, detectorFrontPosition, 180. * deg, detectorDiameter, detectorLength, selectNTypeInsteadOfPType, 1, checkOverlaps);
+    }
+    else if (detectorType == 2) // BEGe planar
+    {
+        logicDetector_a = ConstructHPGePlanar(logicWorld, detectorFrontPosition, 0. * deg, detectorDiameter, detectorLength, 0, checkOverlaps);
+        logicDetector_b = ConstructHPGePlanar(logicWorld, detectorFrontPosition, 180. * deg, detectorDiameter, detectorLength, 0, checkOverlaps);
+    }
+    else
+    {
+        G4cout << "ERROR: Did not specify a valid detectorType!!!" << G4endl;
     }
 
     // Set smaller range cuts for regions with small geometries, as the default is 1 mm
@@ -103,8 +130,60 @@ void EDetectorConstruction::ConstructSDandField()
     G4SDManager::GetSDMpointer()->AddNewDetector(sensDet);
 }
 
-G4LogicalVolume *EDetectorConstruction::ConstructHPGe(G4LogicalVolume* logicWorld, G4double detectorDistance, G4double detectorAngle, G4double detectorDiameter, G4double detectorLength, G4bool selectNTypeInsteadOfPType, G4int copyNo, G4bool checkOverlaps)
+void EDetectorConstruction::ConstructFilterSource(G4LogicalVolume* logicWorld, G4bool checkOverlaps, G4double filterDiameter, G4double filterHeight, G4double beakerThickness)
 {
+    G4NistManager *nist = G4NistManager::Instance();
+    G4Material* MatBeaker = nist->FindOrBuildMaterial("G4_POLYSTYRENE");
+
+    // For the filter material
+    G4Element *eSi = new G4Element("Silicon", "Si", 14., 28.085*g/mole);
+    G4Element *eNa = new G4Element("Sodium", "Na", 11., 22.990*g/mole);
+    G4Element *eAl = new G4Element("Aluminium", "Al", 13., 26.982*g/mole);
+    G4Element *eBa = new G4Element("Barium", "Ba", 56., 137.33*g/mole);
+    G4Element *eCa = new G4Element("Calcium", "Ca", 20., 40.078*g/mole);
+    G4Element *eB = new G4Element("Boron", "B", 5., 10.81*g/mole);
+    G4Element *eZn = new G4Element("Zink", "Zn", 30., 65.38*g/mole);
+    G4Element *eK = new G4Element("Potasium", "K", 19., 39.098*g/mole);
+    G4Element *eO = new G4Element("Oxygen", "O", 8., 15.999*g/mole);
+    G4Element *eC = new G4Element("Carbon", "C", 6., 12.011*g/mole);
+    // Density of pressed filter (total mass = 40 g)
+    G4Material *MatFilter = new G4Material("FOI_filter", 0.96*g/cm3, 10);
+    MatFilter->AddElement(eSi, 0.282524);
+    MatFilter->AddElement(eNa, 0.060861);
+    MatFilter->AddElement(eAl, 0.032884);
+    MatFilter->AddElement(eBa, 0.034297);
+    MatFilter->AddElement(eCa, 0.024823);
+    MatFilter->AddElement(eB , 0.030021);
+    MatFilter->AddElement(eZn, 0.024166);
+    MatFilter->AddElement(eK , 0.023044);
+    MatFilter->AddElement(eO , 0.452465);
+    MatFilter->AddElement(eC , 0.034916);
+
+    // G4double filterDiameter = 31.0 * 2 * mm;
+    // G4double filterHeight = 13.8 * mm;
+
+    // G4double beakerThickness = 1.0 * mm;
+    G4double beakerDiameter = 2 * beakerThickness + filterDiameter;
+    G4double beakerHeight = 2 * beakerThickness + filterHeight;
+
+    G4Tubs *solidBeaker = new G4Tubs("solidBeaker", 0., 0.5 * beakerDiameter, 0.5 * beakerHeight, 0., 360.*degree);
+    G4LogicalVolume *logicBeaker = new G4LogicalVolume(solidBeaker, MatBeaker, "logicBeaker");
+    G4VPhysicalVolume *physBeaker = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicBeaker, "physBeaker", logicWorld, false, 0, checkOverlaps);
+
+    G4Tubs *solidFilter = new G4Tubs("solidFilter", 0., 0.5 * filterDiameter, 0.5 * filterHeight, 0., 360.*degree);
+    G4LogicalVolume *logicFilter = new G4LogicalVolume(solidFilter, MatFilter, "logicFilter");
+    G4VPhysicalVolume *physFilter = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicFilter, "physFilter", logicBeaker, false, 0, checkOverlaps);
+
+    // Show pretty colors in the visualization
+    G4VisAttributes *filterVisAtt = new G4VisAttributes(G4Color(1.0, 0.0, 0.0, 0.5));
+    filterVisAtt->SetForceSolid(true);
+    logicFilter->SetVisAttributes(filterVisAtt);
+}
+
+G4LogicalVolume *EDetectorConstruction::ConstructHPGeCoaxial(G4LogicalVolume* logicWorld, G4double detectorDistance, G4double detectorAngle, G4double detectorDiameter, G4double detectorLength, G4bool selectNTypeInsteadOfPType, G4int copyNo, G4bool checkOverlaps)
+{
+    // COAXIAL HPGe DETECTOR
+
     G4double capWallThickness = 1.5 * mm;
     G4double vacFrontSpace = 4.0 * mm;
     G4double detectorOuterDeadLayer;
@@ -222,7 +301,7 @@ G4LogicalVolume *EDetectorConstruction::ConstructHPGe(G4LogicalVolume* logicWorl
     G4LogicalVolume *logicCrystalInner = new G4LogicalVolume(munionCrystalInner, MatGe, "logicCrystalInner");
     G4VPhysicalVolume *physCrystalInner = new G4PVPlacement(0, G4ThreeVector(0., 0., vacFrontSpace + detectorLength - detectorHoleDepth - detectorInnerDeadLayer), logicCrystalInner, "physCrystalInner", logicCrystal, false, 0, checkOverlaps);
 
-    // Holder
+    // Holder (made from Al)
     G4Tubs *solidHolderSides = new G4Tubs("solidHolderSides", 0.5 * detectorDiameter, 0.5 * holderOuterDiameter, 0.5 * holderLength, 0. * deg, sliceAngle);
     G4Tubs *solidHolderTopRing = new G4Tubs("solidHolderTopRing", 0.5 * detectorDiameter, 0.5 * holderRingOuterDiameter, 0.5 * holderRingLength, 0. * deg, sliceAngle);
     G4Tubs *solidHolderBottomRing = new G4Tubs("solidHolderBottomRing", 0.5 * detectorDiameter, 0.5 * holderRingOuterDiameter, 0.5 * holderRingLength, 0. * deg, sliceAngle);
@@ -281,52 +360,138 @@ G4LogicalVolume *EDetectorConstruction::ConstructHPGe(G4LogicalVolume* logicWorl
     return logicDetector;
 }
 
-void EDetectorConstruction::ConstructFilterSource(G4LogicalVolume* logicWorld, G4bool checkOverlaps, G4double filterDiameter, G4double filterHeight, G4double beakerThickness)
+G4LogicalVolume *EDetectorConstruction::ConstructHPGePlanar(G4LogicalVolume* logicWorld, G4double detectorDistance, G4double detectorAngle, G4double detectorDiameter, G4double detectorLength, G4int copyNo, G4bool checkOverlaps)
 {
-    G4NistManager *nist = G4NistManager::Instance();
-    G4Material* MatBeaker = nist->FindOrBuildMaterial("G4_POLYSTYRENE");
+    // PLANAR HPGe DETECTOR
 
-    // For the filter material
-    G4Element *eSi = new G4Element("Silicon", "Si", 14., 28.085*g/mole);
-    G4Element *eNa = new G4Element("Sodium", "Na", 11., 22.990*g/mole);
-    G4Element *eAl = new G4Element("Aluminium", "Al", 13., 26.982*g/mole);
-    G4Element *eBa = new G4Element("Barium", "Ba", 56., 137.33*g/mole);
-    G4Element *eCa = new G4Element("Calcium", "Ca", 20., 40.078*g/mole);
-    G4Element *eB = new G4Element("Boron", "B", 5., 10.81*g/mole);
-    G4Element *eZn = new G4Element("Zink", "Zn", 30., 65.38*g/mole);
-    G4Element *eK = new G4Element("Potasium", "K", 19., 39.098*g/mole);
-    G4Element *eO = new G4Element("Oxygen", "O", 8., 15.999*g/mole);
-    G4Element *eC = new G4Element("Carbon", "C", 6., 12.011*g/mole);
-    // Density of pressed filter (total mass = 40 g)
-    G4Material *MatFilter = new G4Material("FOI_filter", 0.96*g/cm3, 10);
-    MatFilter->AddElement(eSi, 0.282524);
-    MatFilter->AddElement(eNa, 0.060861);
-    MatFilter->AddElement(eAl, 0.032884);
-    MatFilter->AddElement(eBa, 0.034297);
-    MatFilter->AddElement(eCa, 0.024823);
-    MatFilter->AddElement(eB , 0.030021);
-    MatFilter->AddElement(eZn, 0.024166);
-    MatFilter->AddElement(eK , 0.023044);
-    MatFilter->AddElement(eO , 0.452465);
-    MatFilter->AddElement(eC , 0.034916);
+    G4double capWallThickness = 1.5 * mm;
+    G4double vacFrontSpace = 4.0 * mm;
+    // Front is the front (non-contact), outer is around the circumference, back is the back contact
+    G4double detectorFrontDeadLayer = 0.3 * um; // note the unit
+    G4double detectorOuterDeadLayer = 0.7 * mm;
+    G4double detectorBackDeadLayer = 0.3 * um; // note the unit
+    
+    G4double holderRingThickness = 2.0 * mm;
+    G4double holderThickness = 1.0 * mm;
+    G4double holderBottomSpace = 5.0 * mm;
+    G4double holderBottomThickness = 2.0 * mm;
+    G4double holderLength = detectorLength + holderBottomThickness + holderBottomSpace;
+    G4double holderOuterDiameter = detectorDiameter + 2 * holderThickness;
+    G4double holderRingOuterDiameter = detectorDiameter + 2 * holderRingThickness;
+    G4double holderRingLength = 10.0 * mm;
 
-    // G4double filterDiameter = 31.0 * 2 * mm;
-    // G4double filterHeight = 13.8 * mm;
+    G4double detectorRearContactDiameter = 10.0 * mm;
+    G4double detectorRearContactSpace = 10.0  * mm;
+    G4double detectorInternalDiameter = detectorDiameter - 2 * detectorOuterDeadLayer;
+    G4double detectorInternalLength = detectorLength - detectorOuterDeadLayer - detectorFrontDeadLayer;
+    G4double detectorReadSpaceDiameter = detectorRearContactDiameter + 2 * detectorRearContactSpace;
 
-    // G4double beakerThickness = 1.0 * mm;
-    G4double beakerDiameter = 2 * beakerThickness + filterDiameter;
-    G4double beakerHeight = 2 * beakerThickness + filterHeight;
+    G4double coldfingerDiameter = 20.0 * mm;
+    G4double coldfingerLength = 5.0 * mm;
 
-    G4Tubs *solidBeaker = new G4Tubs("solidBeaker", 0., 0.5 * beakerDiameter, 0.5 * beakerHeight, 0., 360.*degree);
-    G4LogicalVolume *logicBeaker = new G4LogicalVolume(solidBeaker, MatBeaker, "logicBeaker");
-    G4VPhysicalVolume *physBeaker = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicBeaker, "physBeaker", logicWorld, false, 0, checkOverlaps);
+    G4double capBottomThickness = 5.0 * mm;
+    G4double capOuterLength = capWallThickness + vacFrontSpace + holderLength + coldfingerLength + capBottomThickness;
+    G4double capSideSpace = 4.0 * mm;
+    G4double capOuterDiameter = detectorDiameter + 2 * holderRingThickness + 2 * capSideSpace + 2 * capWallThickness;
+    
+    G4double vacDiameter = capOuterDiameter - 2 * capWallThickness;
+    G4double vacLength = capOuterLength - capWallThickness - capBottomThickness;
 
-    G4Tubs *solidFilter = new G4Tubs("solidFilter", 0., 0.5 * filterDiameter, 0.5 * filterHeight, 0., 360.*degree);
-    G4LogicalVolume *logicFilter = new G4LogicalVolume(solidFilter, MatFilter, "logicFilter");
-    G4VPhysicalVolume *physFilter = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicFilter, "physFilter", logicBeaker, false, 0, checkOverlaps);
+    G4double windowThickness = 0.6 * mm;
+    G4double windowDiameter = capOuterDiameter - 10.0;
+    G4double windowVacThickness = capWallThickness - windowThickness;
+    
+    G4double sliceAngle = 180. * deg;
+
+    // Cap
+    G4Tubs *solidCap = new G4Tubs("solidCap", 0. * mm, 0.5 * capOuterDiameter, 0.5 * capOuterLength, 0. * deg, sliceAngle);
+    G4LogicalVolume *logicCap = new G4LogicalVolume(solidCap, MatAl, "logicCap");
+    G4Rotate3D myRoration(detectorAngle, G4ThreeVector(0., 1., 0.));
+    G4Translate3D myTranslation(G4ThreeVector(0., 0., 0.5 * (capOuterLength) + detectorDistance));
+    G4Transform3D myTransform = (myRoration) * (myTranslation);
+    G4VPhysicalVolume *physCap = new G4PVPlacement(myTransform, logicCap, "physCap", logicWorld, false, copyNo, checkOverlaps);
+    
+    // Window
+    G4Tubs *solidWindow = new G4Tubs("solidWindow", 0. * mm, 0.5 * windowDiameter, 0.5 * windowThickness, 0. * deg, sliceAngle);
+    G4LogicalVolume *logicWindow = new G4LogicalVolume(solidWindow, MatCFRP, "logicWindow");
+    G4VPhysicalVolume *physWindow = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (windowThickness - capOuterLength)), logicWindow, "physWindow", logicCap, false, 0, checkOverlaps);
+
+    G4Tubs *solidWindowVacuum = new G4Tubs("solidWindowVacuum", 0. * mm, 0.5 * windowDiameter, 0.5 * windowVacThickness, 0. * deg, sliceAngle);
+    G4LogicalVolume *logicWindowVacuum = new G4LogicalVolume(solidWindowVacuum, MatVac, "logicWindowVacuum");
+    G4VPhysicalVolume *physWindowVacuum = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (windowVacThickness - capOuterLength) + windowThickness), logicWindowVacuum, "physWindowVacuum", logicCap, false, 0, checkOverlaps);
+
+    // Vacuum inside cap
+    G4Tubs *solidVacuum = new G4Tubs("solidVacuum", 0. * mm, 0.5 * vacDiameter, 0.5 * vacLength, 0. * deg, sliceAngle);
+    G4LogicalVolume *logicVacuum = new G4LogicalVolume(solidVacuum, MatVac, "logicVacuum");
+    G4VPhysicalVolume *physVacuum = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (capWallThickness - capBottomThickness)), logicVacuum, "physVacuum", logicCap, false, 0, checkOverlaps);
+
+    // Crystal (including the dead layers)
+    G4Tubs *solidCrystal = new G4Tubs("solidCrystal", 0. * mm, 0.5 * detectorDiameter, 0.5 * detectorLength, 0. * deg, sliceAngle);
+    G4LogicalVolume *logicCrystal = new G4LogicalVolume(solidCrystal, MatGe, "logicCrystal");
+    G4VPhysicalVolume *physCrystal = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (detectorLength - vacLength) + vacFrontSpace), logicCrystal, "physCrystal", logicVacuum, false, 0, checkOverlaps);
+
+    // Crystal (only the sensitive part)
+    G4Tubs *solidDetector1 = new G4Tubs("solidDetector1", 0. * mm, 0.5 * detectorInternalDiameter, 0.5 * detectorInternalLength, 0. * deg, sliceAngle);
+    G4Tubs *solidDetector2 = new G4Tubs("solidDetector2", 0.5 * detectorRearContactDiameter, 0.5 * detectorReadSpaceDiameter, 0.5 * detectorOuterDeadLayer, 0. * deg, sliceAngle);
+    G4Tubs *solidDetector3 = new G4Tubs("solidDetector3", 0. * mm, 0.5 * detectorRearContactDiameter, 0.5 * (detectorOuterDeadLayer - detectorBackDeadLayer), 0. * deg, sliceAngle);
+    G4MultiUnion* munionDetector = new G4MultiUnion("munionDetector");
+    munionDetector->AddNode(*solidDetector1, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., detectorFrontDeadLayer + 0.5 * (detectorInternalLength))));
+    munionDetector->AddNode(*solidDetector2, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., detectorFrontDeadLayer + detectorInternalLength + 0.5 * (detectorOuterDeadLayer))));
+    munionDetector->AddNode(*solidDetector3, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., detectorFrontDeadLayer + detectorInternalLength + 0.5 * (detectorOuterDeadLayer - detectorBackDeadLayer))));
+    munionDetector->Voxelize();
+    G4LogicalVolume *logicDetector = new G4LogicalVolume(munionDetector, MatGe, "logicDetector");
+    G4VPhysicalVolume *physDetector = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (- detectorLength)), logicDetector, "physDetector", logicCrystal, false, 0, checkOverlaps);
+
+    // // Crystal (only outside dead layer)
+    // G4Tubs *solidCrystalOuter1 = new G4Tubs("solidCrystalOuter1", 0. * mm, 0.5 * detectorDiameter, 0.5 * detectorLength, 0. * deg, sliceAngle);
+    // G4Tubs *solidCrystalOuter2 = new G4Tubs("solidCrystalOuter2", 0.5 * detectorReadSpaceDiameter, 0.5 * detectorDiameter - detectorOuterDeadLayer, 0.5 * detectorOuterDeadLayer, 0. * deg, sliceAngle);
+    // G4MultiUnion* munionCrystalOuter = new G4MultiUnion("munionCrystalOuter");
+    // munionCrystalOuter->AddNode(*solidCrystalOuter1, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., 0.)));
+    // munionCrystalOuter->AddNode(*solidCrystalOuter2, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., detectorLength - 0.5 * detectorOuterDeadLayer)));
+    // munionCrystalOuter->Voxelize();
+    // G4LogicalVolume *logicCrystalOuter = new G4LogicalVolume(munionCrystalOuter, MatGe, "logicCrystalOuter");
+    // G4VPhysicalVolume *physCrystalOuter = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicCrystalOuter, "physCrystalOuter", logicCrystal, false, 0, checkOverlaps);
+
+    // // Holder (made from Cu)
+    // G4Tubs *solidHolderSides = new G4Tubs("solidHolderSides", 0.5 * detectorDiameter, 0.5 * holderOuterDiameter, 0.5 * holderLength, 0. * deg, sliceAngle);
+    // G4Tubs *solidHolderTopRing = new G4Tubs("solidHolderTopRing", 0.5 * detectorDiameter, 0.5 * holderRingOuterDiameter, 0.5 * holderRingLength, 0. * deg, sliceAngle);
+    // G4Tubs *solidHolderBottom = new G4Tubs("solidHolderBottom", 0. * mm, 0.5 * detectorDiameter, 0.5 * holderBottomThickness, 0. * deg, sliceAngle);
+    // G4MultiUnion* munionHolder = new G4MultiUnion("munionHolder");
+    // munionHolder->AddNode(*solidHolderSides, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., vacFrontSpace + 0.5 * holderLength)));
+    // munionHolder->AddNode(*solidHolderTopRing, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., vacFrontSpace + 0.5 * holderRingLength)));
+    // munionHolder->AddNode(*solidHolderBottom, G4Transform3D(G4RotationMatrix(), G4ThreeVector(0., 0., vacFrontSpace + holderLength - 0.5 * holderBottomThickness)));
+    // munionHolder->Voxelize();
+    // G4LogicalVolume *logicHolder = new G4LogicalVolume(munionHolder, MatCu, "logicHolder");
+    // G4VPhysicalVolume *physHolder = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (- vacLength)), logicHolder, "physHolder", logicVacuum, false, 0, checkOverlaps);
+
+    // // Cold finger
+    // G4Tubs *solidColdfinger = new G4Tubs("solidColdfinger", 0. * mm, 0.5 * coldfingerDiameter, 0.5 * coldfingerLength, 0. * deg, sliceAngle);
+    // G4LogicalVolume *logicColdfinger = new G4LogicalVolume(solidColdfinger, MatCu, "logicColdfinger");
+    // G4VPhysicalVolume *physColdfinger = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.5 * (vacLength - coldfingerLength)), logicColdfinger, "physColdfinger", logicVacuum, false, 0, checkOverlaps);
+
+    // // Set appropriate range cuts by assigning logic volumes to regions
+    // logicCrystal->SetRegion(regionThinDeadLayer);
+    // regionThinDeadLayer->AddRootLogicalVolume(logicCrystal);
+
+    // logicCrystalOuter->SetRegion(regionThickDeadLayer);
+    // regionThickDeadLayer->AddRootLogicalVolume(logicCrystalOuter);
+
+    // logicWindow->SetRegion(regionCapWindow);
+    // regionCapWindow->AddRootLogicalVolume(logicWindow);
+    
+    // logicDetector->SetRegion(regionActiveRegion);
+    // regionActiveRegion->AddRootLogicalVolume(logicDetector);
 
     // Show pretty colors in the visualization
-    G4VisAttributes *filterVisAtt = new G4VisAttributes(G4Color(1.0, 0.0, 0.0, 0.5));
-    filterVisAtt->SetForceSolid(true);
-    logicFilter->SetVisAttributes(filterVisAtt);
+    // G4VisAttributes *capVisAtt = new G4VisAttributes(G4Color(1.0, 0.0, 0.0, 0.5));
+    // capVisAtt->SetForceSolid(true);
+    // logicCap->SetVisAttributes(capVisAtt);
+    G4VisAttributes *detVisAtt = new G4VisAttributes(G4Color(1.0, 1.0, 0.0, 0.5));
+    detVisAtt->SetForceSolid(true);
+    logicDetector->SetVisAttributes(detVisAtt);
+    // G4VisAttributes *holVisAtt = new G4VisAttributes(G4Color(0.0, 1.0, 1.0, 0.5));
+    // holVisAtt->SetForceSolid(true);
+    // logicHolder->SetVisAttributes(holVisAtt);
+
+    return logicCap;
 }
