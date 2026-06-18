@@ -28,10 +28,6 @@ def run_geometry(geometry, run_dict, run_type):
         # Save with all 9 decimals
         np.savetxt("resources/flux_cdf.dat", np.column_stack((E, flux_cdf)), fmt="%.9f\t%.9f")
 
-    # Special case to put the length and diameter to the same value
-    if len(detector_length) == 1 and type(detector_length[0]) == str:
-        detector_length = geometry[detector_length[0]]
-
     # Combine all geometry to iterate over
     settings = [(det_type, det_diam, det_leng, det_sdis, det_styp) 
                 for det_type in detector_type
@@ -41,6 +37,13 @@ def run_geometry(geometry, run_dict, run_type):
                 for det_styp in detector_source_type]
 
     for i_s, (det_type, det_diam, det_leng, det_sdis, det_styp) in enumerate(settings):
+        # Special case to put the length and diameter to the same value
+        if det_leng == "detector_diameter":
+            det_leng = det_diam
+        else:
+            print("Inclorrect detector diameter specified!")
+            break
+
         # Optional: skip some iterations
         # if i_s <= 2:
         #     continue
@@ -53,7 +56,7 @@ def run_geometry(geometry, run_dict, run_type):
         # Threads and filename
         threads = run_dict["threads"]
         macro_content += "/run/numberOfThreads " + str(threads) + "\n"
-        file_name = run_dict["output"] + "threadoutput_" + str(i_s)
+        file_name = run_dict["output"] + "threadoutput_" + str(i_s) + "_.root"
         macro_content += "/E_file_settings/fileName " + file_name + "\n"
 
         # Dtector geometry settings
@@ -69,7 +72,7 @@ def run_geometry(geometry, run_dict, run_type):
         macro_content += "/process/had/rdm/thresholdForVeryLongDecayTime 1.0e+60 year" + "\n"
 
         # If this is a radionuclide run
-        if run_type == "radionuclides":
+        if run_type == "radionuclides" or run_type == "filter":
             # Specify the ion
             macro_content += "/gun/particle ion" + "\n"
             Z, A = run_dict["ZA"]
@@ -93,105 +96,116 @@ def run_geometry(geometry, run_dict, run_type):
         macro_content += "/run/beamOn " + str(int(events))
 
         # Save the macro file now
-        print("\tWriting macro file...")
+        print("\t\t\tWriting macro file...")
         build_folder = "build/"
         macro_name = "autorun.mac"
         with open(build_folder + macro_name, "w") as file:
             file.write(macro_content)
 
-        sim_start_time = time.time()
-
-        # Start the Geant4 simulation
-        print("\tRunning Geant4...")
-        process_geant4 = [build_folder + "sim", build_folder + macro_name]
-        # Top option is without verbocity, bottom is with verbocity
-        result = subprocess.run(process_geant4, stdout=subprocess.DEVNULL)
-        # result = subprocess.run(process_geant4) # DO NOT PUT SHELL=True
-
-        sim_stop_time = time.time()
-        # The time it took to only run geant4
-        simulated_minutes = (sim_stop_time - sim_start_time) / 60
-
-        # Combine the ROOT files and give it a random and unique uuid4 name
-        print("\tCombining ROOT files...")
-        run_id = str(uuid.uuid4())
-        output_folder = run_dict["output"]
-        output_file = output_folder + run_id + ".root"
-        # Combine thread output files with the built-in ROOT hadd
-        process_root = "hadd -f " + output_file + " " + output_folder + "threadoutput_" + str(i_s) + "*.root"
-        result = subprocess.run(process_root, shell=True, stdout=subprocess.DEVNULL)
-        # result = subprocess.run(process_root, shell=True)
-
-        # Now add the run metadata to the metadata file
-        print("\tAdding metadata...")
-
-        # Make the file if it does not exist already
-        if not os.path.exists(output_folder + "metadata.json"):
-            with open(output_folder + "metadata.json", "w") as f:
+        # Make the metadata file if it does not exist already
+        metadata_folder = run_dict["metadata"]
+        if not os.path.exists(metadata_folder + "metadata.json"):
+            with open(metadata_folder + "metadata.json", "w") as f:
                 f.write("{}")
         
         # Open the metadata file
-        with open(output_folder + "metadata.json") as f:
+        with open(metadata_folder + "metadata.json") as f:
             metadata = json.load(f)
         
-        # Add the run information to the metadata
-        # Properties will depend on what type of run this is
-        properties = {
-            # Properties related to the detector and source type
-            "detector_type":det_type,
-            "detector_diameter":det_diam,
-            "detector_length":det_leng,
-            "source_distance":det_sdis,
-            "source_type":det_styp,
-            # Properties related to the simulation
-            "events":events,
-            "threads":threads,
-            "time_minutes":simulated_minutes,
-            "throughput":events/(simulated_minutes*60*threads),
-            }
-        if run_type == "radionuclides":
-            # Save the Z and A of the simulated radionuclide
-            Z, A = run_dict["ZA"]
-            properties["Z"] = Z
-            properties["A"] = A
-        elif run_type == "background":
-            # Save the properties of the SURE background model
-            properties["background_file"] = run_dict["source_spectrum"]
-            properties["SURE_radius"] = SURE_radius
+        # Check if this run already exists in the metadata
+        already_simulated = any(
+            present_entry["type"] == run_type and
+            present_entry["properties"]["detector_type"] == det_type and
+            present_entry["properties"]["detector_diameter"] == det_diam and
+            present_entry["properties"]["detector_length"] == det_leng and
+            present_entry["properties"]["source_distance"] == det_sdis and
+            present_entry["properties"]["source_type"] == det_styp and
+            ((present_entry["properties"]["Z"] == Z) if (run_type == "radionuclides" or run_type == "filter") else True) and
+            ((present_entry["properties"]["A"] == A) if (run_type == "radionuclides" or run_type == "filter") else True) and
+            ((present_entry["properties"]["background_file"] == background_filename) if (run_type == "background") else True)
+            for present_entry in metadata.values()
+        )
 
-            # Equivalent real time of the simulation, also known as pseudo time
-            # Note flux conversion from cm^-2 to mm^-2 to be compatible with sure radius in mm
-            # Or an equivalent would be to convert radius from mm to cm here
-            pseudo_time = events / (SURE_radius**2 * np.pi * (background_total_flux / 100))
-            properties["SURE_pseudo_time"] = pseudo_time
-        elif run_type == "filter":
-            # in principle save the same information as for the radionuclides
-            Z, A = run_dict["ZA"]
-            properties["Z"] = Z
-            properties["A"] = A
-        
-        # Now we can put together the metadata
-        metadata[run_id] = {
-            # General metadata first
-            "filename":(run_id + ".root"),
-            "file_size":os.path.getsize(output_file),
-            "type":run_type,
-            # Properties from above
-            "properties":properties
-            }
-        # Write the updated metadata
-        with open(output_folder + "metadata.json", "w") as f:
-            json.dump(metadata, f, indent=4)
+        if not already_simulated:
+            sim_start_time = time.time()
 
-        print("\tDeleting temporary ROOT files...")
-        process_delete = "rm " + output_folder + "threadoutput_" + str(i_s) + "*.root"
-        # result = subprocess.run(process_delete, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        result = subprocess.run(process_delete, shell=True)
+            # Start the Geant4 simulation
+            print("\t\t\tRunning Geant4...")
+            process_geant4 = [build_folder + "sim", build_folder + macro_name]
+            # Top option is without verbocity, bottom is with verbocity
+            result = subprocess.run(process_geant4, stdout=subprocess.DEVNULL)
+            # result = subprocess.run(process_geant4) # DO NOT PUT SHELL=True
 
-        partial_time = time.time()
-        elapsed_minutes = (partial_time - time_interval) / 60
-        print(f"\tTime spent for previous run: {elapsed_minutes:.2f} minutes")
-        time_interval = partial_time
+            sim_stop_time = time.time()
+            # The time it took to only run geant4
+            simulated_minutes = (sim_stop_time - sim_start_time) / 60
+
+            # Combine the ROOT files and give it a random and unique uuid4 name
+            print("\t\t\tCombining ROOT files...")
+            run_id = str(uuid.uuid4())
+            output_folder = run_dict["output"]
+            output_file = output_folder + run_id + ".root"
+            # Combine thread output files with the built-in ROOT hadd
+            process_root = "hadd -f " + output_file + " " + output_folder + "threadoutput_" + str(i_s) + "*.root"
+            result = subprocess.run(process_root, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            # result = subprocess.run(process_root, shell=True)
+
+            # Now add the run metadata to the metadata file
+            print("\t\t\tAdding metadata...")
+
+            # Add the run information to the metadata
+            # Properties will depend on what type of run this is
+            properties = {
+                # Properties related to the detector and source type
+                "detector_type":int(det_type),
+                "detector_diameter":det_diam,
+                "detector_length":det_leng,
+                "source_distance":det_sdis,
+                "source_type":int(det_styp),
+                # Properties related to the simulation
+                "events":int(events),
+                "threads":int(threads),
+                "time_minutes":simulated_minutes,
+                "throughput":events/(simulated_minutes*60*threads),
+                }
+            if run_type == "radionuclides" or run_type == "filter":
+                # Save the Z and A of the simulated radionuclide (same for filter)
+                Z, A = run_dict["ZA"]
+                properties["Z"] = int(Z)
+                properties["A"] = int(A)
+            elif run_type == "background":
+                # Save the properties of the SURE background model
+                properties["background_file"] = background_filename
+                properties["SURE_radius"] = SURE_radius
+
+                # Equivalent real time of the simulation, also known as pseudo time
+                # Note flux conversion from cm^-2 to mm^-2 to be compatible with sure radius in mm
+                # Or an equivalent would be to convert radius from mm to cm here
+                pseudo_time = events / (SURE_radius**2 * np.pi * (background_total_flux / 100))
+                properties["SURE_pseudo_time"] = pseudo_time
+            
+            # Now we can put together the metadata
+            metadata[run_id] = {
+                # General metadata first
+                "filename":(run_id + ".root"),
+                "file_size":os.path.getsize(output_file),
+                "type":run_type,
+                # Properties from above
+                "properties":properties
+                }
+            
+            # Write the updated metadata
+            with open(metadata_folder + "metadata.json", "w") as f:
+                json.dump(metadata, f, indent=4)
+
+            print("\t\t\tDeleting temporary ROOT files...")
+            process_delete = "rm " + output_folder + "threadoutput_" + str(i_s) + "*.root"
+            # result = subprocess.run(process_delete, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            result = subprocess.run(process_delete, shell=True)
+
+            print(f"\t\t\tTime spent for previous run: {simulated_minutes:.2f} minutes")
+        else:
+            print(f"\t\t\tFound this run in metadata already, skipping!")
 
 
 def calculate_SURE_radius(diameter, length, source_type, detector_type):
@@ -253,7 +267,6 @@ def run_filter(filter, geometry):
 def run(runcard):
     # Keep track of the time the run takes
     start_time = time.time()
-    time_interval = start_time
 
     if not "geometry" in runcard.keys():
         print("Please specify the geometry in the runcard")
