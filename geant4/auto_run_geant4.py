@@ -4,6 +4,7 @@ import time
 import subprocess
 import uuid
 import os
+import numpy as np
 
 
 def run_geometry(geometry, run_dict, run_type):
@@ -45,8 +46,8 @@ def run_geometry(geometry, run_dict, run_type):
         macro_content += "/E_detector/detectorDiameter " + str(det_diam) + "\n"
         macro_content += "/E_detector/detectorLength " + str(det_leng) + "\n"
         macro_content += "/E_detector/sourceDistance " + str(det_sdis) + "\n"
-        macro_content += "/E_detector/detectorType " + str(det_type) + "\n" # TODO MUST IMPLEMENT THIS in G4
-        macro_content += "/E_detector/sourceType " + str(det_styp) + "\n" # TODO MUST IMPLEMENT THIS in G4
+        macro_content += "/E_detector/detectorType " + str(det_type) + "\n"
+        macro_content += "/E_detector/sourceType " + str(det_styp) + "\n"
 
         # General settings
         macro_content += "/run/reinitializeGeometry" + "\n"
@@ -64,17 +65,12 @@ def run_geometry(geometry, run_dict, run_type):
             # Specify the source type (either point or filter - no SURE model here)
             macro_content += "/E_source/sourceType " + str(det_styp) + "\n"
         elif run_type == "background":
-
-            #TODO Implement sure radius calculation depending on detector type and size
-
-            # "source_type":source_type,
-            # "source_SURE_radius":source_SURE_radius,
-            # "SURE_background_total_flux":background_total_flux/100, # convert to mm^-2 s^-1
-            # "SURE_pseudo_time":pseudo_time,
+            # Calculate the SURE model radius that encompasses both detectors
+            SURE_radius = calculate_SURE_radius(det_diam, det_leng, det_styp, det_type)
 
             # The sure model must be used with a specified SURE radius
             macro_content += "/E_source/sourceType " + str(det_styp) + "\n"
-            macro_content += "/E_source/sourceRadiusSURE " + 1 + "\n"
+            macro_content += "/E_source/sourceRadiusSURE " + str(SURE_radius) + "\n"
 
         # General run settings
         events = run_dict["events"]
@@ -172,6 +168,26 @@ def run_geometry(geometry, run_dict, run_type):
         elapsed_minutes = (partial_time - time_interval) / 60
         print(f"\tTime spent for previous run: {elapsed_minutes:.2f} minutes")
         time_interval = partial_time
+
+
+def calculate_SURE_radius(diameter, length, source_type, detector_type):
+    # Correct for filter source thickness if needed
+    if source_type == 1:
+        # Filter source
+        source_thickness = 13.8/2
+    elif source_type == 0:
+        # Point source
+        source_thickness = 0
+    
+    # Determine radius differently for coaxial and planar detectors
+    if detector_type == 0 or detector_type == 1:
+        # Coaxial
+        R = np.sqrt((length+1.5+4+5+5+5+5+source_thickness)**2 + (diameter/2+2+4+1.5)**2)
+    elif detector_type == 2:
+        # Planar
+        R = np.sqrt((length+1.5+4+5+2+5+5+source_thickness)**2 + (diameter/2+2+4+1.5)**2)
+    
+    return R
 
 
 def run_radionuclides(radionuclides, geometry):
