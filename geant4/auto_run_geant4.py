@@ -14,6 +14,20 @@ def run_geometry(geometry, run_dict, run_type):
     detector_source_distance = geometry["detector_source_distance"]
     detector_source_type = geometry["source_type"]
 
+    # If this is a background run, prepare the SURE source spectrum
+    if run_type == "background":
+        # Background source spectrum for SURE model
+        background_filename = run_dict["source_spectrum"]
+        flux_data = np.genfromtxt(background_filename, delimiter=",")
+        E = flux_data[:, 0]
+        # Flux is in s^(-1)cm^(-2) here (not mm^(-2))
+        flux = flux_data[:, 1]
+        background_total_flux = flux.sum()
+        # Make cumulative distribution function of the flux
+        flux_cdf = np.cumsum(flux) / background_total_flux
+        # Save with all 9 decimals
+        np.savetxt("resources/flux_cdf.dat", np.column_stack((E, flux_cdf)), fmt="%.9f\t%.9f")
+
     # Special case to put the length and diameter to the same value
     if len(detector_length) == 1 and type(detector_length[0]) == str:
         detector_length = geometry[detector_length[0]]
@@ -32,7 +46,7 @@ def run_geometry(geometry, run_dict, run_type):
         #     continue
 
         print(f"\t\tRunning: detector_type={det_type}, detector_diameter={det_diam}, detector_length={det_leng}, detector_source_distance={det_sdis}, detector_source_type={det_styp}")
-            
+
         # Make macro file first
         macro_content = ""
 
@@ -65,11 +79,12 @@ def run_geometry(geometry, run_dict, run_type):
             # Specify the source type (either point or filter - no SURE model here)
             macro_content += "/E_source/sourceType " + str(det_styp) + "\n"
         elif run_type == "background":
+            # The background model uses the SURE model
             # Calculate the SURE model radius that encompasses both detectors
             SURE_radius = calculate_SURE_radius(det_diam, det_leng, det_styp, det_type)
 
-            # The sure model must be used with a specified SURE radius
-            macro_content += "/E_source/sourceType " + str(det_styp) + "\n"
+            # The SURE model must be used (source type 2) with a specified SURE radius
+            macro_content += "/E_source/sourceType " + str(2) + "\n"
             macro_content += "/E_source/sourceRadiusSURE " + str(SURE_radius) + "\n"
 
         # General run settings
@@ -97,25 +112,28 @@ def run_geometry(geometry, run_dict, run_type):
         # The time it took to only run geant4
         simulated_minutes = (sim_stop_time - sim_start_time) / 60
 
-        # Combine the ROOT files and give it a random uuid4 name
+        # Combine the ROOT files and give it a random and unique uuid4 name
         print("\tCombining ROOT files...")
         run_id = str(uuid.uuid4())
         output_folder = run_dict["output"]
         output_file = output_folder + run_id + ".root"
-        # Combine with ROOT hadd
+        # Combine thread output files with the built-in ROOT hadd
         process_root = "hadd -f " + output_file + " " + output_folder + "threadoutput_" + str(i_s) + "*.root"
         result = subprocess.run(process_root, shell=True, stdout=subprocess.DEVNULL)
         # result = subprocess.run(process_root, shell=True)
 
         # Now add the run metadata to the metadata file
         print("\tAdding metadata...")
+
         # Make the file if it does not exist already
         if not os.path.exists(output_folder + "metadata.json"):
             with open(output_folder + "metadata.json", "w") as f:
                 f.write("{}")
+        
         # Open the metadata file
         with open(output_folder + "metadata.json") as f:
             metadata = json.load(f)
+        
         # Add the run information to the metadata
         # Properties will depend on what type of run this is
         properties = {
@@ -129,24 +147,30 @@ def run_geometry(geometry, run_dict, run_type):
             "events":events,
             "threads":threads,
             "time_minutes":simulated_minutes,
-            "throughput":events/(simulated_minutes*60*threads),}
+            "throughput":events/(simulated_minutes*60*threads),
+            }
         if run_type == "radionuclides":
+            # Save the Z and A of the simulated radionuclide
             Z, A = run_dict["ZA"]
             properties["Z"] = Z
             properties["A"] = A
         elif run_type == "background":
+            # Save the properties of the SURE background model
             properties["background_file"] = run_dict["source_spectrum"]
+            properties["SURE_radius"] = SURE_radius
 
-            # TODO 
-            # "source_SURE_radius":source_SURE_radius,
-            # "SURE_background_total_flux":background_total_flux/100, # convert to mm^-2 s^-1
-            # "SURE_pseudo_time":pseudo_time,
-
+            # Equivalent real time of the simulation, also known as pseudo time
+            # Note flux conversion from cm^-2 to mm^-2 to be compatible with sure radius in mm
+            # Or an equivalent would be to convert radius from mm to cm here
+            pseudo_time = events / (SURE_radius**2 * np.pi * (background_total_flux / 100))
+            properties["SURE_pseudo_time"] = pseudo_time
         elif run_type == "filter":
+            # in principle save the same information as for the radionuclides
             Z, A = run_dict["ZA"]
             properties["Z"] = Z
             properties["A"] = A
-
+        
+        # Now we can put together the metadata
         metadata[run_id] = {
             # General metadata first
             "filename":(run_id + ".root"),
@@ -181,7 +205,7 @@ def calculate_SURE_radius(diameter, length, source_type, detector_type):
     
     # Determine radius differently for coaxial and planar detectors
     if detector_type == 0 or detector_type == 1:
-        # Coaxial
+        # Coaxial p- or n-type
         R = np.sqrt((length+1.5+4+5+5+5+5+source_thickness)**2 + (diameter/2+2+4+1.5)**2)
     elif detector_type == 2:
         # Planar
@@ -215,8 +239,15 @@ def run_background(background, geometry):
 
 
 def run_filter(filter, geometry):
-    return
-# TODO fix this function
+    if filter["active"] == False:
+        return
+    else:
+        ZAs = filter["ZAs"]
+        for i_ZA, (Z, A) in enumerate(ZAs):
+            print(f"\tRunning: Z={Z}, A={A} ({i_ZA+1} out of {len(ZAs)})")
+
+            filter["ZA"] = [Z, A]
+            run_geometry(geometry, run_dict=filter, run_type="filter")
 
 
 def run(runcard):
@@ -237,9 +268,7 @@ def run(runcard):
     if "filter" in runcard.keys():
         print("Running filter background")
         run_filter(runcard["filter"], runcard["geometry"])
-
     
-
     print("Finished!")
 
     # Print the total time this runcard took
