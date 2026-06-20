@@ -1,0 +1,35 @@
+{
+    "geometry": {
+        "_detector_type": "0=p-type coaxial, 1=n-type coaxial, 2=BEGe planar",
+        "detector_type": [2],
+        "detector_diameter": [40.0, 45.0],
+        "detector_length": ["detector_diameter"],
+        "detector_source_distance": [0],
+        "_source_type": "0=point source, 1=FOI filter source",
+        "source_type": [1]
+    },
+    "radionuclides": {
+        "active": true,
+        "events": 1e2,
+        "output": "output/data/",
+        "metadata": "output/",
+        "threads": 16,
+        "ZAs": [[57, 140], [56, 140]]
+    },
+    "background": {
+        "active": true,
+        "events": 1e2,
+        "output": "output/data/",
+        "metadata": "output/",
+        "threads": 16,
+        "source_spectra": ["resources/source_flux_avg_unshielded.csv"]
+    },
+    "filter": {
+        "active": true,
+        "events": 1e2,
+        "output": "output/data/",
+        "metadata": "output/",
+        "threads": 16,
+        "ZAs":  [[4, 7]]
+    }
+}

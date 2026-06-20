@@ -1,9 +1,6 @@
 geant4/build/*
-geant4/output/*
-geant4/output_pelle_old/*
-geant4/output_radionuclides/*
-geant4/output_background/*
-geant4/output_background_p_corrupted/*
+geant4/output/data/*
+geant4/output_pelle/data*
 python/metadata_peakinfo.json
 python/metadata_backinfo.json
 python/datacuts/*

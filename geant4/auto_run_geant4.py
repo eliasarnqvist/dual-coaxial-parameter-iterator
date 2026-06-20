@@ -277,7 +277,7 @@ def run(runcard):
         run_radionuclides(runcard["radionuclides"], runcard["geometry"])
     if "background" in runcard.keys():
         print("Running background")
-        run_background(runcard["background", runcard["geometry"]])
+        run_background(runcard["background"], runcard["geometry"])
     if "filter" in runcard.keys():
         print("Running filter background")
         run_filter(runcard["filter"], runcard["geometry"])

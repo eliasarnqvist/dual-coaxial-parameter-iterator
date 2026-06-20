@@ -10,22 +10,25 @@
     },
     "radionuclides": {
         "active": true,
-        "events": 1e7,
-        "output": "output/",
+        "events": 1e2,
+        "output": "output/data/",
+        "metadata": "output/",
         "threads": 16,
         "ZAs": [[57, 140], [56, 140], [42, 99], [52, 132], [53, 132], [53, 131], [53, 133], [53, 135], [93, 239], [27, 60], [55, 134], [41, 94], [25, 56], [11, 24]]
     },
     "background": {
         "active": true,
-        "events": 1e9,
-        "output": "output/",
+        "events": 1e2,
+        "output": "output/data/",
+        "metadata": "output/",
         "threads": 16,
         "source_spectra": ["resources/source_flux_avg_unshielded.csv"]
     },
     "filter": {
         "active": true,
-        "events": 1e7,
-        "output": "output/",
+        "events": 1e2,
+        "output": "output/data/",
+        "metadata": "output/",
         "threads": 16,
         "ZAs":  [[4, 7], [55, 137], [19, 40], [82, 214], [83, 214], [89, 228], [82, 212], [83, 212], [81, 208], [92, 235]]
     }
