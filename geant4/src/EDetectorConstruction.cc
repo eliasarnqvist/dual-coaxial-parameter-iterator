@@ -95,7 +95,7 @@ G4VPhysicalVolume *EDetectorConstruction::Construct()
     else if (detectorType == 2) // BEGe planar
     {
         logicDetector_a = ConstructHPGePlanar(logicWorld, detectorFrontPosition, 0. * deg, detectorDiameter, detectorLength, 0, checkOverlaps);
-        logicDetector_b = ConstructHPGePlanar(logicWorld, detectorFrontPosition, 180. * deg, detectorDiameter, detectorLength, 0, checkOverlaps);
+        logicDetector_b = ConstructHPGePlanar(logicWorld, detectorFrontPosition, 180. * deg, detectorDiameter, detectorLength, 1, checkOverlaps);
     }
     else
     {
@@ -401,7 +401,7 @@ G4LogicalVolume *EDetectorConstruction::ConstructHPGePlanar(G4LogicalVolume* log
     G4double windowDiameter = capOuterDiameter - 10.0;
     G4double windowVacThickness = capWallThickness - windowThickness;
     
-    G4double sliceAngle = 180. * deg;
+    G4double sliceAngle = 360. * deg;
 
     // Cap
     G4Tubs *solidCap = new G4Tubs("solidCap", 0. * mm, 0.5 * capOuterDiameter, 0.5 * capOuterLength, 0. * deg, sliceAngle);
@@ -493,5 +493,5 @@ G4LogicalVolume *EDetectorConstruction::ConstructHPGePlanar(G4LogicalVolume* log
     // holVisAtt->SetForceSolid(true);
     // logicHolder->SetVisAttributes(holVisAtt);
 
-    return logicCap;
+    return logicDetector;
 }
