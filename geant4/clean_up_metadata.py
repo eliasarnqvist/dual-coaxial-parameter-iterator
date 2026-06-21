@@ -1,6 +1,7 @@
 import json
 
-metadata_file = "output_pelle/metadata.json"
+# metadata_file = "output_pelle/metadata.json"
+metadata_file = "pelle2/output/metadata.json"
 
 with open(metadata_file, "r") as f:
     metadata = json.load(f)
@@ -21,12 +22,12 @@ for key, value in metadata.items():
     except:
         pass
 
-    # # Fix SURE radius
-    # try:
-    #     if metadata[key]["type"] == "radionuclides":
-    #         metadata[key]["properties"].pop("source_SURE_radius")
-    # except:
-    #     pass
+    # Fix SURE radius
+    try:
+        if metadata[key]["type"] == "radionuclides":
+            metadata[key]["properties"].pop("source_SURE_radius")
+    except:
+        pass
 
     # Fix model or detector type
     try:
@@ -34,7 +35,6 @@ for key, value in metadata.items():
             metadata[key]["properties"]["detector_type"] = 1
         else:
             metadata[key]["properties"]["detector_type"] = 0
-
         metadata[key]["properties"].pop("model")
         metadata[key]["properties"].pop("select_ntype_instead_of_ptype")
     except:
@@ -44,14 +44,14 @@ for key, value in metadata.items():
     try:
         if metadata[key]["type"] == "external_background":
             metadata[key]["type"] = "background"
-
         metadata[key]["properties"].pop("SURE_background_total_flux")
     except:
         pass
 
     try:
-        metadata[key]["properties"]["SURE_radius"] = metadata[key]["properties"]["source_SURE_radius"]
-        metadata[key]["properties"].pop("source_SURE_radius")
+        if metadata[key]["type"] == "background":
+            metadata[key]["properties"]["SURE_radius"] = metadata[key]["properties"]["source_SURE_radius"]
+            metadata[key]["properties"].pop("source_SURE_radius")
     except:
         pass
 
@@ -66,10 +66,15 @@ for key, value in metadata.items():
     except:
         pass
 
-
+    # Filter
+    try:
+        if metadata[key]["type"] == "radionuclides":
+            metadata[key]["type"] = "filter"
+    except:
+        pass
 
 
 print(metadata)
 
-with open(metadata_file, "w") as f:
-    json.dump(metadata, f, indent=4)
+# with open(metadata_file, "w") as f:
+#     json.dump(metadata, f, indent=4)
