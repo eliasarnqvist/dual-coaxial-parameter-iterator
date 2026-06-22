@@ -10,6 +10,7 @@
     },
     "radionuclides": {
         "active": true,
+        "test_run": false,
         "events": 1e2,
         "output": "output/data/",
         "metadata": "output/",
@@ -18,6 +19,7 @@
     },
     "background": {
         "active": true,
+        "test_run": false,
         "events": 1e2,
         "output": "output/data/",
         "metadata": "output/",
@@ -26,6 +28,7 @@
     },
     "filter": {
         "active": true,
+        "test_run": false,
         "events": 1e2,
         "output": "output/data/",
         "metadata": "output/",

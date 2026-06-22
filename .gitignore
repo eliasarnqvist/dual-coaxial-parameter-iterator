@@ -1,6 +1,7 @@
 geant4/build/*
 geant4/output/data/*
-geant4/output_pelle/data*
+geant4/output/data_pelle/*
+geant4/resources/flux_cdf.dat
 python/metadata_peakinfo.json
 python/metadata_backinfo.json
 python/datacuts/*

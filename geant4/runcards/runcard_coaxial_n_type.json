@@ -1,7 +1,7 @@
 {
     "geometry": {
         "_detector_type": "0=p-type coaxial, 1=n-type coaxial, 2=BEGe planar",
-        "detector_type": [0],
+        "detector_type": [1],
         "detector_diameter": [40.0, 45.0, 50.0, 55.0, 60.0, 65.0, 70.0, 75.0, 80.0, 85.0, 90.0],
         "detector_length": ["detector_diameter"],
         "detector_source_distance": [0],

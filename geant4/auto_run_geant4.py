@@ -126,7 +126,7 @@ def run_geometry(geometry, run_dict, run_type):
             for present_entry in metadata.values()
         )
 
-        if not already_simulated:
+        if not already_simulated and not run_dict["test_run"]:
             sim_start_time = time.time()
 
             # Start the Geant4 simulation
@@ -204,6 +204,8 @@ def run_geometry(geometry, run_dict, run_type):
             result = subprocess.run(process_delete, shell=True)
 
             print(f"\t\t\tTime spent for previous run: {simulated_minutes:.2f} minutes")
+        elif not already_simulated and run_dict["test_run"]:
+            print(f"\t\t\tWould have simulated this! But test_run = true")
         else:
             print(f"\t\t\tFound this run in metadata already, skipping!")
 

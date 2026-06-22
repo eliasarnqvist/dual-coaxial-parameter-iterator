@@ -5548,7 +5548,7 @@
         "file_size": 978247897,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 40.0,
             "detector_length": 40.0,
             "source_distance": 0,
@@ -5567,7 +5567,7 @@
         "file_size": 1128839861,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 45.0,
             "detector_length": 45.0,
             "source_distance": 0,
@@ -5586,7 +5586,7 @@
         "file_size": 1269662347,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 50.0,
             "detector_length": 50.0,
             "source_distance": 0,
@@ -5605,7 +5605,7 @@
         "file_size": 1400959640,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 55.0,
             "detector_length": 55.0,
             "source_distance": 0,
@@ -5624,7 +5624,7 @@
         "file_size": 1522993685,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 60.0,
             "detector_length": 60.0,
             "source_distance": 0,
@@ -5643,7 +5643,7 @@
         "file_size": 1636079960,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 65.0,
             "detector_length": 65.0,
             "source_distance": 0,
@@ -5662,7 +5662,7 @@
         "file_size": 1740923613,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 70.0,
             "detector_length": 70.0,
             "source_distance": 0,
@@ -5681,7 +5681,7 @@
         "file_size": 1837769032,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 75.0,
             "detector_length": 75.0,
             "source_distance": 0,
@@ -5700,7 +5700,7 @@
         "file_size": 1927529345,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 80.0,
             "detector_length": 80.0,
             "source_distance": 0,
@@ -5719,7 +5719,7 @@
         "file_size": 2010361085,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 85.0,
             "detector_length": 85.0,
             "source_distance": 0,
@@ -5738,7 +5738,7 @@
         "file_size": 2087040780,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 90.0,
             "detector_length": 90.0,
             "source_distance": 0,
@@ -5757,7 +5757,7 @@
         "file_size": 895252835,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 40.0,
             "detector_length": 40.0,
             "source_distance": 0,
@@ -5776,7 +5776,7 @@
         "file_size": 1052321759,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 45.0,
             "detector_length": 45.0,
             "source_distance": 0,
@@ -5795,7 +5795,7 @@
         "file_size": 1202781600,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 50.0,
             "detector_length": 50.0,
             "source_distance": 0,
@@ -5814,7 +5814,7 @@
         "file_size": 1345792945,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 55.0,
             "detector_length": 55.0,
             "source_distance": 0,
@@ -5833,7 +5833,7 @@
         "file_size": 1481102418,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 60.0,
             "detector_length": 60.0,
             "source_distance": 0,
@@ -5852,7 +5852,7 @@
         "file_size": 1608480707,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 65.0,
             "detector_length": 65.0,
             "source_distance": 0,
@@ -5871,7 +5871,7 @@
         "file_size": 1728373844,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 70.0,
             "detector_length": 70.0,
             "source_distance": 0,
@@ -5890,7 +5890,7 @@
         "file_size": 1840721815,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 75.0,
             "detector_length": 75.0,
             "source_distance": 0,
@@ -5909,7 +5909,7 @@
         "file_size": 1946292036,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 80.0,
             "detector_length": 80.0,
             "source_distance": 0,
@@ -5928,7 +5928,7 @@
         "file_size": 2044801778,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 85.0,
             "detector_length": 85.0,
             "source_distance": 0,
@@ -5947,7 +5947,7 @@
         "file_size": 2137395202,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_shielded.csv",
+            "background_file": "resources/source_flux_avg_shielded.csv",
             "detector_diameter": 90.0,
             "detector_length": 90.0,
             "source_distance": 0,
@@ -5966,7 +5966,7 @@
         "file_size": 1171129810,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 40.0,
             "detector_length": 40.0,
             "source_distance": 0,
@@ -5985,7 +5985,7 @@
         "file_size": 1339916266,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 45.0,
             "detector_length": 45.0,
             "source_distance": 0,
@@ -6004,7 +6004,7 @@
         "file_size": 1428821348,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 50.0,
             "detector_length": 50.0,
             "source_distance": 0,
@@ -6023,7 +6023,7 @@
         "file_size": 1642219705,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 55.0,
             "detector_length": 55.0,
             "source_distance": 0,
@@ -6042,7 +6042,7 @@
         "file_size": 1776766229,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 60.0,
             "detector_length": 60.0,
             "source_distance": 0,
@@ -6061,7 +6061,7 @@
         "file_size": 1900984657,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 65.0,
             "detector_length": 65.0,
             "source_distance": 0,
@@ -6080,7 +6080,7 @@
         "file_size": 1955374793,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 70.0,
             "detector_length": 70.0,
             "source_distance": 0,
@@ -6099,7 +6099,7 @@
         "file_size": 2058384003,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 75.0,
             "detector_length": 75.0,
             "source_distance": 0,
@@ -6118,7 +6118,7 @@
         "file_size": 2053125148,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 80.0,
             "detector_length": 80.0,
             "source_distance": 0,
@@ -6137,7 +6137,7 @@
         "file_size": 2274589324,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 85.0,
             "detector_length": 85.0,
             "source_distance": 0,
@@ -6156,7 +6156,7 @@
         "file_size": 2175202287,
         "type": "background",
         "properties": {
-            "background_file": "resources/resources/source_flux_avg_unshielded.csv",
+            "background_file": "resources/source_flux_avg_unshielded.csv",
             "detector_diameter": 90.0,
             "detector_length": 90.0,
             "source_distance": 0,
