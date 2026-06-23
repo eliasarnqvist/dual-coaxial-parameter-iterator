@@ -8149,5 +8149,2194 @@
             "detector_type": 0,
             "time_minutes": 3.016316231091817
         }
+    },
+    "99d38bbc-d50f-445d-a634-877e350caf74": {
+        "filename": "99d38bbc-d50f-445d-a634-877e350caf74.root",
+        "file_size": 1028873162,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 42.88694012959798,
+            "throughput": 12144.334190302505,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 77.44682046410944,
+            "SURE_pseudo_time": 53803775.567285284
+        }
+    },
+    "2d9ddb0b-69df-43d1-8f5a-e643cc29fe0e": {
+        "filename": "2d9ddb0b-69df-43d1-8f5a-e643cc29fe0e.root",
+        "file_size": 1198235776,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 44.260703142484026,
+            "throughput": 11767.398535370461,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 83.0106017325498,
+            "SURE_pseudo_time": 46833090.09315849
+        }
+    },
+    "0a01bfc6-b9fc-4c22-840a-ffd76c917fee": {
+        "filename": "0a01bfc6-b9fc-4c22-840a-ffd76c917fee.root",
+        "file_size": 1359446704,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 45.332926189899446,
+            "throughput": 11489.07377281503,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 88.5777059987444,
+            "SURE_pseudo_time": 41131171.62613007
+        }
+    },
+    "3646c482-819e-441e-b645-03c566c532ad": {
+        "filename": "3646c482-819e-441e-b645-03c566c532ad.root",
+        "file_size": 1308757481,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 45.273120387395224,
+            "throughput": 11504.250841926545,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 94.14754378102491,
+            "SURE_pseudo_time": 36408429.81876007
+        }
+    },
+    "dfb73993-501f-4a2e-9c8b-7afc843d5134": {
+        "filename": "dfb73993-501f-4a2e-9c8b-7afc843d5134.root",
+        "file_size": 1655497465,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 46.95550440152486,
+            "throughput": 11092.061302964503,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 99.71965703912143,
+            "SURE_pseudo_time": 32453264.215375163
+        }
+    },
+    "29ffa24c-32a6-4a35-9cfc-e9376f2eaf63": {
+        "filename": "29ffa24c-32a6-4a35-9cfc-e9376f2eaf63.root",
+        "file_size": 1790315628,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 43.45996851523717,
+            "throughput": 11984.208712685282,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 105.2936845209626,
+            "SURE_pseudo_time": 29108196.072642762
+        }
+    },
+    "8765b741-006f-45c6-941a-7bd534067e81": {
+        "filename": "8765b741-006f-45c6-941a-7bd534067e81.root",
+        "file_size": 1860528864,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 44.536824496587116,
+            "throughput": 11694.442502815733,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 110.86933751042261,
+            "SURE_pseudo_time": 26254093.82927062
+        }
+    },
+    "0223d896-525b-4813-b47a-3da1acda78dc": {
+        "filename": "0223d896-525b-4813-b47a-3da1acda78dc.root",
+        "file_size": 1974971228,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 45.09912486473719,
+            "throughput": 11548.635032174885,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 116.44638251143743,
+            "SURE_pseudo_time": 23799505.587881554
+        }
+    },
+    "7b393696-08ce-43f6-b107-4bf74745f425": {
+        "filename": "7b393696-08ce-43f6-b107-4bf74745f425.root",
+        "file_size": 1888247741,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 45.92649626334508,
+            "throughput": 11340.584971839482,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 122.02462866159439,
+            "SURE_pseudo_time": 21673295.30942778
+        }
+    },
+    "8734dce6-1331-4905-9fe5-85db102f9cee": {
+        "filename": "8734dce6-1331-4905-9fe5-85db102f9cee.root",
+        "file_size": 2249204392,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 46.75527704556783,
+            "throughput": 11139.562553029633,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 127.60391843513271,
+            "SURE_pseudo_time": 19819464.506651986
+        }
+    },
+    "26061538-d51c-4711-9c89-d65440572a97": {
+        "filename": "26061538-d51c-4711-9c89-d65440572a97.root",
+        "file_size": 1628927029,
+        "type": "background",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 47.9221270442009,
+            "throughput": 10868.32670955827,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 133.18412067510152,
+            "SURE_pseudo_time": 18193449.202606868
+        }
+    },
+    "a74c6623-a487-4fba-81e3-8a8f0ac18328": {
+        "filename": "a74c6623-a487-4fba-81e3-8a8f0ac18328.root",
+        "file_size": 1457776,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4726764798164368,
+            "throughput": 11018.81213839111,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "2a7fbae2-125e-45b7-89c6-6be3da302e3e": {
+        "filename": "2a7fbae2-125e-45b7-89c6-6be3da302e3e.root",
+        "file_size": 1779027,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4443511883417765,
+            "throughput": 11721.209417194805,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "e3ca4103-8a99-427f-a489-005b7836a517": {
+        "filename": "e3ca4103-8a99-427f-a489-005b7836a517.root",
+        "file_size": 2091769,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4496274630228678,
+            "throughput": 11583.663725337079,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "28af0c41-92d3-411c-b230-853ad8a6c7f5": {
+        "filename": "28af0c41-92d3-411c-b230-853ad8a6c7f5.root",
+        "file_size": 2421598,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4574711759885152,
+            "throughput": 11385.0524507452,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "ccec3f20-e103-43af-aaf9-9bbae0468941": {
+        "filename": "ccec3f20-e103-43af-aaf9-9bbae0468941.root",
+        "file_size": 2750596,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4609218875567118,
+            "throughput": 11299.817765092572,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "f154e98f-aba9-4dfc-a195-92038d54cb06": {
+        "filename": "f154e98f-aba9-4dfc-a195-92038d54cb06.root",
+        "file_size": 3072187,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.46888121366500857,
+            "throughput": 11108.001731659095,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "951d9f65-1231-4a87-b186-29d9ffcaf452": {
+        "filename": "951d9f65-1231-4a87-b186-29d9ffcaf452.root",
+        "file_size": 3383754,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4764257987340291,
+            "throughput": 10932.097605068933,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "89f70199-21e9-4228-9ea9-52c282f5559e": {
+        "filename": "89f70199-21e9-4228-9ea9-52c282f5559e.root",
+        "file_size": 3690121,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.48034063577651975,
+            "throughput": 10842.999624450948,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "b3738ae5-adba-488f-9c83-1d41684781c7": {
+        "filename": "b3738ae5-adba-488f-9c83-1d41684781c7.root",
+        "file_size": 3990615,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4850728789965312,
+            "throughput": 10737.218176591932,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "53cfeda1-5183-4d01-bf93-4b6989b09ae6": {
+        "filename": "53cfeda1-5183-4d01-bf93-4b6989b09ae6.root",
+        "file_size": 4253210,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.48927741050720214,
+            "throughput": 10644.949514293317,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "d42a4249-eedd-406a-80cf-33cad2135a5d": {
+        "filename": "d42a4249-eedd-406a-80cf-33cad2135a5d.root",
+        "file_size": 4511097,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4928851008415222,
+            "throughput": 10567.033421056834,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "76521ff2-0371-4a8b-a8b4-0f1893fb89fe": {
+        "filename": "76521ff2-0371-4a8b-a8b4-0f1893fb89fe.root",
+        "file_size": 11424273,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.751600197950999,
+            "throughput": 6929.659342203758,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "efcc3510-ab08-4bbc-8170-234952a9aefa": {
+        "filename": "efcc3510-ab08-4bbc-8170-234952a9aefa.root",
+        "file_size": 14169980,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7836367805798848,
+            "throughput": 6646.36150625703,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "5fadafc1-e0e0-4861-a50c-cd7c0f370125": {
+        "filename": "5fadafc1-e0e0-4861-a50c-cd7c0f370125.root",
+        "file_size": 16983319,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8085851510365804,
+            "throughput": 6441.29233223788,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "c34c189f-e50a-4ccc-be0c-73d70d55cede": {
+        "filename": "c34c189f-e50a-4ccc-be0c-73d70d55cede.root",
+        "file_size": 19813789,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8392470439275106,
+            "throughput": 6205.959700446916,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "f7259f96-0bc5-413f-9346-34f895f36c13": {
+        "filename": "f7259f96-0bc5-413f-9346-34f895f36c13.root",
+        "file_size": 22655734,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8548405726750692,
+            "throughput": 6092.754017319036,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "871e7e09-62ec-4972-85c2-49c221b0ed41": {
+        "filename": "871e7e09-62ec-4972-85c2-49c221b0ed41.root",
+        "file_size": 25431543,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8785422563552856,
+            "throughput": 5928.381128689915,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "fa905cee-b5db-4c33-ae5b-96b8106b9c56": {
+        "filename": "fa905cee-b5db-4c33-ae5b-96b8106b9c56.root",
+        "file_size": 28132314,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9041877428690592,
+            "throughput": 5760.234392037742,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "079f7739-4546-4a20-a25b-a22b5668ea73": {
+        "filename": "079f7739-4546-4a20-a25b-a22b5668ea73.root",
+        "file_size": 30731291,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9223863641421001,
+            "throughput": 5646.585352741569,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "a6e38986-21fd-42d0-8130-60147ad68a8b": {
+        "filename": "a6e38986-21fd-42d0-8130-60147ad68a8b.root",
+        "file_size": 33193646,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9462254643440247,
+            "throughput": 5504.325902858718,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "ddf733e5-c294-4440-b782-24269b9d651b": {
+        "filename": "ddf733e5-c294-4440-b782-24269b9d651b.root",
+        "file_size": 35596898,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9647857427597046,
+            "throughput": 5398.435219860574,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "c5bce6e6-3e8f-4745-bdef-46a4c33d05cc": {
+        "filename": "c5bce6e6-3e8f-4745-bdef-46a4c33d05cc.root",
+        "file_size": 37846461,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9899643460909525,
+            "throughput": 5261.132235619746,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "c520aa73-2fd5-4b3c-848e-77ed67f44639": {
+        "filename": "c520aa73-2fd5-4b3c-848e-77ed67f44639.root",
+        "file_size": 1847249,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.696159855524699,
+            "throughput": 7481.519211428514,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "23bc0f6b-ee58-4287-a838-8f2027a6b382": {
+        "filename": "23bc0f6b-ee58-4287-a838-8f2027a6b382.root",
+        "file_size": 2274660,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7028652429580688,
+            "throughput": 7410.14495383726,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "cee3845b-61cb-4441-82e1-222182646032": {
+        "filename": "cee3845b-61cb-4441-82e1-222182646032.root",
+        "file_size": 2751572,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7067357699076334,
+            "throughput": 7369.562367013112,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "5d696d99-5094-48cb-a30b-137dd05c9856": {
+        "filename": "5d696d99-5094-48cb-a30b-137dd05c9856.root",
+        "file_size": 3241318,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.714817476272583,
+            "throughput": 7286.2423013105345,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "fc4b505e-8afb-4257-b6d9-765ecf3b5505": {
+        "filename": "fc4b505e-8afb-4257-b6d9-765ecf3b5505.root",
+        "file_size": 3740988,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7249514142672221,
+            "throughput": 7184.389506430435,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "1a457a8a-b128-408d-a900-444c6e2993eb": {
+        "filename": "1a457a8a-b128-408d-a900-444c6e2993eb.root",
+        "file_size": 4205284,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7306047757466634,
+            "throughput": 7128.797273478703,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "0ab3f667-d450-4e33-9790-3fb0cd6c78d3": {
+        "filename": "0ab3f667-d450-4e33-9790-3fb0cd6c78d3.root",
+        "file_size": 4631433,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7356585423151653,
+            "throughput": 7079.8244480956755,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "d1bb9440-1afa-4735-80fd-395ae5df4c60": {
+        "filename": "d1bb9440-1afa-4735-80fd-395ae5df4c60.root",
+        "file_size": 5040014,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.737862781683604,
+            "throughput": 7058.674678575495,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "f23d98e6-d358-4b14-86ca-f2d636e8ed6e": {
+        "filename": "f23d98e6-d358-4b14-86ca-f2d636e8ed6e.root",
+        "file_size": 5404338,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7447083989779154,
+            "throughput": 6993.788898421955,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "8fdf7093-8805-4ed9-9982-aa4ecc9e41d5": {
+        "filename": "8fdf7093-8805-4ed9-9982-aa4ecc9e41d5.root",
+        "file_size": 5792090,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7485695004463195,
+            "throughput": 6957.715122280521,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "7ac4cf70-8184-48b0-91b4-7fedc716e8b1": {
+        "filename": "7ac4cf70-8184-48b0-91b4-7fedc716e8b1.root",
+        "file_size": 6140695,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7511051932970683,
+            "throughput": 6934.226230643828,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "7abf70f5-a2ad-4a8d-8147-d937d4bfdd56": {
+        "filename": "7abf70f5-a2ad-4a8d-8147-d937d4bfdd56.root",
+        "file_size": 12717254,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9144863208134969,
+            "throughput": 5695.364944005036,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "389404df-ed94-4cde-940b-c30003d0438f": {
+        "filename": "389404df-ed94-4cde-940b-c30003d0438f.root",
+        "file_size": 15419122,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9395729899406433,
+            "throughput": 5543.298273891808,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "a71001e8-b345-48e3-bc8b-22590f9e52a6": {
+        "filename": "a71001e8-b345-48e3-bc8b-22590f9e52a6.root",
+        "file_size": 18208640,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9717641353607178,
+            "throughput": 5359.66819911501,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "8cd352a0-3ebc-4e63-b829-e132f84a2988": {
+        "filename": "8cd352a0-3ebc-4e63-b829-e132f84a2988.root",
+        "file_size": 21019686,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0031257430712381,
+            "throughput": 5192.104149762067,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "15ee5f6a-9326-4309-a36f-d7be797f7a64": {
+        "filename": "15ee5f6a-9326-4309-a36f-d7be797f7a64.root",
+        "file_size": 23832511,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0266087452570598,
+            "throughput": 5073.338170355428,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "cea5082a-a79f-4af8-bdc3-54b89e3e1435": {
+        "filename": "cea5082a-a79f-4af8-bdc3-54b89e3e1435.root",
+        "file_size": 26553546,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0484266956647237,
+            "throughput": 4967.7610794058855,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "49ac5d3b-09de-4e31-9272-16214375b672": {
+        "filename": "49ac5d3b-09de-4e31-9272-16214375b672.root",
+        "file_size": 29153981,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0665478984514871,
+            "throughput": 4883.356238285475,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "633c5061-f861-4864-b6fa-0c71918071a5": {
+        "filename": "633c5061-f861-4864-b6fa-0c71918071a5.root",
+        "file_size": 31631462,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.087001419067383,
+            "throughput": 4791.468752452908,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "10d15d31-467d-422b-901a-e4f13e3f8a74": {
+        "filename": "10d15d31-467d-422b-901a-e4f13e3f8a74.root",
+        "file_size": 33889485,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1028287291526795,
+            "throughput": 4722.703712420493,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "dc655cbb-39bf-49f5-936c-140577e44a01": {
+        "filename": "dc655cbb-39bf-49f5-936c-140577e44a01.root",
+        "file_size": 36126463,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1203747669855753,
+            "throughput": 4648.742087744993,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "ec992e0e-aff0-4cdd-9bf6-bc508ea39954": {
+        "filename": "ec992e0e-aff0-4cdd-9bf6-bc508ea39954.root",
+        "file_size": 38154140,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1310498555501303,
+            "throughput": 4604.866273379309,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "d44841d5-37d8-464a-9b08-063fd4c67ab8": {
+        "filename": "d44841d5-37d8-464a-9b08-063fd4c67ab8.root",
+        "file_size": 17483067,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.056384559472402,
+            "throughput": 4930.338375955221,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "2499d2ca-3b16-4118-aef4-849c55e6f06c": {
+        "filename": "2499d2ca-3b16-4118-aef4-849c55e6f06c.root",
+        "file_size": 21987974,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0913811445236206,
+            "throughput": 4772.240531612565,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "d3669869-01d7-4bfe-8bbe-6fefc1015e22": {
+        "filename": "d3669869-01d7-4bfe-8bbe-6fefc1015e22.root",
+        "file_size": 26728548,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1256787220637003,
+            "throughput": 4626.8382187991665,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "5d32f210-5407-4331-acb1-8d891a93af4e": {
+        "filename": "5d32f210-5407-4331-acb1-8d891a93af4e.root",
+        "file_size": 31647429,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1723102966944376,
+            "throughput": 4442.794154431012,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "874d8f0a-b4f5-4723-96bb-18acb2b0cec6": {
+        "filename": "874d8f0a-b4f5-4723-96bb-18acb2b0cec6.root",
+        "file_size": 36644003,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2106911420822144,
+            "throughput": 4301.950474648514,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "1308facd-3ab4-479f-8776-c060bfb5b1c5": {
+        "filename": "1308facd-3ab4-479f-8776-c060bfb5b1c5.root",
+        "file_size": 41532438,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.254705532391866,
+            "throughput": 4151.040382682143,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "ecc93ac8-f172-49ca-a5a2-77d0c01b6c13": {
+        "filename": "ecc93ac8-f172-49ca-a5a2-77d0c01b6c13.root",
+        "file_size": 46290310,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2905959645907084,
+            "throughput": 4035.603299739955,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "5b0e99cd-fdc5-4e60-9b60-f42ae9d69f82": {
+        "filename": "5b0e99cd-fdc5-4e60-9b60-f42ae9d69f82.root",
+        "file_size": 50925438,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3214542269706726,
+            "throughput": 3941.364919822473,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "58cefab5-3766-42b5-9e37-2445e84206e1": {
+        "filename": "58cefab5-3766-42b5-9e37-2445e84206e1.root",
+        "file_size": 55398542,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3563536167144776,
+            "throughput": 3839.9524055899105,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "fab548c9-f3d2-4ae3-850a-22e549454252": {
+        "filename": "fab548c9-f3d2-4ae3-850a-22e549454252.root",
+        "file_size": 59696744,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3891015251477559,
+            "throughput": 3749.425969983967,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "85357cb3-66c6-4dce-9dff-03b63f08e28e": {
+        "filename": "85357cb3-66c6-4dce-9dff-03b63f08e28e.root",
+        "file_size": 63779123,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4222002148628234,
+            "throughput": 3662.16604308114,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "18a223d5-097c-4e49-8d03-228cac083da0": {
+        "filename": "18a223d5-097c-4e49-8d03-228cac083da0.root",
+        "file_size": 19160232,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4507759968439737,
+            "throughput": 3590.0327443130923,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "6b4176eb-bac3-40a4-a5db-0bfd91cce8f1": {
+        "filename": "6b4176eb-bac3-40a4-a5db-0bfd91cce8f1.root",
+        "file_size": 23779354,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4965850671132406,
+            "throughput": 3480.145197078356,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "10328f76-4fda-41e7-89cd-fef13b71bc26": {
+        "filename": "10328f76-4fda-41e7-89cd-fef13b71bc26.root",
+        "file_size": 28675231,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5305397629737854,
+            "throughput": 3402.93892346431,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "6c75c6e0-5d42-45da-93ae-a313e21d10b7": {
+        "filename": "6c75c6e0-5d42-45da-93ae-a313e21d10b7.root",
+        "file_size": 33680830,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5697972337404886,
+            "throughput": 3317.8382668715735,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "7600ad8e-4f23-4309-a26b-673b8b3a4ffb": {
+        "filename": "7600ad8e-4f23-4309-a26b-673b8b3a4ffb.root",
+        "file_size": 38710718,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6024004618326824,
+            "throughput": 3250.331897293956,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "8139c3c8-8ebc-41e1-8702-3473448b5788": {
+        "filename": "8139c3c8-8ebc-41e1-8702-3473448b5788.root",
+        "file_size": 43652765,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6386510332425435,
+            "throughput": 3178.427394042003,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "ffad55c9-f24e-4a3d-af03-ba54ada6c208": {
+        "filename": "ffad55c9-f24e-4a3d-af03-ba54ada6c208.root",
+        "file_size": 48441632,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6768712202707927,
+            "throughput": 3105.9828986105776,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "fd34857a-b3f3-42de-9d8d-22a59ef28d36": {
+        "filename": "fd34857a-b3f3-42de-9d8d-22a59ef28d36.root",
+        "file_size": 53071230,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7081643660863242,
+            "throughput": 3049.0820653673113,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "237bfc08-de0a-4c06-84a5-d66a713f36d3": {
+        "filename": "237bfc08-de0a-4c06-84a5-d66a713f36d3.root",
+        "file_size": 57439817,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7398178497950236,
+            "throughput": 2993.6084021364377,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "27213e6d-2759-49f2-85b2-aaed8d0ac1ab": {
+        "filename": "27213e6d-2759-49f2-85b2-aaed8d0ac1ab.root",
+        "file_size": 61688145,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7627472281455994,
+            "throughput": 2954.668287189691,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "40fb40a5-f5c7-46a6-9de1-c9abc698eac0": {
+        "filename": "40fb40a5-f5c7-46a6-9de1-c9abc698eac0.root",
+        "file_size": 65666971,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7951744675636292,
+            "throughput": 2901.2964630685547,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "f81d3b6a-b8c9-436a-903a-4ea86034fa1f": {
+        "filename": "f81d3b6a-b8c9-436a-903a-4ea86034fa1f.root",
+        "file_size": 12974209,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8548145731290181,
+            "throughput": 6092.939331004168,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "8da92c06-1037-40a7-a794-f64e9f98776f": {
+        "filename": "8da92c06-1037-40a7-a794-f64e9f98776f.root",
+        "file_size": 15630217,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8738435824712117,
+            "throughput": 5960.258148951868,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "53f8f90f-df9c-4d2b-90c9-f7457a2b9fab": {
+        "filename": "53f8f90f-df9c-4d2b-90c9-f7457a2b9fab.root",
+        "file_size": 18343183,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8969366113344829,
+            "throughput": 5806.802027608457,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "d04a5646-d60d-4bdd-9cd9-bc098177126d": {
+        "filename": "d04a5646-d60d-4bdd-9cd9-bc098177126d.root",
+        "file_size": 21080989,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9117178996404012,
+            "throughput": 5712.658855757465,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "5fdd8fad-9fe2-4ec8-85fd-5485d9a7b48d": {
+        "filename": "5fdd8fad-9fe2-4ec8-85fd-5485d9a7b48d.root",
+        "file_size": 23796843,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9264432112375895,
+            "throughput": 5621.859246370621,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "bdd2386a-cce1-412f-b33d-74e8da37477f": {
+        "filename": "bdd2386a-cce1-412f-b33d-74e8da37477f.root",
+        "file_size": 26404794,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9433602492014567,
+            "throughput": 5521.043883015132,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "1964ffe0-5548-4917-94e0-12da6e25d1b3": {
+        "filename": "1964ffe0-5548-4917-94e0-12da6e25d1b3.root",
+        "file_size": 28859826,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9599228421847026,
+            "throughput": 5425.783307207911,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "66d1c789-c85a-41f1-9178-808fbf74fad1": {
+        "filename": "66d1c789-c85a-41f1-9178-808fbf74fad1.root",
+        "file_size": 31155256,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.982149581114451,
+            "throughput": 5302.993997536919,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "71926dfe-09eb-432b-8045-34e49aabc6c1": {
+        "filename": "71926dfe-09eb-432b-8045-34e49aabc6c1.root",
+        "file_size": 33290777,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9993924538294474,
+            "throughput": 5211.499559933807,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "ac6652fe-1902-4a51-b7d1-5c23476072bb": {
+        "filename": "ac6652fe-1902-4a51-b7d1-5c23476072bb.root",
+        "file_size": 35212118,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.009399652481079,
+            "throughput": 5159.832699101273,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "58a2fcc8-402e-44ea-9b9b-a36f9b39b0df": {
+        "filename": "58a2fcc8-402e-44ea-9b9b-a36f9b39b0df.root",
+        "file_size": 36992017,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0190510193506876,
+            "throughput": 5110.964254421673,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "268dea7e-a0ea-4d8e-874c-8669cba3b954": {
+        "filename": "268dea7e-a0ea-4d8e-874c-8669cba3b954.root",
+        "file_size": 2879591,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7993966857592265,
+            "throughput": 6515.330155999736,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "583b5025-9c74-415c-97b3-65b1d65ae78d": {
+        "filename": "583b5025-9c74-415c-97b3-65b1d65ae78d.root",
+        "file_size": 3579955,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8005726019541423,
+            "throughput": 6505.76015294572,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "63753e46-381d-4690-b5b9-aef6b2da0aac": {
+        "filename": "63753e46-381d-4690-b5b9-aef6b2da0aac.root",
+        "file_size": 4311585,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8059496998786926,
+            "throughput": 6462.355323312689,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "e40cee05-0b81-4246-adce-f32f6b257427": {
+        "filename": "e40cee05-0b81-4246-adce-f32f6b257427.root",
+        "file_size": 5074516,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8145941138267517,
+            "throughput": 6393.777274998877,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "5f09a577-bd7d-46b4-b62e-03b8529ba446": {
+        "filename": "5f09a577-bd7d-46b4-b62e-03b8529ba446.root",
+        "file_size": 5835586,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.82330694993337,
+            "throughput": 6326.1136490525705,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "545350e1-99f2-4ac2-9934-784358dc59be": {
+        "filename": "545350e1-99f2-4ac2-9934-784358dc59be.root",
+        "file_size": 6521171,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8299062927563985,
+            "throughput": 6275.808942277932,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "1bcbe78e-37d4-48d0-97f7-eecb7db2c464": {
+        "filename": "1bcbe78e-37d4-48d0-97f7-eecb7db2c464.root",
+        "file_size": 7145289,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8347445329030355,
+            "throughput": 6239.433896284454,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "cbc89c1d-233d-41b4-92d0-23d80c4f228d": {
+        "filename": "cbc89c1d-233d-41b4-92d0-23d80c4f228d.root",
+        "file_size": 7730390,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8455702702204386,
+            "throughput": 6159.551153537518,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "9c1b7484-a55c-4214-b8a2-696c6858ad0b": {
+        "filename": "9c1b7484-a55c-4214-b8a2-696c6858ad0b.root",
+        "file_size": 8268702,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.848293137550354,
+            "throughput": 6139.780109943623,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "cd9ddcf9-7456-42ce-8fd7-b2419d3aaca1": {
+        "filename": "cd9ddcf9-7456-42ce-8fd7-b2419d3aaca1.root",
+        "file_size": 8786272,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8501920342445374,
+            "throughput": 6126.066963167149,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "73989012-5f2c-4895-8c49-3616be501d32": {
+        "filename": "73989012-5f2c-4895-8c49-3616be501d32.root",
+        "file_size": 9280179,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8555983026822408,
+            "throughput": 6087.35818783835,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "bdd4665a-841b-4a7f-9a41-3f1a9e9b84f0": {
+        "filename": "bdd4665a-841b-4a7f-9a41-3f1a9e9b84f0.root",
+        "file_size": 29377627,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4535428524017333,
+            "throughput": 3583.1990262464187,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "5774edf7-076c-4011-9de8-658e0f34063f": {
+        "filename": "5774edf7-076c-4011-9de8-658e0f34063f.root",
+        "file_size": 36834705,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5139264901479086,
+            "throughput": 3440.2815243852997,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "b4c69c1d-5e28-4f72-a710-b50157e5f46c": {
+        "filename": "b4c69c1d-5e28-4f72-a710-b50157e5f46c.root",
+        "file_size": 44731563,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.575508952140808,
+            "throughput": 3305.810053479054,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "50fafd8a-764a-4017-8794-0d3049f15945": {
+        "filename": "50fafd8a-764a-4017-8794-0d3049f15945.root",
+        "file_size": 52923202,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6358123858769735,
+            "throughput": 3183.9429621026497,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "d7f6eac2-c9fd-48f4-85ab-b6ad4c899500": {
+        "filename": "d7f6eac2-c9fd-48f4-85ab-b6ad4c899500.root",
+        "file_size": 61230527,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7017149448394775,
+            "throughput": 3060.6379459308528,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "66b5bce7-98b1-47ac-96fd-d00e62bf90b4": {
+        "filename": "66b5bce7-98b1-47ac-96fd-d00e62bf90b4.root",
+        "file_size": 69459637,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7645269195238749,
+            "throughput": 2951.6882262916715,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "cf347328-8cbb-4fad-960c-c1c748558000": {
+        "filename": "cf347328-8cbb-4fad-960c-c1c748558000.root",
+        "file_size": 77576525,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.8459449768066407,
+            "throughput": 2821.499773164093,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "4f290357-8d35-4657-9d1e-72e45335d312": {
+        "filename": "4f290357-8d35-4657-9d1e-72e45335d312.root",
+        "file_size": 85196848,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.9115862011909486,
+            "throughput": 2724.6133761001515,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "43924788-62e3-4221-ac41-2e02e72623e3": {
+        "filename": "43924788-62e3-4221-ac41-2e02e72623e3.root",
+        "file_size": 92380934,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.9669331908226013,
+            "throughput": 2647.946233067087,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "daf80b00-37f6-414c-a96a-c6c8047a0fce": {
+        "filename": "daf80b00-37f6-414c-a96a-c6c8047a0fce.root",
+        "file_size": 99250986,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.0281169136365254,
+            "throughput": 2568.0636546709256,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "4977e814-2705-4c29-b0cd-14df7a325bf7": {
+        "filename": "4977e814-2705-4c29-b0cd-14df7a325bf7.root",
+        "file_size": 105712931,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.0811211903889975,
+            "throughput": 2502.657393229371,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "d8ca6d9a-509d-4dce-a663-9aabc7687403": {
+        "filename": "d8ca6d9a-509d-4dce-a663-9aabc7687403.root",
+        "file_size": 13566246,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 40.0,
+            "detector_length": 40.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2010594169298807,
+            "throughput": 4336.449354559619,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "213f20e7-8136-4aff-9b5d-4c6ffafb77c8": {
+        "filename": "213f20e7-8136-4aff-9b5d-4c6ffafb77c8.root",
+        "file_size": 16339624,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 45.0,
+            "detector_length": 45.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2164045890172324,
+            "throughput": 4281.744232436095,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "e1e130f4-896e-4402-82bc-0a9de3b52ca6": {
+        "filename": "e1e130f4-896e-4402-82bc-0a9de3b52ca6.root",
+        "file_size": 19178378,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 50.0,
+            "detector_length": 50.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.23815309604009,
+            "throughput": 4206.53419192734,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "f37a4c18-6c9d-4261-b490-ff0f63605eea": {
+        "filename": "f37a4c18-6c9d-4261-b490-ff0f63605eea.root",
+        "file_size": 22056451,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 55.0,
+            "detector_length": 55.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2571537137031554,
+            "throughput": 4142.956646082141,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "b9f223ce-99a7-47ad-8689-48533453a4a1": {
+        "filename": "b9f223ce-99a7-47ad-8689-48533453a4a1.root",
+        "file_size": 24941039,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 60.0,
+            "detector_length": 60.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2728424509366354,
+            "throughput": 4091.891600174651,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "27287d87-5349-43ee-9d67-ef035fdaf36d": {
+        "filename": "27287d87-5349-43ee-9d67-ef035fdaf36d.root",
+        "file_size": 27721280,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 65.0,
+            "detector_length": 65.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2951324939727784,
+            "throughput": 4021.4675776969616,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "92d46e78-b99a-4c3d-85df-74cc14347fcb": {
+        "filename": "92d46e78-b99a-4c3d-85df-74cc14347fcb.root",
+        "file_size": 30365296,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 70.0,
+            "detector_length": 70.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3107202529907227,
+            "throughput": 3973.642218047117,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "b069bc50-e8ee-4491-8295-51201b7bffaf": {
+        "filename": "b069bc50-e8ee-4491-8295-51201b7bffaf.root",
+        "file_size": 32850955,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 75.0,
+            "detector_length": 75.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3272708137830098,
+            "throughput": 3924.0924152384946,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "9fb15c5a-53fa-46c1-8372-1a270aca37a8": {
+        "filename": "9fb15c5a-53fa-46c1-8372-1a270aca37a8.root",
+        "file_size": 35210319,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 80.0,
+            "detector_length": 80.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3374817291895549,
+            "throughput": 3894.1341923895407,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "47bfac11-24ae-40c5-bf04-218423e356c8": {
+        "filename": "47bfac11-24ae-40c5-bf04-218423e356c8.root",
+        "file_size": 37349759,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 85.0,
+            "detector_length": 85.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3501234173774719,
+            "throughput": 3857.672021903143,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "6dcb6779-5fe8-4884-aa25-f789bb55cf39": {
+        "filename": "6dcb6779-5fe8-4884-aa25-f789bb55cf39.root",
+        "file_size": 39341862,
+        "type": "filter",
+        "properties": {
+            "detector_type": 1,
+            "detector_diameter": 90.0,
+            "detector_length": 90.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3633536537488302,
+            "throughput": 3820.236458098686,
+            "Z": 92,
+            "A": 235
+        }
     }
 }
