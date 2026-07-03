@@ -10338,5 +10338,4705 @@
             "Z": 92,
             "A": 235
         }
+    },
+    "bea2eea2-2de7-458b-8d43-3b7e27fe8211": {
+        "filename": "bea2eea2-2de7-458b-8d43-3b7e27fe8211.root",
+        "file_size": 36946913,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3047909339269002,
+            "throughput": 3991.6995113219614,
+            "Z": 57,
+            "A": 140
+        }
+    },
+    "1343c968-8c3d-42b1-8fe0-ee4c3770c855": {
+        "filename": "1343c968-8c3d-42b1-8fe0-ee4c3770c855.root",
+        "file_size": 38385548,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2425361116727194,
+            "throughput": 4191.695745825691,
+            "Z": 57,
+            "A": 140
+        }
+    },
+    "ce3159e3-dc07-45dd-8df8-23e551c43478": {
+        "filename": "ce3159e3-dc07-45dd-8df8-23e551c43478.root",
+        "file_size": 50122662,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3115419109662374,
+            "throughput": 3971.152800977787,
+            "Z": 57,
+            "A": 140
+        }
+    },
+    "490a7db6-7872-4022-b77f-17390eb8fb63": {
+        "filename": "490a7db6-7872-4022-b77f-17390eb8fb63.root",
+        "file_size": 52088542,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3193769534428914,
+            "throughput": 3947.570343518793,
+            "Z": 57,
+            "A": 140
+        }
+    },
+    "f01e2f7e-1511-4aa9-9082-3e72456257c4": {
+        "filename": "f01e2f7e-1511-4aa9-9082-3e72456257c4.root",
+        "file_size": 63113205,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3795165459314982,
+            "throughput": 3775.477248673725,
+            "Z": 57,
+            "A": 140
+        }
+    },
+    "6079f38c-ca5f-48da-b1ab-e22d01e95823": {
+        "filename": "6079f38c-ca5f-48da-b1ab-e22d01e95823.root",
+        "file_size": 65600616,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3799212058385213,
+            "throughput": 3774.3700954058777,
+            "Z": 57,
+            "A": 140
+        }
+    },
+    "b71110a6-7085-4bc0-b5d1-c6cfa99e38dd": {
+        "filename": "b71110a6-7085-4bc0-b5d1-c6cfa99e38dd.root",
+        "file_size": 75407090,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4222494999567667,
+            "throughput": 3662.0391383450337,
+            "Z": 57,
+            "A": 140
+        }
+    },
+    "f20af09b-7bde-492c-9ae2-2a0fd40f28ac": {
+        "filename": "f20af09b-7bde-492c-9ae2-2a0fd40f28ac.root",
+        "file_size": 78329152,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4497653206189474,
+            "throughput": 3592.535467126323,
+            "Z": 57,
+            "A": 140
+        }
+    },
+    "15d162b7-6cd9-481e-a4da-ecd105edeca0": {
+        "filename": "15d162b7-6cd9-481e-a4da-ecd105edeca0.root",
+        "file_size": 86579321,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4780954082806905,
+            "throughput": 3523.6787180007736,
+            "Z": 57,
+            "A": 140
+        }
+    },
+    "d39ef687-a044-421f-bf4d-bcbe3e8eb412": {
+        "filename": "d39ef687-a044-421f-bf4d-bcbe3e8eb412.root",
+        "file_size": 89803212,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5022482951482137,
+            "throughput": 3467.0256242956643,
+            "Z": 57,
+            "A": 140
+        }
+    },
+    "4395c14b-c4c7-4cd3-a1ce-e4d551ac246f": {
+        "filename": "4395c14b-c4c7-4cd3-a1ce-e4d551ac246f.root",
+        "file_size": 9074267,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6473389744758606,
+            "throughput": 3161.6646082148854,
+            "Z": 56,
+            "A": 140
+        }
+    },
+    "cb859d2d-45da-40b1-a9c7-02c7538da781": {
+        "filename": "cb859d2d-45da-40b1-a9c7-02c7538da781.root",
+        "file_size": 9258667,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6485803643862407,
+            "throughput": 3159.283857704064,
+            "Z": 56,
+            "A": 140
+        }
+    },
+    "98bd8429-0ef2-4a56-933b-17ecb97472e3": {
+        "filename": "98bd8429-0ef2-4a56-933b-17ecb97472e3.root",
+        "file_size": 12157609,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6691776911417644,
+            "throughput": 3120.298911837653,
+            "Z": 56,
+            "A": 140
+        }
+    },
+    "2474b5a2-2e0e-40f3-8dab-b5b5debeaaac": {
+        "filename": "2474b5a2-2e0e-40f3-8dab-b5b5debeaaac.root",
+        "file_size": 12365353,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6677782654762268,
+            "throughput": 3122.9171414139496,
+            "Z": 56,
+            "A": 140
+        }
+    },
+    "ba52f866-b2b9-4b47-874f-ab0a3537f41e": {
+        "filename": "ba52f866-b2b9-4b47-874f-ab0a3537f41e.root",
+        "file_size": 15073489,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6858867327372233,
+            "throughput": 3089.373225493642,
+            "Z": 56,
+            "A": 140
+        }
+    },
+    "3dc13546-8ce8-4c47-a860-d04e4c39e7ed": {
+        "filename": "3dc13546-8ce8-4c47-a860-d04e4c39e7ed.root",
+        "file_size": 15306488,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6866040150324504,
+            "throughput": 3088.059370730909,
+            "Z": 56,
+            "A": 140
+        }
+    },
+    "f51edb6f-5d41-479d-9e97-ad29f197cee9": {
+        "filename": "f51edb6f-5d41-479d-9e97-ad29f197cee9.root",
+        "file_size": 17730001,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7012793143590292,
+            "throughput": 3061.4216545009926,
+            "Z": 56,
+            "A": 140
+        }
+    },
+    "106781bd-873b-458c-9190-13b1cb932888": {
+        "filename": "106781bd-873b-458c-9190-13b1cb932888.root",
+        "file_size": 18004603,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7240123788515727,
+            "throughput": 3021.0533272404887,
+            "Z": 56,
+            "A": 140
+        }
+    },
+    "a20724a5-ff62-4ac9-a9c1-aee46e5eb7b5": {
+        "filename": "a20724a5-ff62-4ac9-a9c1-aee46e5eb7b5.root",
+        "file_size": 20111468,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7195207516352335,
+            "throughput": 3028.944738457097,
+            "Z": 56,
+            "A": 140
+        }
+    },
+    "6d13191e-875c-4e2e-af7f-b4d8e3850b11": {
+        "filename": "6d13191e-875c-4e2e-af7f-b4d8e3850b11.root",
+        "file_size": 20419210,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7237518310546875,
+            "throughput": 3021.509964196287,
+            "Z": 56,
+            "A": 140
+        }
+    },
+    "64d16439-a851-47b1-bfdc-11ca23ba1b01": {
+        "filename": "64d16439-a851-47b1-bfdc-11ca23ba1b01.root",
+        "file_size": 18603720,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.982052465279897,
+            "throughput": 2627.747461063214,
+            "Z": 42,
+            "A": 99
+        }
+    },
+    "c1a003fb-fd93-4a40-8baf-2626c65de942": {
+        "filename": "c1a003fb-fd93-4a40-8baf-2626c65de942.root",
+        "file_size": 18743570,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.969345780213674,
+            "throughput": 2644.7023096006174,
+            "Z": 42,
+            "A": 99
+        }
+    },
+    "79ad31d4-3b67-479f-9bcf-0d456aed95e0": {
+        "filename": "79ad31d4-3b67-479f-9bcf-0d456aed95e0.root",
+        "file_size": 24635309,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.0030187010765075,
+            "throughput": 2600.241990019441,
+            "Z": 42,
+            "A": 99
+        }
+    },
+    "de974e77-78b1-4c9a-9e43-dcb12e105e7c": {
+        "filename": "de974e77-78b1-4c9a-9e43-dcb12e105e7c.root",
+        "file_size": 24830694,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.0121795455614726,
+            "throughput": 2588.4038752019096,
+            "Z": 42,
+            "A": 99
+        }
+    },
+    "cc4320f9-85da-41a6-8079-912a7b62ce27": {
+        "filename": "cc4320f9-85da-41a6-8079-912a7b62ce27.root",
+        "file_size": 30226169,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.035916256904602,
+            "throughput": 2558.225720566749,
+            "Z": 42,
+            "A": 99
+        }
+    },
+    "32a75655-4950-4213-9302-5049d4fc6e80": {
+        "filename": "32a75655-4950-4213-9302-5049d4fc6e80.root",
+        "file_size": 30457356,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.0478262662887574,
+            "throughput": 2543.347264888985,
+            "Z": 42,
+            "A": 99
+        }
+    },
+    "90934c9a-43ee-4e8d-977c-6ed072130f9e": {
+        "filename": "90934c9a-43ee-4e8d-977c-6ed072130f9e.root",
+        "file_size": 35158827,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.0728050231933595,
+            "throughput": 2512.6981433639066,
+            "Z": 42,
+            "A": 99
+        }
+    },
+    "8c711d51-9c21-4633-81fc-c53020f68ff9": {
+        "filename": "8c711d51-9c21-4633-81fc-c53020f68ff9.root",
+        "file_size": 35401445,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.069907291730245,
+            "throughput": 2516.215752339161,
+            "Z": 42,
+            "A": 99
+        }
+    },
+    "90bcf5b3-3ba9-4b35-9c00-087cb0b23f48": {
+        "filename": "90bcf5b3-3ba9-4b35-9c00-087cb0b23f48.root",
+        "file_size": 39487829,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.086303687095642,
+            "throughput": 2496.4406502985626,
+            "Z": 42,
+            "A": 99
+        }
+    },
+    "aaa5ba1f-fbdd-4503-a150-2b8a66aa0236": {
+        "filename": "aaa5ba1f-fbdd-4503-a150-2b8a66aa0236.root",
+        "file_size": 39763086,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.09777246316274,
+            "throughput": 2482.792306979236,
+            "Z": 42,
+            "A": 99
+        }
+    },
+    "86020d77-d22d-4492-9852-34bd13b49b02": {
+        "filename": "86020d77-d22d-4492-9852-34bd13b49b02.root",
+        "file_size": 27332148,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.355236538251241,
+            "throughput": 3843.117556477646,
+            "Z": 52,
+            "A": 132
+        }
+    },
+    "4d864c12-0a65-4c96-8a96-60157af4dd52": {
+        "filename": "4d864c12-0a65-4c96-8a96-60157af4dd52.root",
+        "file_size": 27519723,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3599834481875102,
+            "throughput": 3829.703471961098,
+            "Z": 52,
+            "A": 132
+        }
+    },
+    "d993ed89-8366-4b23-abf5-59cb77241359": {
+        "filename": "d993ed89-8366-4b23-abf5-59cb77241359.root",
+        "file_size": 36510644,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.395278771718343,
+            "throughput": 3732.826327543891,
+            "Z": 52,
+            "A": 132
+        }
+    },
+    "4bbb51e5-7da9-4ad0-8631-f29c39a9e028": {
+        "filename": "4bbb51e5-7da9-4ad0-8631-f29c39a9e028.root",
+        "file_size": 36661384,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.394487702846527,
+            "throughput": 3734.943895669868,
+            "Z": 52,
+            "A": 132
+        }
+    },
+    "54cf5856-1cfc-4651-9b80-056e81884933": {
+        "filename": "54cf5856-1cfc-4651-9b80-056e81884933.root",
+        "file_size": 44702373,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4343595226605734,
+            "throughput": 3631.1212433494143,
+            "Z": 52,
+            "A": 132
+        }
+    },
+    "d763585e-577b-4423-8b67-91331096e02e": {
+        "filename": "d763585e-577b-4423-8b67-91331096e02e.root",
+        "file_size": 44861250,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4394927541414897,
+            "throughput": 3618.1726641893183,
+            "Z": 52,
+            "A": 132
+        }
+    },
+    "f5c174f9-a897-4170-b849-c2e4e72fc188": {
+        "filename": "f5c174f9-a897-4170-b849-c2e4e72fc188.root",
+        "file_size": 51771353,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4715277274449667,
+            "throughput": 3539.405500959627,
+            "Z": 52,
+            "A": 132
+        }
+    },
+    "b84d9a4d-5071-4ea9-b7b6-31722bef8043": {
+        "filename": "b84d9a4d-5071-4ea9-b7b6-31722bef8043.root",
+        "file_size": 51937114,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4700225671132405,
+            "throughput": 3543.0295084253075,
+            "Z": 52,
+            "A": 132
+        }
+    },
+    "2b4ef0f1-3f3f-4074-af4c-280a4c07410f": {
+        "filename": "2b4ef0f1-3f3f-4074-af4c-280a4c07410f.root",
+        "file_size": 57798985,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4946526249249776,
+            "throughput": 3484.6446903304773,
+            "Z": 52,
+            "A": 132
+        }
+    },
+    "d2b4fd53-9b97-49ca-b601-c008db4bbd1f": {
+        "filename": "d2b4fd53-9b97-49ca-b601-c008db4bbd1f.root",
+        "file_size": 57967719,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4964616417884826,
+            "throughput": 3480.4322328694243,
+            "Z": 52,
+            "A": 132
+        }
+    },
+    "51b068a8-d1c5-4640-8c48-000345477333": {
+        "filename": "51b068a8-d1c5-4640-8c48-000345477333.root",
+        "file_size": 52764287,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3563735922177633,
+            "throughput": 3839.895854074653,
+            "Z": 53,
+            "A": 132
+        }
+    },
+    "82d91ee7-b1d0-4510-8df9-593ca6db903a": {
+        "filename": "82d91ee7-b1d0-4510-8df9-593ca6db903a.root",
+        "file_size": 54913076,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.372314997514089,
+            "throughput": 3795.289960955092,
+            "Z": 53,
+            "A": 132
+        }
+    },
+    "575ab603-7c29-4306-829f-dd189c64295d": {
+        "filename": "575ab603-7c29-4306-829f-dd189c64295d.root",
+        "file_size": 71659737,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4584346612294514,
+            "throughput": 3571.1804387196476,
+            "Z": 53,
+            "A": 132
+        }
+    },
+    "b4ec45ac-6d32-486f-868c-45e15d964d54": {
+        "filename": "b4ec45ac-6d32-486f-868c-45e15d964d54.root",
+        "file_size": 74478225,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4750551621119181,
+            "throughput": 3530.9413960331317,
+            "Z": 53,
+            "A": 132
+        }
+    },
+    "04e366a4-bfbc-40b1-abda-3e60f8364323": {
+        "filename": "04e366a4-bfbc-40b1-abda-3e60f8364323.root",
+        "file_size": 89805140,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5511038184165955,
+            "throughput": 3357.8238100465296,
+            "Z": 53,
+            "A": 132
+        }
+    },
+    "32c768dd-8402-49ee-b079-2b4f3b82c8cb": {
+        "filename": "32c768dd-8402-49ee-b079-2b4f3b82c8cb.root",
+        "file_size": 93181166,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5717004140218098,
+            "throughput": 3313.8206790986183,
+            "Z": 53,
+            "A": 132
+        }
+    },
+    "0e57cbd1-817b-4f77-8af0-ac61722ba7e8": {
+        "filename": "0e57cbd1-817b-4f77-8af0-ac61722ba7e8.root",
+        "file_size": 106434938,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.639002831776937,
+            "throughput": 3177.7451706332204,
+            "Z": 53,
+            "A": 132
+        }
+    },
+    "1f9f930a-1e2c-478e-b1bd-f6c9aa0b5000": {
+        "filename": "1f9f930a-1e2c-478e-b1bd-f6c9aa0b5000.root",
+        "file_size": 110237160,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6541810671488444,
+            "throughput": 3148.5871992903685,
+            "Z": 53,
+            "A": 132
+        }
+    },
+    "35bb4510-7eec-4d9a-8495-ea9c9b497c7d": {
+        "filename": "35bb4510-7eec-4d9a-8495-ea9c9b497c7d.root",
+        "file_size": 121183388,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.713845177491506,
+            "throughput": 3038.9753997246034,
+            "Z": 53,
+            "A": 132
+        }
+    },
+    "b93d162b-1314-4970-b989-54128e8ce6af": {
+        "filename": "b93d162b-1314-4970-b989-54128e8ce6af.root",
+        "file_size": 125468687,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.7408228834470114,
+            "throughput": 2991.8800946712563,
+            "Z": 53,
+            "A": 132
+        }
+    },
+    "e9007f39-263b-4479-8ecc-8764d9da5d80": {
+        "filename": "e9007f39-263b-4479-8ecc-8764d9da5d80.root",
+        "file_size": 19685652,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7372765103975932,
+            "throughput": 7064.287631413376,
+            "Z": 53,
+            "A": 131
+        }
+    },
+    "06fad3d5-487b-4e53-b81b-c680a8d5b8a2": {
+        "filename": "06fad3d5-487b-4e53-b81b-c680a8d5b8a2.root",
+        "file_size": 20066719,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7376381278038024,
+            "throughput": 7060.824457163431,
+            "Z": 53,
+            "A": 131
+        }
+    },
+    "4b589e39-b6cd-4722-9f85-548fe828939b": {
+        "filename": "4b589e39-b6cd-4722-9f85-548fe828939b.root",
+        "file_size": 26290064,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7786319136619568,
+            "throughput": 6689.0827898874595,
+            "Z": 53,
+            "A": 131
+        }
+    },
+    "09f2efa9-80a1-4765-9323-c6014f8c01fd": {
+        "filename": "09f2efa9-80a1-4765-9323-c6014f8c01fd.root",
+        "file_size": 26714135,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7814398090044657,
+            "throughput": 6665.047356582225,
+            "Z": 53,
+            "A": 131
+        }
+    },
+    "a09eea1a-0a08-4f57-8973-fff47f12aacf": {
+        "filename": "a09eea1a-0a08-4f57-8973-fff47f12aacf.root",
+        "file_size": 32636970,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8160382032394409,
+            "throughput": 6382.462625717427,
+            "Z": 53,
+            "A": 131
+        }
+    },
+    "254b1fd8-51bb-43e3-9862-614fb72623fa": {
+        "filename": "254b1fd8-51bb-43e3-9862-614fb72623fa.root",
+        "file_size": 33113029,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8190430283546448,
+            "throughput": 6359.047269831751,
+            "Z": 53,
+            "A": 131
+        }
+    },
+    "c8639da7-0372-4ad0-997b-16d4d6c2e8a1": {
+        "filename": "c8639da7-0372-4ad0-997b-16d4d6c2e8a1.root",
+        "file_size": 38513072,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8454260945320129,
+            "throughput": 6160.601579510525,
+            "Z": 53,
+            "A": 131
+        }
+    },
+    "e0ce0dfc-d0ed-4b0d-af89-97efc4b49896": {
+        "filename": "e0ce0dfc-d0ed-4b0d-af89-97efc4b49896.root",
+        "file_size": 39030979,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8496042927106221,
+            "throughput": 6130.304870184204,
+            "Z": 53,
+            "A": 131
+        }
+    },
+    "ce0f93cc-8642-4315-a7cf-b49f62f5d553": {
+        "filename": "ce0f93cc-8642-4315-a7cf-b49f62f5d553.root",
+        "file_size": 43858443,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8699240763982137,
+            "throughput": 5987.112524690238,
+            "Z": 53,
+            "A": 131
+        }
+    },
+    "c9c352f2-5968-4568-bf60-a74ad84ad2b1": {
+        "filename": "c9c352f2-5968-4568-bf60-a74ad84ad2b1.root",
+        "file_size": 44394851,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8797131101290385,
+            "throughput": 5920.490752456061,
+            "Z": 53,
+            "A": 131
+        }
+    },
+    "aa15cc2b-c032-48a9-9a6f-10f21cbbb578": {
+        "filename": "aa15cc2b-c032-48a9-9a6f-10f21cbbb578.root",
+        "file_size": 19576276,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8309017340342204,
+            "throughput": 6268.290364548488,
+            "Z": 53,
+            "A": 133
+        }
+    },
+    "7b39e047-5abf-44e1-9ac3-4fb092881828": {
+        "filename": "7b39e047-5abf-44e1-9ac3-4fb092881828.root",
+        "file_size": 20140798,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8332422574361166,
+            "throughput": 6250.683143890657,
+            "Z": 53,
+            "A": 133
+        }
+    },
+    "307a40f0-4955-4cf4-b871-6b5c43fe19ca": {
+        "filename": "307a40f0-4955-4cf4-b871-6b5c43fe19ca.root",
+        "file_size": 26333229,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8741775631904602,
+            "throughput": 5957.981024272268,
+            "Z": 53,
+            "A": 133
+        }
+    },
+    "d1b05846-0b92-4780-ad89-c115257326ad": {
+        "filename": "d1b05846-0b92-4780-ad89-c115257326ad.root",
+        "file_size": 27019540,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8730535467465719,
+            "throughput": 5965.651651885674,
+            "Z": 53,
+            "A": 133
+        }
+    },
+    "22df94c2-a44d-4937-b962-098bd3dd41e5": {
+        "filename": "22df94c2-a44d-4937-b962-098bd3dd41e5.root",
+        "file_size": 32883173,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9137015422185262,
+            "throughput": 5700.256695076999,
+            "Z": 53,
+            "A": 133
+        }
+    },
+    "980f8342-7290-439c-b3f4-7e65670da9d4": {
+        "filename": "980f8342-7290-439c-b3f4-7e65670da9d4.root",
+        "file_size": 33684529,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9176032344500223,
+            "throughput": 5676.018934757806,
+            "Z": 53,
+            "A": 133
+        }
+    },
+    "47e5f3aa-6d95-43d0-829a-2813b23ecac2": {
+        "filename": "47e5f3aa-6d95-43d0-829a-2813b23ecac2.root",
+        "file_size": 39010312,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9405422568321228,
+            "throughput": 5537.585680494277,
+            "Z": 53,
+            "A": 133
+        }
+    },
+    "0acd56a6-9c27-4180-a99b-3a54607d9abb": {
+        "filename": "0acd56a6-9c27-4180-a99b-3a54607d9abb.root",
+        "file_size": 39946225,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9505650917689006,
+            "throughput": 5479.196930786906,
+            "Z": 53,
+            "A": 133
+        }
+    },
+    "a394dc28-1ac5-4b53-9f96-3194cf3e32c9": {
+        "filename": "a394dc28-1ac5-4b53-9f96-3194cf3e32c9.root",
+        "file_size": 44723391,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9710502425829569,
+            "throughput": 5363.608498237293,
+            "Z": 53,
+            "A": 133
+        }
+    },
+    "bb58c542-925b-457f-ab65-126961a79d85": {
+        "filename": "bb58c542-925b-457f-ab65-126961a79d85.root",
+        "file_size": 45764934,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9815500219662984,
+            "throughput": 5306.233219678092,
+            "Z": 53,
+            "A": 133
+        }
+    },
+    "cd4ce426-00ed-4bd0-9939-34c5d7b41cf7": {
+        "filename": "cd4ce426-00ed-4bd0-9939-34c5d7b41cf7.root",
+        "file_size": 24016108,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9583749612172444,
+            "throughput": 5434.546543993763,
+            "Z": 53,
+            "A": 135
+        }
+    },
+    "764051d7-fe99-42c7-919c-d20d91ecde0d": {
+        "filename": "764051d7-fe99-42c7-919c-d20d91ecde0d.root",
+        "file_size": 25008099,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9616589665412902,
+            "throughput": 5415.987906883106,
+            "Z": 53,
+            "A": 135
+        }
+    },
+    "47c9720f-693b-41e0-ac2b-cc617551dc7f": {
+        "filename": "47c9720f-693b-41e0-ac2b-cc617551dc7f.root",
+        "file_size": 32540795,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.00763045946757,
+            "throughput": 5168.892310069116,
+            "Z": 53,
+            "A": 135
+        }
+    },
+    "0df05d25-0ef2-48c7-ade5-015b91ce3527": {
+        "filename": "0df05d25-0ef2-48c7-ade5-015b91ce3527.root",
+        "file_size": 33892052,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.021108365058899,
+            "throughput": 5100.666600682395,
+            "Z": 53,
+            "A": 135
+        }
+    },
+    "e5e7fdcd-ee5d-436f-9248-30a3c846bbf9": {
+        "filename": "e5e7fdcd-ee5d-436f-9248-30a3c846bbf9.root",
+        "file_size": 41035996,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0589821775754293,
+            "throughput": 4918.244559373005,
+            "Z": 53,
+            "A": 135
+        }
+    },
+    "a8e3636e-755f-487b-a2f1-c7afdcd46a9c": {
+        "filename": "a8e3636e-755f-487b-a2f1-c7afdcd46a9c.root",
+        "file_size": 42712898,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.06995317141215,
+            "throughput": 4867.814286170346,
+            "Z": 53,
+            "A": 135
+        }
+    },
+    "f0cb651e-32ee-46e5-8a94-cdb4234397fd": {
+        "filename": "f0cb651e-32ee-46e5-8a94-cdb4234397fd.root",
+        "file_size": 49133312,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1043761293093364,
+            "throughput": 4716.08648096239,
+            "Z": 53,
+            "A": 135
+        }
+    },
+    "873f9ddd-4d35-4dc9-b6df-d651a3a5f793": {
+        "filename": "873f9ddd-4d35-4dc9-b6df-d651a3a5f793.root",
+        "file_size": 51147657,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1190652171770732,
+            "throughput": 4654.182127536543,
+            "Z": 53,
+            "A": 135
+        }
+    },
+    "6f465e34-9a60-45ff-ba2b-4f2be1477024": {
+        "filename": "6f465e34-9a60-45ff-ba2b-4f2be1477024.root",
+        "file_size": 56688946,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1440963665644328,
+            "throughput": 4552.355453215237,
+            "Z": 53,
+            "A": 135
+        }
+    },
+    "107fe943-a029-4cb5-a4d6-f36b1a50fbd3": {
+        "filename": "107fe943-a029-4cb5-a4d6-f36b1a50fbd3.root",
+        "file_size": 59038565,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1672797203063965,
+            "throughput": 4461.941077813131,
+            "Z": 53,
+            "A": 135
+        }
+    },
+    "4c3c7c2f-cd85-44cd-b363-0bf2910458e0": {
+        "filename": "4c3c7c2f-cd85-44cd-b363-0bf2910458e0.root",
+        "file_size": 27986241,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.9183052937189737,
+            "throughput": 2715.0700935803907,
+            "Z": 93,
+            "A": 239
+        }
+    },
+    "cb0f7587-bf76-489c-94af-92728ccf0c78": {
+        "filename": "cb0f7587-bf76-489c-94af-92728ccf0c78.root",
+        "file_size": 28062799,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.911785892645518,
+            "throughput": 2724.3287825113475,
+            "Z": 93,
+            "A": 239
+        }
+    },
+    "38059e14-baae-4c3a-8e25-a9369f56f330": {
+        "filename": "38059e14-baae-4c3a-8e25-a9369f56f330.root",
+        "file_size": 37437532,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.954671061038971,
+            "throughput": 2664.557447617266,
+            "Z": 93,
+            "A": 239
+        }
+    },
+    "425f7248-40d5-4bcd-b595-f590e7855f28": {
+        "filename": "425f7248-40d5-4bcd-b595-f590e7855f28.root",
+        "file_size": 37577759,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.9517977039019268,
+            "throughput": 2668.4801006380526,
+            "Z": 93,
+            "A": 239
+        }
+    },
+    "9e1ff7fe-914c-40ef-88b8-be33d5a7ed97": {
+        "filename": "9e1ff7fe-914c-40ef-88b8-be33d5a7ed97.root",
+        "file_size": 46019262,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.9983731985092164,
+            "throughput": 2606.2866221478266,
+            "Z": 93,
+            "A": 239
+        }
+    },
+    "63fb4efd-8e96-4e36-b26c-0f8466ef1b27": {
+        "filename": "63fb4efd-8e96-4e36-b26c-0f8466ef1b27.root",
+        "file_size": 46188822,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.0031593879063925,
+            "throughput": 2600.0593686041316,
+            "Z": 93,
+            "A": 239
+        }
+    },
+    "31c2e7ea-948a-457b-9202-a53a30d01e35": {
+        "filename": "31c2e7ea-948a-457b-9202-a53a30d01e35.root",
+        "file_size": 53373677,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.0272481640179953,
+            "throughput": 2569.1641634097937,
+            "Z": 93,
+            "A": 239
+        }
+    },
+    "50c28033-ae0c-492f-bb61-1eb81c6fc35a": {
+        "filename": "50c28033-ae0c-492f-bb61-1eb81c6fc35a.root",
+        "file_size": 53521863,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.0266676425933836,
+            "throughput": 2569.9000782726253,
+            "Z": 93,
+            "A": 239
+        }
+    },
+    "f4329f4f-a8e3-462e-bfb7-e104080c493f": {
+        "filename": "f4329f4f-a8e3-462e-bfb7-e104080c493f.root",
+        "file_size": 59567827,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.0549283901850384,
+            "throughput": 2534.5570961060807,
+            "Z": 93,
+            "A": 239
+        }
+    },
+    "0260a85b-a331-4709-85ff-f70a3408b8bd": {
+        "filename": "0260a85b-a331-4709-85ff-f70a3408b8bd.root",
+        "file_size": 59722256,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 2.058015505472819,
+            "throughput": 2530.7551471225406,
+            "Z": 93,
+            "A": 239
+        }
+    },
+    "a0349f1e-465e-4567-b88b-b5ffc531d2d2": {
+        "filename": "a0349f1e-465e-4567-b88b-b5ffc531d2d2.root",
+        "file_size": 29833610,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8911971330642701,
+            "throughput": 5844.198932087146,
+            "Z": 27,
+            "A": 60
+        }
+    },
+    "98e50f71-d074-43a6-8384-f069a2eaf587": {
+        "filename": "98e50f71-d074-43a6-8384-f069a2eaf587.root",
+        "file_size": 31267682,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9006380319595337,
+            "throughput": 5782.93737163361,
+            "Z": 27,
+            "A": 60
+        }
+    },
+    "e61ccf91-cc8a-49f0-81a4-28f4dca57278": {
+        "filename": "e61ccf91-cc8a-49f0-81a4-28f4dca57278.root",
+        "file_size": 40620893,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9576027552286784,
+            "throughput": 5438.928934670377,
+            "Z": 27,
+            "A": 60
+        }
+    },
+    "bf41ca27-4e40-4e86-833e-38dd0e9fa59b": {
+        "filename": "bf41ca27-4e40-4e86-833e-38dd0e9fa59b.root",
+        "file_size": 42602047,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9703238209088644,
+            "throughput": 5367.6239015289675,
+            "Z": 27,
+            "A": 60
+        }
+    },
+    "c54a5e9c-c7cc-4eef-ac79-24a76da1148c": {
+        "filename": "c54a5e9c-c7cc-4eef-ac79-24a76da1148c.root",
+        "file_size": 51482287,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0289940675099691,
+            "throughput": 5061.577610390717,
+            "Z": 27,
+            "A": 60
+        }
+    },
+    "fe519fc1-0c9d-44f9-8315-5c9ef1488fbf": {
+        "filename": "fe519fc1-0c9d-44f9-8315-5c9ef1488fbf.root",
+        "file_size": 54000992,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0411568641662599,
+            "throughput": 5002.448250201063,
+            "Z": 27,
+            "A": 60
+        }
+    },
+    "efef9b40-e93a-4ccc-a3a8-344c145e82d3": {
+        "filename": "efef9b40-e93a-4ccc-a3a8-344c145e82d3.root",
+        "file_size": 62021734,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0891850630442301,
+            "throughput": 4781.862614582909,
+            "Z": 27,
+            "A": 60
+        }
+    },
+    "ae5bac93-5cd9-4fc4-a98f-25b52b92aae6": {
+        "filename": "ae5bac93-5cd9-4fc4-a98f-25b52b92aae6.root",
+        "file_size": 65011086,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1104246060053506,
+            "throughput": 4690.397983947625,
+            "Z": 27,
+            "A": 60
+        }
+    },
+    "cd8f43fe-971d-4048-a075-e561215d1d57": {
+        "filename": "cd8f43fe-971d-4048-a075-e561215d1d57.root",
+        "file_size": 72035229,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1446924686431885,
+            "throughput": 4549.984800290339,
+            "Z": 27,
+            "A": 60
+        }
+    },
+    "da863043-fab4-4b3c-8fbe-4017c3095f90": {
+        "filename": "da863043-fab4-4b3c-8fbe-4017c3095f90.root",
+        "file_size": 75560021,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1623099088668822,
+            "throughput": 4481.019471313684,
+            "Z": 27,
+            "A": 60
+        }
+    },
+    "65c3358b-7ba7-43bd-ad13-11f8ac21d7d4": {
+        "filename": "65c3358b-7ba7-43bd-ad13-11f8ac21d7d4.root",
+        "file_size": 39959185,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0330255468686422,
+            "throughput": 5041.824327695564,
+            "Z": 55,
+            "A": 134
+        }
+    },
+    "2a9b3928-ba3c-46b2-854b-eb7bae44cc93": {
+        "filename": "2a9b3928-ba3c-46b2-854b-eb7bae44cc93.root",
+        "file_size": 41421157,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0402330001195272,
+            "throughput": 5006.891083761882,
+            "Z": 55,
+            "A": 134
+        }
+    },
+    "b5fe3d65-47b9-46be-bbf4-d0d702ef0d69": {
+        "filename": "b5fe3d65-47b9-46be-bbf4-d0d702ef0d69.root",
+        "file_size": 54226886,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1095512866973878,
+            "throughput": 4694.089760227391,
+            "Z": 55,
+            "A": 134
+        }
+    },
+    "6e1b748e-2bf1-4fbc-83e1-fc255232c79b": {
+        "filename": "6e1b748e-2bf1-4fbc-83e1-fc255232c79b.root",
+        "file_size": 56239536,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1193072199821472,
+            "throughput": 4653.175857667035,
+            "Z": 55,
+            "A": 134
+        }
+    },
+    "299ae2d7-72b5-40c6-a47b-6cb896edf22e": {
+        "filename": "299ae2d7-72b5-40c6-a47b-6cb896edf22e.root",
+        "file_size": 68459107,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.182088319460551,
+            "throughput": 4406.044157267513,
+            "Z": 55,
+            "A": 134
+        }
+    },
+    "e9abfb0a-3195-4d12-baa3-21d1cb1b6b75": {
+        "filename": "e9abfb0a-3195-4d12-baa3-21d1cb1b6b75.root",
+        "file_size": 70974729,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1999063968658448,
+            "throughput": 4340.6163571904435,
+            "Z": 55,
+            "A": 134
+        }
+    },
+    "7aaf0b01-1c15-4a8e-9478-5c7455271cc4": {
+        "filename": "7aaf0b01-1c15-4a8e-9478-5c7455271cc4.root",
+        "file_size": 81873904,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2444270412127176,
+            "throughput": 4185.326387843287,
+            "Z": 55,
+            "A": 134
+        }
+    },
+    "39c20c98-81fc-49a7-806f-7cd8793b29ef": {
+        "filename": "39c20c98-81fc-49a7-806f-7cd8793b29ef.root",
+        "file_size": 84707456,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2673087517420452,
+            "throughput": 4109.75883041441,
+            "Z": 55,
+            "A": 134
+        }
+    },
+    "22687f1a-3d0b-404e-a224-cbc21871d3b4": {
+        "filename": "22687f1a-3d0b-404e-a224-cbc21871d3b4.root",
+        "file_size": 93860612,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.30384757121404,
+            "throughput": 3994.5875946861975,
+            "Z": 55,
+            "A": 134
+        }
+    },
+    "764f89f7-a7b2-4e9c-b71c-b0269bc184c9": {
+        "filename": "764f89f7-a7b2-4e9c-b71c-b0269bc184c9.root",
+        "file_size": 97068211,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3386281967163085,
+            "throughput": 3890.7990628835673,
+            "Z": 55,
+            "A": 134
+        }
+    },
+    "eb876ba9-18b0-4306-a33c-6f0480406044": {
+        "filename": "eb876ba9-18b0-4306-a33c-6f0480406044.root",
+        "file_size": 34122393,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8975867509841919,
+            "throughput": 5802.596047259461,
+            "Z": 41,
+            "A": 94
+        }
+    },
+    "3739740c-75c8-4bb2-a214-c446d8659ff0": {
+        "filename": "3739740c-75c8-4bb2-a214-c446d8659ff0.root",
+        "file_size": 35504646,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.904010275999705,
+            "throughput": 5761.36518755129,
+            "Z": 41,
+            "A": 94
+        }
+    },
+    "85d42656-6516-4f22-a23d-9731cdf7be7c": {
+        "filename": "85d42656-6516-4f22-a23d-9731cdf7be7c.root",
+        "file_size": 46388647,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9653409123420715,
+            "throughput": 5395.330568448698,
+            "Z": 41,
+            "A": 94
+        }
+    },
+    "d242a1d7-bd75-468b-abac-9d41ba6f6ea7": {
+        "filename": "d242a1d7-bd75-468b-abac-9d41ba6f6ea7.root",
+        "file_size": 48205118,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9771861076354981,
+            "throughput": 5329.929777589617,
+            "Z": 41,
+            "A": 94
+        }
+    },
+    "52c3bb8d-387d-4fb0-871b-d196b23db530": {
+        "filename": "52c3bb8d-387d-4fb0-871b-d196b23db530.root",
+        "file_size": 58675764,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0406896988550822,
+            "throughput": 5004.693847804294,
+            "Z": 41,
+            "A": 94
+        }
+    },
+    "cb3b6f3e-59a3-434c-afbc-9fb506400acf": {
+        "filename": "cb3b6f3e-59a3-434c-afbc-9fb506400acf.root",
+        "file_size": 60958406,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0521714011828105,
+            "throughput": 4950.08068787873,
+            "Z": 41,
+            "A": 94
+        }
+    },
+    "fb537353-8b18-41a3-8813-1d541466397b": {
+        "filename": "fb537353-8b18-41a3-8813-1d541466397b.root",
+        "file_size": 70424841,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0998680988947551,
+            "throughput": 4735.416309071177,
+            "Z": 41,
+            "A": 94
+        }
+    },
+    "0d48df79-9fb7-4331-ac18-638b7abc5cba": {
+        "filename": "0d48df79-9fb7-4331-ac18-638b7abc5cba.root",
+        "file_size": 73142817,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1115416566530862,
+            "throughput": 4685.684339546854,
+            "Z": 41,
+            "A": 94
+        }
+    },
+    "8d38d691-fd42-4044-afd6-8bf0966b2b31": {
+        "filename": "8d38d691-fd42-4044-afd6-8bf0966b2b31.root",
+        "file_size": 81311375,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1494805415471394,
+            "throughput": 4531.032188090104,
+            "Z": 41,
+            "A": 94
+        }
+    },
+    "6dbd3f8d-e2b8-415d-ae54-7110f6531985": {
+        "filename": "6dbd3f8d-e2b8-415d-ae54-7110f6531985.root",
+        "file_size": 84322713,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1718504826227825,
+            "throughput": 4444.537430813084,
+            "Z": 41,
+            "A": 94
+        }
+    },
+    "53ce9fd7-d1de-446c-99c1-f225e1f41854": {
+        "filename": "53ce9fd7-d1de-446c-99c1-f225e1f41854.root",
+        "file_size": 25779871,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.105849313735962,
+            "throughput": 4709.8038300875605,
+            "Z": 25,
+            "A": 56
+        }
+    },
+    "adef9160-9bbb-4ea5-aefe-851bb0b8e055": {
+        "filename": "adef9160-9bbb-4ea5-aefe-851bb0b8e055.root",
+        "file_size": 26796246,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.09213525056839,
+            "throughput": 4768.945357841634,
+            "Z": 25,
+            "A": 56
+        }
+    },
+    "024f1e8f-6a4c-4075-ba97-0dfc4860e8ae": {
+        "filename": "024f1e8f-6a4c-4075-ba97-0dfc4860e8ae.root",
+        "file_size": 34977700,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1194619099299112,
+            "throughput": 4652.53287059979,
+            "Z": 25,
+            "A": 56
+        }
+    },
+    "5e7d771c-9be5-40b9-8ecc-4bafce9883d6": {
+        "filename": "5e7d771c-9be5-40b9-8ecc-4bafce9883d6.root",
+        "file_size": 36372828,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1272142012914022,
+            "throughput": 4620.535588858234,
+            "Z": 25,
+            "A": 56
+        }
+    },
+    "42160d4b-98d8-4b78-8441-7a3093acf50c": {
+        "filename": "42160d4b-98d8-4b78-8441-7a3093acf50c.root",
+        "file_size": 43861847,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.168679165840149,
+            "throughput": 4456.598085745053,
+            "Z": 25,
+            "A": 56
+        }
+    },
+    "e157ab7b-b9a1-428f-99c7-969c36a73b8f": {
+        "filename": "e157ab7b-b9a1-428f-99c7-969c36a73b8f.root",
+        "file_size": 45596906,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.180097258090973,
+            "throughput": 4413.478039732744,
+            "Z": 25,
+            "A": 56
+        }
+    },
+    "70ed9906-92da-46b2-b43c-41dbc623cb94": {
+        "filename": "70ed9906-92da-46b2-b43c-41dbc623cb94.root",
+        "file_size": 52209422,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2458241820335387,
+            "throughput": 4180.632715630752,
+            "Z": 25,
+            "A": 56
+        }
+    },
+    "9ce3cfc4-0d29-424a-97ba-d9c36e5a0f5e": {
+        "filename": "9ce3cfc4-0d29-424a-97ba-d9c36e5a0f5e.root",
+        "file_size": 54236481,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2434971491495768,
+            "throughput": 4188.456191391588,
+            "Z": 25,
+            "A": 56
+        }
+    },
+    "ea6e0d11-22ae-4cd4-aeca-368666fee4eb": {
+        "filename": "ea6e0d11-22ae-4cd4-aeca-368666fee4eb.root",
+        "file_size": 60022730,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2767971316973368,
+            "throughput": 4079.2176016322396,
+            "Z": 25,
+            "A": 56
+        }
+    },
+    "23edb711-5433-4f4a-a308-534cac6b9e15": {
+        "filename": "23edb711-5433-4f4a-a308-534cac6b9e15.root",
+        "file_size": 62400034,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2878579020500183,
+            "throughput": 4044.1832325155465,
+            "Z": 25,
+            "A": 56
+        }
+    },
+    "0ed66782-9b1f-40ad-97b0-acca1856f713": {
+        "filename": "0ed66782-9b1f-40ad-97b0-acca1856f713.root",
+        "file_size": 28307819,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1349467476209005,
+            "throughput": 4589.055252372988,
+            "Z": 11,
+            "A": 24
+        }
+    },
+    "2414b0be-bbcb-4a8f-9de8-fc6e9a1d1d83": {
+        "filename": "2414b0be-bbcb-4a8f-9de8-fc6e9a1d1d83.root",
+        "file_size": 29748052,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1513651331265768,
+            "throughput": 4523.6156484866815,
+            "Z": 11,
+            "A": 24
+        }
+    },
+    "8cbb06cb-885a-4559-a3f9-e580309f292e": {
+        "filename": "8cbb06cb-885a-4559-a3f9-e580309f292e.root",
+        "file_size": 38566058,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.21147909561793,
+            "throughput": 4299.1524593140075,
+            "Z": 11,
+            "A": 24
+        }
+    },
+    "abb5a341-e048-4063-8fa4-4df8103be1ad": {
+        "filename": "abb5a341-e048-4063-8fa4-4df8103be1ad.root",
+        "file_size": 40591007,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2364250620206196,
+            "throughput": 4212.41326572728,
+            "Z": 11,
+            "A": 24
+        }
+    },
+    "e2f439ef-64e4-4dcb-a1ab-58a91feb3003": {
+        "filename": "e2f439ef-64e4-4dcb-a1ab-58a91feb3003.root",
+        "file_size": 48879722,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2806115825970967,
+            "throughput": 4067.0671764273493,
+            "Z": 11,
+            "A": 24
+        }
+    },
+    "3218a165-6689-482c-9e6b-86e089b18821": {
+        "filename": "3218a165-6689-482c-9e6b-86e089b18821.root",
+        "file_size": 51445463,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2911351164182028,
+            "throughput": 4033.918113684345,
+            "Z": 11,
+            "A": 24
+        }
+    },
+    "2d0d92f9-4f90-4add-a0ce-d797416a1a03": {
+        "filename": "2d0d92f9-4f90-4add-a0ce-d797416a1a03.root",
+        "file_size": 58847372,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.323058040936788,
+            "throughput": 3936.587188303233,
+            "Z": 11,
+            "A": 24
+        }
+    },
+    "cbde16cf-5778-45ae-88e3-23762e893b25": {
+        "filename": "cbde16cf-5778-45ae-88e3-23762e893b25.root",
+        "file_size": 61970617,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3453175902366639,
+            "throughput": 3871.4526377500947,
+            "Z": 11,
+            "A": 24
+        }
+    },
+    "a0b4f1ad-0793-45da-a861-3df5831c9dea": {
+        "filename": "a0b4f1ad-0793-45da-a861-3df5831c9dea.root",
+        "file_size": 68325783,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.390682824452718,
+            "throughput": 3745.1626220975245,
+            "Z": 11,
+            "A": 24
+        }
+    },
+    "0be6d540-07ae-4926-9b04-787f2b677146": {
+        "filename": "0be6d540-07ae-4926-9b04-787f2b677146.root",
+        "file_size": 71989577,
+        "type": "radionuclides",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4211586276690165,
+            "throughput": 3664.8500962035732,
+            "Z": 11,
+            "A": 24
+        }
+    },
+    "3316ed1f-58dd-40e7-bc04-766dd2b90caf": {
+        "filename": "3316ed1f-58dd-40e7-bc04-766dd2b90caf.root",
+        "file_size": 1320960327,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 39.800596475601196,
+            "throughput": 13086.068538008412,
+            "background_file": "resources/source_flux_avg_unshielded.csv",
+            "SURE_radius": 63.368840923595876,
+            "SURE_pseudo_time": 586769.4090777936
+        }
+    },
+    "dedc7355-72fc-4195-9571-951964c8a90a": {
+        "filename": "dedc7355-72fc-4195-9571-951964c8a90a.root",
+        "file_size": 981698587,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 39.84450023969014,
+            "throughput": 13071.64929162589,
+            "background_file": "resources/source_flux_avg_unshielded.csv",
+            "SURE_radius": 67.70974819034554,
+            "SURE_pseudo_time": 513944.93899958296
+        }
+    },
+    "7449c507-194a-4ca5-a3c1-3592353621ff": {
+        "filename": "7449c507-194a-4ca5-a3c1-3592353621ff.root",
+        "file_size": 1605101064,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 41.88260303338369,
+            "throughput": 12435.553084372257,
+            "background_file": "resources/source_flux_avg_unshielded.csv",
+            "SURE_radius": 66.07276292088896,
+            "SURE_pseudo_time": 539726.8896641886
+        }
+    },
+    "a79098c5-e282-45e9-b20f-e4dd7312db54": {
+        "filename": "a79098c5-e282-45e9-b20f-e4dd7312db54.root",
+        "file_size": 1647501057,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 41.36870794693629,
+            "throughput": 12590.031431520827,
+            "background_file": "resources/source_flux_avg_unshielded.csv",
+            "SURE_radius": 70.2467792856014,
+            "SURE_pseudo_time": 477492.0625514232
+        }
+    },
+    "a33ae575-e13e-4072-a88e-d9b0ed1fdc07": {
+        "filename": "a33ae575-e13e-4072-a88e-d9b0ed1fdc07.root",
+        "file_size": 1971375182,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 43.39787358045578,
+            "throughput": 12001.35606570112,
+            "background_file": "resources/source_flux_avg_unshielded.csv",
+            "SURE_radius": 69.03339771443963,
+            "SURE_pseudo_time": 494425.08027028624
+        }
+    },
+    "70ec3379-55ec-403e-98b2-469c31dc10f7": {
+        "filename": "70ec3379-55ec-403e-98b2-469c31dc10f7.root",
+        "file_size": 1912599682,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 43.354189964135486,
+            "throughput": 12013.448613944576,
+            "background_file": "resources/source_flux_avg_unshielded.csv",
+            "SURE_radius": 73.03841455015299,
+            "SURE_pseudo_time": 441688.7282832068
+        }
+    },
+    "303da7e0-499f-4e8b-b222-c416244fc0ec": {
+        "filename": "303da7e0-499f-4e8b-b222-c416244fc0ec.root",
+        "file_size": 2264494295,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 45.458942417303724,
+            "throughput": 11457.225039513472,
+            "background_file": "resources/source_flux_avg_unshielded.csv",
+            "SURE_radius": 72.21918027781817,
+            "SURE_pseudo_time": 451766.35269640136
+        }
+    },
+    "9a8952be-08f1-4b3c-99cc-055a32a3ef30": {
+        "filename": "9a8952be-08f1-4b3c-99cc-055a32a3ef30.root",
+        "file_size": 2039800598,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 45.138496192296344,
+            "throughput": 11538.561920949029,
+            "background_file": "resources/source_flux_avg_unshielded.csv",
+            "SURE_radius": 76.05662364317784,
+            "SURE_pseudo_time": 407328.6024099946
+        }
+    },
+    "d22bd9db-9b99-4216-ae48-7c7841041390": {
+        "filename": "d22bd9db-9b99-4216-ae48-7c7841041390.root",
+        "file_size": 2529510726,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 46.376326942443846,
+            "throughput": 11230.586113033976,
+            "background_file": "resources/source_flux_avg_unshielded.csv",
+            "SURE_radius": 75.60165342107274,
+            "SURE_pseudo_time": 412245.9556874731
+        }
+    },
+    "ca79aad8-eae1-4900-ab3a-052c6b44ec98": {
+        "filename": "ca79aad8-eae1-4900-ab3a-052c6b44ec98.root",
+        "file_size": 2400546139,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 46.41712960799535,
+            "throughput": 11220.713941855201,
+            "background_file": "resources/source_flux_avg_unshielded.csv",
+            "SURE_radius": 79.2755321647228,
+            "SURE_pseudo_time": 374921.7702907385
+        }
+    },
+    "06494b41-3589-4c70-bff3-22f34030954b": {
+        "filename": "06494b41-3589-4c70-bff3-22f34030954b.root",
+        "file_size": 1275377056,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 42.79051303068797,
+            "throughput": 12171.701072146729,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 63.368840923595876,
+            "SURE_pseudo_time": 80365270.50443964
+        }
+    },
+    "3b4c4e6c-83c9-4913-ba44-dfc5a7e74434": {
+        "filename": "3b4c4e6c-83c9-4913-ba44-dfc5a7e74434.root",
+        "file_size": 1216446837,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 42.50940518776576,
+            "throughput": 12252.190568952718,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 67.70974819034554,
+            "SURE_pseudo_time": 70391065.73739812
+        }
+    },
+    "354e6a45-bb85-4e6c-8301-914ce9b15e00": {
+        "filename": "354e6a45-bb85-4e6c-8301-914ce9b15e00.root",
+        "file_size": 1704192703,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 45.49864909251531,
+            "throughput": 11447.226318176825,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 66.07276292088896,
+            "SURE_pseudo_time": 73922220.23733975
+        }
+    },
+    "0203a2f8-1e8d-42e7-aebc-65064be12621": {
+        "filename": "0203a2f8-1e8d-42e7-aebc-65064be12621.root",
+        "file_size": 1709822570,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 45.260303966204326,
+            "throughput": 11507.508516121265,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 70.2467792856014,
+            "SURE_pseudo_time": 65398397.014218524
+        }
+    },
+    "19b4e0f2-5197-49a6-baad-4e639e5c2c4f": {
+        "filename": "19b4e0f2-5197-49a6-baad-4e639e5c2c4f.root",
+        "file_size": 2037881943,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 48.05362831354141,
+            "throughput": 10838.584964593892,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 69.03339771443963,
+            "SURE_pseudo_time": 67717581.5667528
+        }
+    },
+    "65326cec-debb-460d-9d7d-0d5641e1afcd": {
+        "filename": "65326cec-debb-460d-9d7d-0d5641e1afcd.root",
+        "file_size": 1963367689,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 47.86554439465205,
+            "throughput": 10881.174337829641,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 73.03841455015299,
+            "SURE_pseudo_time": 60494691.06276423
+        }
+    },
+    "8ef9ab8d-04fd-423a-b9ed-a81946f210e5": {
+        "filename": "8ef9ab8d-04fd-423a-b9ed-a81946f210e5.root",
+        "file_size": 2312615143,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 50.1351016998291,
+            "throughput": 10388.596326216462,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 72.21918027781817,
+            "SURE_pseudo_time": 61874945.38325004
+        }
+    },
+    "b4f9e61a-f694-4b3a-8faf-85c3fbb1d69c": {
+        "filename": "b4f9e61a-f694-4b3a-8faf-85c3fbb1d69c.root",
+        "file_size": 2328969358,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 50.48461356163025,
+            "throughput": 10316.674657666026,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 76.05662364317784,
+            "SURE_pseudo_time": 55788650.209838316
+        }
+    },
+    "99f25644-e1e9-405d-8abd-d2d807d90879": {
+        "filename": "99f25644-e1e9-405d-8abd-d2d807d90879.root",
+        "file_size": 2738148953,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 51.9872584382693,
+            "throughput": 10018.480469628557,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 75.60165342107274,
+            "SURE_pseudo_time": 56462142.07938134
+        }
+    },
+    "8229748b-5e2d-48e3-8420-bf208e34a25e": {
+        "filename": "8229748b-5e2d-48e3-8420-bf208e34a25e.root",
+        "file_size": 2702221680,
+        "type": "background",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 1000000000,
+            "threads": 32,
+            "time_minutes": 52.63035253286362,
+            "throughput": 9896.063930183878,
+            "background_file": "resources/source_flux_avg_shielded.csv",
+            "SURE_radius": 79.2755321647228,
+            "SURE_pseudo_time": 51350136.90433182
+        }
+    },
+    "44e52351-bd2e-42f0-b7a6-68fe8d8115b7": {
+        "filename": "44e52351-bd2e-42f0-b7a6-68fe8d8115b7.root",
+        "file_size": 1988141,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.5611899932225545,
+            "throughput": 9280.873494242498,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "2607e457-0d84-45a5-bf6d-ab20a5923878": {
+        "filename": "2607e457-0d84-45a5-bf6d-ab20a5923878.root",
+        "file_size": 2046377,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4277547279993693,
+            "throughput": 12175.980748811297,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "6009ef09-2f81-416d-9a95-579b056b55c3": {
+        "filename": "6009ef09-2f81-416d-9a95-579b056b55c3.root",
+        "file_size": 2651019,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.43594166040420534,
+            "throughput": 11947.317282097252,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "8a79b073-4e32-402b-9aae-8a53d3c0a52a": {
+        "filename": "8a79b073-4e32-402b-9aae-8a53d3c0a52a.root",
+        "file_size": 2698140,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4360857645670573,
+            "throughput": 11943.36930145869,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "9c17bfd5-5b93-48b8-ae65-1ddc2c401e5e": {
+        "filename": "9c17bfd5-5b93-48b8-ae65-1ddc2c401e5e.root",
+        "file_size": 3283000,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4425409555435181,
+            "throughput": 11769.155528072164,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "9d60a570-1750-440d-a090-31160ef6f8da": {
+        "filename": "9d60a570-1750-440d-a090-31160ef6f8da.root",
+        "file_size": 3340114,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4446749607721964,
+            "throughput": 11712.675083591052,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "3a8e01ea-cbf1-424f-84c6-cba3000501ae": {
+        "filename": "3a8e01ea-cbf1-424f-84c6-cba3000501ae.root",
+        "file_size": 3882130,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.44824627637863157,
+            "throughput": 11619.356607736498,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "af1d9143-4b33-4e71-af1e-b46e0c6c2c88": {
+        "filename": "af1d9143-4b33-4e71-af1e-b46e0c6c2c88.root",
+        "file_size": 3953393,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4491249163945516,
+            "throughput": 11596.625222097156,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "4b811b15-3707-40fb-bd9a-9bdc4daaea0e": {
+        "filename": "4b811b15-3707-40fb-bd9a-9bdc4daaea0e.root",
+        "file_size": 4417471,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4556501626968384,
+            "throughput": 11430.552998175133,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "f2cee5c0-15e6-480b-ba67-2664ffee6657": {
+        "filename": "f2cee5c0-15e6-480b-ba67-2664ffee6657.root",
+        "file_size": 4499296,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.4540624936421712,
+            "throughput": 11470.520922253965,
+            "Z": 4,
+            "A": 7
+        }
+    },
+    "57c3943e-c4a6-4b9b-9105-37a4dc671f15": {
+        "filename": "57c3943e-c4a6-4b9b-9105-37a4dc671f15.root",
+        "file_size": 15835443,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7380374908447266,
+            "throughput": 7057.00374024644,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "4444c8c1-b4a1-46d7-b1f7-40d56cb51cb8": {
+        "filename": "4444c8c1-b4a1-46d7-b1f7-40d56cb51cb8.root",
+        "file_size": 16341138,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7463574926058452,
+            "throughput": 6978.335964912566,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "cc8f660e-e8f1-4f4a-b196-6a8a5f5b0391": {
+        "filename": "cc8f660e-e8f1-4f4a-b196-6a8a5f5b0391.root",
+        "file_size": 21285459,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7625710527102153,
+            "throughput": 6829.964650274435,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "2bf874ff-e734-4dc3-8771-08ba086fa498": {
+        "filename": "2bf874ff-e734-4dc3-8771-08ba086fa498.root",
+        "file_size": 21933486,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7693633715311686,
+            "throughput": 6769.666358001724,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "f4c6c817-ba34-4f2e-aabc-e221e069a914": {
+        "filename": "f4c6c817-ba34-4f2e-aabc-e221e069a914.root",
+        "file_size": 26596779,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.801940921942393,
+            "throughput": 6494.659632430469,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "107a755b-c9dc-4ad1-85dd-39a5adfd4ea0": {
+        "filename": "107a755b-c9dc-4ad1-85dd-39a5adfd4ea0.root",
+        "file_size": 27313747,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8035613894462585,
+            "throughput": 6481.56245650683,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "2fd346af-7059-40cb-8b43-ce24cbcb56ab": {
+        "filename": "2fd346af-7059-40cb-8b43-ce24cbcb56ab.root",
+        "file_size": 31572997,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8267086625099183,
+            "throughput": 6300.083172614449,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "6468c8fc-ccfd-4090-abae-87df1f14a556": {
+        "filename": "6468c8fc-ccfd-4090-abae-87df1f14a556.root",
+        "file_size": 32370470,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8415591677029928,
+            "throughput": 6188.909268910114,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "b2e713fd-03e4-4630-8f10-531981ac2b80": {
+        "filename": "b2e713fd-03e4-4630-8f10-531981ac2b80.root",
+        "file_size": 36204598,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8522723555564881,
+            "throughput": 6111.113776455381,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "0f6066e7-87ca-4aaa-b05a-7c6a2298fea3": {
+        "filename": "0f6066e7-87ca-4aaa-b05a-7c6a2298fea3.root",
+        "file_size": 37109616,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8608325640360515,
+            "throughput": 6050.344225959381,
+            "Z": 55,
+            "A": 137
+        }
+    },
+    "783b43b9-8834-4b0a-ad63-5a161e242945": {
+        "filename": "783b43b9-8834-4b0a-ad63-5a161e242945.root",
+        "file_size": 2562711,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.6710548599561056,
+            "throughput": 7761.412135028746,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "185ad5cd-941c-446e-85d8-687035b4182c": {
+        "filename": "185ad5cd-941c-446e-85d8-687035b4182c.root",
+        "file_size": 2633479,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.66866002480189,
+            "throughput": 7789.209972401824,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "3772a0b9-f04f-4f40-8232-7864a6fea7cd": {
+        "filename": "3772a0b9-f04f-4f40-8232-7864a6fea7cd.root",
+        "file_size": 3442461,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.6810149669647216,
+            "throughput": 7647.898483856873,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "f30c5f04-4eea-4cbb-a27b-c4a9bbbe605c": {
+        "filename": "f30c5f04-4eea-4cbb-a27b-c4a9bbbe605c.root",
+        "file_size": 3557769,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.6762877861658733,
+            "throughput": 7701.356493307842,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "116f18e8-6271-48ae-a6a7-838165e4c1d9": {
+        "filename": "116f18e8-6271-48ae-a6a7-838165e4c1d9.root",
+        "file_size": 4231343,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.6856223106384277,
+            "throughput": 7596.505032754132,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "454b91cb-5eec-4fd3-8057-2958a275bfd4": {
+        "filename": "454b91cb-5eec-4fd3-8057-2958a275bfd4.root",
+        "file_size": 4375886,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.6882184545199076,
+            "throughput": 7567.848986215576,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "9e4c6687-9c5c-4d5d-915c-cf1520c2ecea": {
+        "filename": "9e4c6687-9c5c-4d5d-915c-cf1520c2ecea.root",
+        "file_size": 4918677,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.6909965833028158,
+            "throughput": 7537.422701048123,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "9b3df6f4-4cbf-4d88-9aa2-d112f703248a": {
+        "filename": "9b3df6f4-4cbf-4d88-9aa2-d112f703248a.root",
+        "file_size": 5066716,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.6893520951271057,
+            "throughput": 7555.403646627053,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "c256d2a7-2e69-44d4-a08e-330c97adc783": {
+        "filename": "c256d2a7-2e69-44d4-a08e-330c97adc783.root",
+        "file_size": 5566799,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.699260675907135,
+            "throughput": 7448.342961051943,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "45d2fcc8-7be5-4556-a9e4-7fa5742b5a69": {
+        "filename": "45d2fcc8-7be5-4556-a9e4-7fa5742b5a69.root",
+        "file_size": 5747215,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.6989793141682943,
+            "throughput": 7451.341159545839,
+            "Z": 19,
+            "A": 40
+        }
+    },
+    "67a661cc-ad21-4e05-b7db-95f657049a65": {
+        "filename": "67a661cc-ad21-4e05-b7db-95f657049a65.root",
+        "file_size": 17614705,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8949034492174784,
+            "throughput": 5819.994702096193,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "dba312f2-ca5f-4a4e-9f16-d73882a13cff": {
+        "filename": "dba312f2-ca5f-4a4e-9f16-d73882a13cff.root",
+        "file_size": 17835413,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9000205636024475,
+            "throughput": 5786.904815248124,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "6c544b42-253f-41ce-9d83-d40877382933": {
+        "filename": "6c544b42-253f-41ce-9d83-d40877382933.root",
+        "file_size": 23414771,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9170799215634664,
+            "throughput": 5679.257838786836,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "c4a18c39-fc57-433f-a782-26b31725e7f8": {
+        "filename": "c4a18c39-fc57-433f-a782-26b31725e7f8.root",
+        "file_size": 23701519,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9251787940661113,
+            "throughput": 5629.542491395622,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "ba695dfc-5ac2-4e3a-a37f-cef4563574d7": {
+        "filename": "ba695dfc-5ac2-4e3a-a37f-cef4563574d7.root",
+        "file_size": 28827370,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9585845152537028,
+            "throughput": 5433.358509817859,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "8a7aef48-a422-4a0a-9d44-b58d3b5ac4d0": {
+        "filename": "8a7aef48-a422-4a0a-9d44-b58d3b5ac4d0.root",
+        "file_size": 29141360,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9582891662915548,
+            "throughput": 5435.033094956981,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "9512e5e6-7c55-4f53-bd7b-7b3b98d4dfc3": {
+        "filename": "9512e5e6-7c55-4f53-bd7b-7b3b98d4dfc3.root",
+        "file_size": 33654448,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9801064491271972,
+            "throughput": 5314.0486300967095,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "ea42b7e1-5db8-4303-a7ed-af3559dc288c": {
+        "filename": "ea42b7e1-5db8-4303-a7ed-af3559dc288c.root",
+        "file_size": 33963610,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.981654703617096,
+            "throughput": 5305.667373815075,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "927ce017-e8a0-4806-a102-9c231047afb4": {
+        "filename": "927ce017-e8a0-4806-a102-9c231047afb4.root",
+        "file_size": 37951426,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0011399428049723,
+            "throughput": 5202.4028915885,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "3f669994-85a0-4954-b372-df9020e43b9d": {
+        "filename": "3f669994-85a0-4954-b372-df9020e43b9d.root",
+        "file_size": 38278812,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0019188443819682,
+            "throughput": 5198.358492344841,
+            "Z": 82,
+            "A": 214
+        }
+    },
+    "fee2277a-111d-42f5-a5e9-799430c8d4a7": {
+        "filename": "fee2277a-111d-42f5-a5e9-799430c8d4a7.root",
+        "file_size": 24197267,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.004897117614746,
+            "throughput": 5182.9518087344,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "c5758947-5d5a-48d6-b0fc-1f7c5254b9a2": {
+        "filename": "c5758947-5d5a-48d6-b0fc-1f7c5254b9a2.root",
+        "file_size": 25175324,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0108808716138205,
+            "throughput": 5152.272121855953,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "5c9e2012-fbeb-4965-bed3-634e6781f46d": {
+        "filename": "5c9e2012-fbeb-4965-bed3-634e6781f46d.root",
+        "file_size": 32851488,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0580878575642905,
+            "throughput": 4922.40157194779,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "ecfa2755-f721-4017-b10c-1f6925b71cb2": {
+        "filename": "ecfa2755-f721-4017-b10c-1f6925b71cb2.root",
+        "file_size": 34188975,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.0625227769215901,
+            "throughput": 4901.8557027297375,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "27a25114-e031-4356-92dd-50e2a6f07a10": {
+        "filename": "27a25114-e031-4356-92dd-50e2a6f07a10.root",
+        "file_size": 41267250,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.10861847003301,
+            "throughput": 4698.039473560504,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "8e300613-78cd-460c-a9c9-3a2f1892724a": {
+        "filename": "8e300613-78cd-460c-a9c9-3a2f1892724a.root",
+        "file_size": 42897410,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1149736007054647,
+            "throughput": 4671.261570711561,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "db89ab0e-ea92-4d8e-a993-4135b80a36fd": {
+        "filename": "db89ab0e-ea92-4d8e-a993-4135b80a36fd.root",
+        "file_size": 49165101,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1421510815620421,
+            "throughput": 4560.108918524378,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "386e71f2-d03e-4ff5-83f8-d1f8e96bbb4d": {
+        "filename": "386e71f2-d03e-4ff5-83f8-d1f8e96bbb4d.root",
+        "file_size": 51126764,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1521133581797283,
+            "throughput": 4520.677845070902,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "056e7ec6-5f7e-4a41-97f4-3424aed724ef": {
+        "filename": "056e7ec6-5f7e-4a41-97f4-3424aed724ef.root",
+        "file_size": 56491997,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1896085381507873,
+            "throughput": 4378.190947947918,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "fe00f5c2-4e61-4b4e-bc3f-e007640ea46c": {
+        "filename": "fe00f5c2-4e61-4b4e-bc3f-e007640ea46c.root",
+        "file_size": 58766263,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2008495887120565,
+            "throughput": 4337.20707596645,
+            "Z": 83,
+            "A": 214
+        }
+    },
+    "cdeed022-6a30-4f85-8991-a39bf1693138": {
+        "filename": "cdeed022-6a30-4f85-8991-a39bf1693138.root",
+        "file_size": 26602766,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.3889308094978332,
+            "throughput": 3749.886817772011,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "ff3292dc-b497-402d-8984-49d7e7bb6b9c": {
+        "filename": "ff3292dc-b497-402d-8984-49d7e7bb6b9c.root",
+        "file_size": 27400039,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.385933800538381,
+            "throughput": 3757.995750814433,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "511a453b-47cb-486b-aa0c-ed09a1293b59": {
+        "filename": "511a453b-47cb-486b-aa0c-ed09a1293b59.root",
+        "file_size": 35966417,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4440907518068948,
+            "throughput": 3606.6523705774666,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "355221a1-adf9-4dc9-9290-e805124143db": {
+        "filename": "355221a1-adf9-4dc9-9290-e805124143db.root",
+        "file_size": 37037252,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4480836947758993,
+            "throughput": 3596.7073948300745,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "c64b3257-328e-4fe7-8e96-f9599eba9553": {
+        "filename": "c64b3257-328e-4fe7-8e96-f9599eba9553.root",
+        "file_size": 44965225,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4831285516421,
+            "throughput": 3511.720765921967,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "1e7c9ebf-470a-47cf-b7e4-7e337082b3b1": {
+        "filename": "1e7c9ebf-470a-47cf-b7e4-7e337082b3b1.root",
+        "file_size": 46296142,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4959981123606363,
+            "throughput": 3481.5106317980258,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "8231ac75-909f-4c36-98e8-aea91c7e74ab": {
+        "filename": "8231ac75-909f-4c36-98e8-aea91c7e74ab.root",
+        "file_size": 53283282,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5285707394282022,
+            "throughput": 3407.322408436022,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "3bd4fdce-0b9c-41ef-bac4-8f86f6b0f694": {
+        "filename": "3bd4fdce-0b9c-41ef-bac4-8f86f6b0f694.root",
+        "file_size": 54804387,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5374815702438354,
+            "throughput": 3387.574481629281,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "4a0ca76b-2f4e-48cb-a86e-e69b64d941f2": {
+        "filename": "4a0ca76b-2f4e-48cb-a86e-e69b64d941f2.root",
+        "file_size": 60887058,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5567436416943867,
+            "throughput": 3345.658972895815,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "a9c33f75-1bbf-4f9f-9069-6360cf3c997b": {
+        "filename": "a9c33f75-1bbf-4f9f-9069-6360cf3c997b.root",
+        "file_size": 62641342,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5765336831410726,
+            "throughput": 3303.661310271718,
+            "Z": 89,
+            "A": 228
+        }
+    },
+    "0b946a5a-d3f2-436d-a216-3364da1ef8ed": {
+        "filename": "0b946a5a-d3f2-436d-a216-3364da1ef8ed.root",
+        "file_size": 17899017,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8290359020233155,
+            "throughput": 6282.397807648693,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "9243fe87-c581-45e7-bfd6-e8a0f9ac0b92": {
+        "filename": "9243fe87-c581-45e7-bfd6-e8a0f9ac0b92.root",
+        "file_size": 18002258,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8317085464795431,
+            "throughput": 6262.209707209542,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "4adb4671-538a-4122-9f7c-454667079215": {
+        "filename": "4adb4671-538a-4122-9f7c-454667079215.root",
+        "file_size": 23739611,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8648726423581441,
+            "throughput": 6022.081261736292,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "fbddbc19-23b7-4a90-acd3-982088d50cb5": {
+        "filename": "fbddbc19-23b7-4a90-acd3-982088d50cb5.root",
+        "file_size": 23830402,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8650621215502421,
+            "throughput": 6020.762213006962,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "91c64f23-1e9a-4116-af34-8d517fdecb27": {
+        "filename": "91c64f23-1e9a-4116-af34-8d517fdecb27.root",
+        "file_size": 28986292,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9072263598442077,
+            "throughput": 5740.941361346387,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "af4c9ddd-5c69-42c4-9d1b-a185c775b74f": {
+        "filename": "af4c9ddd-5c69-42c4-9d1b-a185c775b74f.root",
+        "file_size": 29063710,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.89080278078715,
+            "throughput": 5846.786118843315,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "452f2c9a-c555-4893-a6a1-957af54480a4": {
+        "filename": "452f2c9a-c555-4893-a6a1-957af54480a4.root",
+        "file_size": 33456420,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9110268632570903,
+            "throughput": 5716.99204863463,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "caf88a30-e4ec-49bf-a6c3-3218fc77724a": {
+        "filename": "caf88a30-e4ec-49bf-a6c3-3218fc77724a.root",
+        "file_size": 33552536,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9266068816184998,
+            "throughput": 5620.866234271823,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "f661bd55-fe19-4e78-84e2-2626ff92e6e0": {
+        "filename": "f661bd55-fe19-4e78-84e2-2626ff92e6e0.root",
+        "file_size": 37186830,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9304320176442464,
+            "throughput": 5597.758067827752,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "df11a27c-986a-4a10-ae9a-a49eaa510d6e": {
+        "filename": "df11a27c-986a-4a10-ae9a-a49eaa510d6e.root",
+        "file_size": 37275370,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.9289477308591206,
+            "throughput": 5606.702250638472,
+            "Z": 82,
+            "A": 212
+        }
+    },
+    "8e32674e-b92f-4d27-b35c-3658731ee10e": {
+        "filename": "8e32674e-b92f-4d27-b35c-3658731ee10e.root",
+        "file_size": 4123287,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7858568986256917,
+            "throughput": 6627.584923465936,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "be453d48-29b0-4a4b-b060-87c7686f007c": {
+        "filename": "be453d48-29b0-4a4b-b060-87c7686f007c.root",
+        "file_size": 4219592,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7757260044415791,
+            "throughput": 6714.140435555785,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "64d3b502-a717-4630-99df-77a7f9f25252": {
+        "filename": "64d3b502-a717-4630-99df-77a7f9f25252.root",
+        "file_size": 5565656,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7933237671852111,
+            "throughput": 6565.205214780089,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "2eb0a650-b34a-47b8-8825-d0c40719072c": {
+        "filename": "2eb0a650-b34a-47b8-8825-d0c40719072c.root",
+        "file_size": 5677326,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7812054832776387,
+            "throughput": 6667.046564344586,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "4ef64f86-3d03-4973-b9b3-74fbd21a4887": {
+        "filename": "4ef64f86-3d03-4973-b9b3-74fbd21a4887.root",
+        "file_size": 6787621,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8022962411244711,
+            "throughput": 6491.783291958979,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "7e77dba5-7054-44b6-aaba-0f79e7f147d3": {
+        "filename": "7e77dba5-7054-44b6-aaba-0f79e7f147d3.root",
+        "file_size": 6928479,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7866929133733114,
+            "throughput": 6620.541821077534,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "f001406d-319b-483e-aefe-d769896cbadf": {
+        "filename": "f001406d-319b-483e-aefe-d769896cbadf.root",
+        "file_size": 7818142,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.7945556243260702,
+            "throughput": 6555.026701561595,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "90e39a25-eb09-4804-9358-2d7885df0f68": {
+        "filename": "90e39a25-eb09-4804-9358-2d7885df0f68.root",
+        "file_size": 7988147,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8090488870938619,
+            "throughput": 6437.600269177662,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "26824f68-863e-4809-9770-370e66e327d3": {
+        "filename": "26824f68-863e-4809-9770-370e66e327d3.root",
+        "file_size": 8741398,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8033157467842102,
+            "throughput": 6483.5444271857605,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "6e29095f-d184-4d5b-b85e-a55db11263ed": {
+        "filename": "6e29095f-d184-4d5b-b85e-a55db11263ed.root",
+        "file_size": 8937329,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 0.8039853413899739,
+            "throughput": 6478.144644190752,
+            "Z": 83,
+            "A": 212
+        }
+    },
+    "4558d709-cc0f-425b-bd1b-708ffb7ff972": {
+        "filename": "4558d709-cc0f-425b-bd1b-708ffb7ff972.root",
+        "file_size": 40636097,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4269503712654115,
+            "throughput": 3649.975106502557,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "abeef7fa-db89-4c5e-8f27-4330f0d25e3e": {
+        "filename": "abeef7fa-db89-4c5e-8f27-4330f0d25e3e.root",
+        "file_size": 42215243,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.4336091915766398,
+            "throughput": 3633.0217216348665,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "f5bfc3b1-2770-4d0c-aa68-d9a0fa8d58db": {
+        "filename": "f5bfc3b1-2770-4d0c-aa68-d9a0fa8d58db.root",
+        "file_size": 55180840,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.515701989332835,
+            "throughput": 3436.251565273646,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "82c5c4fe-dce8-4883-ac37-a1cdf405695a": {
+        "filename": "82c5c4fe-dce8-4883-ac37-a1cdf405695a.root",
+        "file_size": 57294493,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.5242361664772033,
+            "throughput": 3417.0120404443437,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "3cf785b2-f517-43fa-a31d-53628202cb25": {
+        "filename": "3cf785b2-f517-43fa-a31d-53628202cb25.root",
+        "file_size": 69471590,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6009559035301208,
+            "throughput": 3253.2647038240816,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "fd3d5d4f-3c57-40d0-9109-c8606f41dad8": {
+        "filename": "fd3d5d4f-3c57-40d0-9109-c8606f41dad8.root",
+        "file_size": 72080820,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6146122773488363,
+            "throughput": 3225.7486248558207,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "bfd9093a-7dd5-4ac7-ae73-065511478f6c": {
+        "filename": "bfd9093a-7dd5-4ac7-ae73-065511478f6c.root",
+        "file_size": 82808958,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6785782098770141,
+            "throughput": 3102.8243442496114,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "04acdf2c-4a87-493f-ade7-5e53ad16fcde": {
+        "filename": "04acdf2c-4a87-493f-ade7-5e53ad16fcde.root",
+        "file_size": 85868319,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.6798206567764282,
+            "throughput": 3100.5294001611533,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "5ee2a4cf-d69a-4752-9d2d-3272112801ae": {
+        "filename": "5ee2a4cf-d69a-4752-9d2d-3272112801ae.root",
+        "file_size": 94603907,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.737674343585968,
+            "throughput": 2997.3011643741643,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "191b5ad8-b2f4-4a9e-9f32-53664dae499a": {
+        "filename": "191b5ad8-b2f4-4a9e-9f32-53664dae499a.root",
+        "file_size": 98139289,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.76857533454895,
+            "throughput": 2944.9315681322923,
+            "Z": 81,
+            "A": 208
+        }
+    },
+    "3fcc7d7e-b976-4578-8e56-3ad33067ab21": {
+        "filename": "3fcc7d7e-b976-4578-8e56-3ad33067ab21.root",
+        "file_size": 18710346,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.198203686873118,
+            "throughput": 4346.784599641164,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "7e8752a6-50a0-4b55-9d25-2c299439f85f": {
+        "filename": "7e8752a6-50a0-4b55-9d25-2c299439f85f.root",
+        "file_size": 18817650,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 50.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.1864402135213217,
+            "throughput": 4389.882670847058,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "46c20412-6566-480c-92ec-7ec309d20017": {
+        "filename": "46c20412-6566-480c-92ec-7ec309d20017.root",
+        "file_size": 24816124,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2133906722068786,
+            "throughput": 4292.379571255952,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "4e789941-80a1-4e88-96a8-e7e05b54c9fa": {
+        "filename": "4e789941-80a1-4e88-96a8-e7e05b54c9fa.root",
+        "file_size": 24857186,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 60.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2151232401529948,
+            "throughput": 4286.25933668881,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "9b165a0a-4ce3-47b8-8043-c1625b64accf": {
+        "filename": "9b165a0a-4ce3-47b8-8043-c1625b64accf.root",
+        "file_size": 30366955,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2383978406588236,
+            "throughput": 4205.702854393316,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "0b1350ee-633a-4b4c-86a7-8d0284ee3157": {
+        "filename": "0b1350ee-633a-4b4c-86a7-8d0284ee3157.root",
+        "file_size": 30411223,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 70.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2371926466623941,
+            "throughput": 4209.799781290315,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "ad5f092b-2444-4b03-b536-fd7166e21bf2": {
+        "filename": "ad5f092b-2444-4b03-b536-fd7166e21bf2.root",
+        "file_size": 35226487,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2670043031374614,
+            "throughput": 4110.746364819776,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "43756368-e34b-4798-802b-c4bdca121b30": {
+        "filename": "43756368-e34b-4798-802b-c4bdca121b30.root",
+        "file_size": 35295530,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 80.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2682984232902528,
+            "throughput": 4106.551926337446,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "a539fd2b-7814-4fb7-a19d-493c0f9d182a": {
+        "filename": "a539fd2b-7814-4fb7-a19d-493c0f9d182a.root",
+        "file_size": 39367698,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 25.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2816526055336,
+            "throughput": 4063.763699185014,
+            "Z": 92,
+            "A": 235
+        }
+    },
+    "3000348d-b5db-4889-9590-84515ec1e8b3": {
+        "filename": "3000348d-b5db-4889-9590-84515ec1e8b3.root",
+        "file_size": 39429912,
+        "type": "filter",
+        "properties": {
+            "detector_type": 2,
+            "detector_diameter": 90.0,
+            "detector_length": 30.0,
+            "source_distance": 0,
+            "source_type": 1,
+            "events": 10000000,
+            "threads": 32,
+            "time_minutes": 1.2759894172350565,
+            "throughput": 4081.7997884490915,
+            "Z": 92,
+            "A": 235
+        }
     }
 }
