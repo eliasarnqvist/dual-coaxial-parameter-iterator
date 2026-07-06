@@ -2,7 +2,7 @@
     "geometry": {
         "_detector_type": "0=p-type coaxial, 1=n-type coaxial, 2=BEGe planar",
         "detector_type": [2],
-        "detector_diameter": [40.0, 45.0],
+        "detector_diameter": ["any"],
         "detector_length": ["detector_diameter"],
         "detector_source_distance": [0],
         "_source_type": "0=point source, 1=FOI filter source",
@@ -10,29 +10,25 @@
     },
     "radionuclides": {
         "active": true,
-        "test_run": false,
-        "events": 1e2,
-        "output": "output/data/",
-        "metadata": "output/",
-        "threads": 16,
-        "ZAs": [[57, 140], [56, 140]]
+        "ZAs_name": [[57, 140]],
+        "gammas_singles": [[328.76, 487.02, 815.77, 1596.21, "combied"]],
+        "gammas_coincidences": [[[328.76, 487.02], [328.76, 1596.21], [815.77, 1596.21], [487.02, 1596.21], "combined"]]
     },
     "background": {
         "active": true,
-        "test_run": false,
-        "events": 1e2,
-        "output": "output/data/",
-        "metadata": "output/",
-        "threads": 16,
         "source_spectra": ["resources/source_flux_avg_unshielded.csv"]
     },
     "filter": {
-        "active": true,
-        "test_run": false,
-        "events": 1e2,
-        "output": "output/data/",
-        "metadata": "output/",
-        "threads": 16,
-        "ZAs":  [[4, 7]]
+        "active": false,
+        "ZAs_Bq_exposure": [[4, 7, 65.31, 0.68], [55, 137, 0.069, 0.005], [19, 40, 4.28, 0.26]],
+        "ZAs_Bq_filter": [[19, 40, 18.40, 0.29], [82, 214, 0.440, 0.006], [83, 214, 0.440, 0.006], [89, 228, 0.267, 0.008], [82, 212, 0.117, 0.005], [83, 212, 0.117, 0.005], [81, 208, 0.117, 0.005], [92, 235, 0.0323, 0.0038]]
+    },
+    "plot": {
+        "x_value": "detector_diameter",
+        "x_label": "$d=l$ (mm)",
+        "line_by": ["gammas"],
+        "save_plot": false,
+        "save_data": false,
+        "save_path": "figures/v3/la140"
     }
 }
