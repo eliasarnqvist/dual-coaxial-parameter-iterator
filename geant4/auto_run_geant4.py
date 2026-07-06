@@ -160,7 +160,7 @@ def run_geometry(geometry, run_dict, run_type):
                 "detector_type":int(det_type),
                 "detector_diameter":det_diam,
                 "detector_length":det_leng,
-                "source_distance":det_sdis,
+                "detector_source_distance":det_sdis,
                 "source_type":int(det_styp),
                 # Properties related to the simulation
                 "events":int(events),
