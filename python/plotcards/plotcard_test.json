@@ -3,25 +3,31 @@
         "_detector_type": "0=p-type coaxial, 1=n-type coaxial, 2=BEGe planar",
         "detector_type": [2],
         "detector_diameter": ["any"],
-        "detector_length": ["detector_diameter"],
+        "detector_length": [30],
         "detector_source_distance": [0],
         "_source_type": "0=point source, 1=FOI filter source",
         "source_type": [1]
     },
     "radionuclides": {
         "active": true,
-        "ZAs_name": [[57, 140]],
+        "ZAs": [[57, 140]],
         "gammas_singles": [[328.76, 487.02, 815.77, 1596.21, "combied"]],
         "gammas_coincidences": [[[328.76, 487.02], [328.76, 1596.21], [815.77, 1596.21], [487.02, 1596.21], "combined"]]
     },
     "background": {
         "active": true,
-        "source_spectra": ["resources/source_flux_avg_unshielded.csv"]
+        "background_file": ["resources/source_flux_avg_unshielded.csv"]
     },
     "filter": {
         "active": false,
         "ZAs_Bq_exposure": [[4, 7, 65.31, 0.68], [55, 137, 0.069, 0.005], [19, 40, 4.28, 0.26]],
         "ZAs_Bq_filter": [[19, 40, 18.40, 0.29], [82, 214, 0.440, 0.006], [83, 214, 0.440, 0.006], [89, 228, 0.267, 0.008], [82, 212, 0.117, 0.005], [83, 212, 0.117, 0.005], [81, 208, 0.117, 0.005], [92, 235, 0.0323, 0.0038]]
+    },
+    "analysis": {
+        "ROI_type": "square",
+        "_ROI_width_polynomial": "elements are degrees of polynomial describing the ROI width as a function of energy (keV)",
+        "ROI_width_polynomial": [5, 0, 0],
+        "measurement_time_hours": 24
     },
     "plot": {
         "x_value": "detector_diameter",
@@ -30,5 +36,8 @@
         "save_plot": false,
         "save_data": false,
         "save_path": "figures/v3/la140"
+    },
+    "results": {
+        "1":1
     }
 }
