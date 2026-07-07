@@ -11,8 +11,9 @@
     "radionuclides": {
         "active": true,
         "ZAs": [[57, 140]],
-        "gammas_singles": [[328.76, 487.02, 815.77, 1596.21, "combied"]],
-        "gammas_coincidences": [[[328.76, 487.02], [328.76, 1596.21], [815.77, 1596.21], [487.02, 1596.21], "combined"]]
+        "gammas_singles": [[328.76, 487.02, 815.77, 1596.21, "combined"]],
+        "gammas_coincidences": [[[328.76, 487.02], [328.76, 1596.21], [815.77, 1596.21], [487.02, 1596.21], "combined"]],
+        "only_show_combined": false
     },
     "background": {
         "active": true,
@@ -25,8 +26,8 @@
     },
     "analysis": {
         "ROI_type": "square",
-        "_ROI_width_polynomial": "elements are degrees of polynomial describing the ROI width as a function of energy (keV)",
-        "ROI_width_polynomial": [5, 0, 0],
+        "_ROI_width_polynomial": "elements are degrees of polynomial describing the ROI width as a function of energy (keV), from highest to lowest (constant) order",
+        "ROI_width_polynomial": [0, 0, 5],
         "measurement_time_hours": 24
     },
     "plot": {
@@ -38,6 +39,11 @@
         "save_path": "figures/v3/la140"
     },
     "results": {
-        "1":1
+        "x": [],
+        "y": [],
+        "label": []
+    },
+        "metadata": {
+        
     }
 }
