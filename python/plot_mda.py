@@ -7,9 +7,12 @@ import os
 import numpy as np
 import uproot
 import pprint
+# from analysis.cut_metadata import cut_metadata
 
 
 def cut_metadata(plotcard, metadata):
+    # Cut the metadata according to the cuts in the plotcard
+
     # Use the selection cuts in the plotcard to remove irrelevant metadata
     for key in list(metadata):
         value = metadata[key]
@@ -40,7 +43,6 @@ def cut_metadata(plotcard, metadata):
             if (ZA not in ZAs_filter) and (ZA not in ZAs_exposure):
                 keep_this_key = False
         else:
-            print("BAD RUN TYPE!")
             raise ValueError
         
         # Remove the key from the metadata dictionary if it is not interesting
@@ -50,6 +52,78 @@ def cut_metadata(plotcard, metadata):
     # Return the shortened metadata dictionary
     return metadata
 
+
+def create_data_list(plotcard, metadata):
+    # Make a "list mode" data storage scheme
+    # A list with dictionaries
+    # Every list entry is a specific data point with a specific detector design, radionuclide, and gamma ray(s)
+    # The dictionary specifies which properties this data point has
+    # Calculated quantities (like the MDAs) are added to this list later on
+
+    data_list = []
+    
+    # First use the metadata to supply the geometry and radionuclide information
+    for key, value in metadata.items():
+        if value["type"] == "radionuclides":
+            data_point = {
+                "detector_type": value["properties"]["detector_type"],
+                "detector_diameter": value["properties"]["detector_diameter"],
+                "detector_length": value["properties"]["detector_length"],
+                "detector_source_distance": value["properties"]["detector_source_distance"],
+                "source_type": value["properties"]["source_type"],
+                "ZA": [value["properties"]["Z"], value["properties"]["A"]],
+            }
+            if data_point not in data_list:
+                data_list.append(data_point)
+            else:
+                # Somehow there is a duplicate!
+                raise ValueError
+        else:
+            # Not metadata for a radionuclide
+            pass
+    
+    # Next use the plotcard to supply the background file information
+    new_data_list = []
+    background_files = plotcard["background"]["background_file"]
+    for data_point in data_list:
+        for background_file in background_files:
+            new_data_point = data_point.copy() # important with .copy() here!
+            new_data_point["background_file"] = background_file
+            new_data_list.append(new_data_point)
+    data_list = new_data_list
+
+    # Next use the plotcard to supply the gamma information
+    new_data_list = []
+    ZAs = plotcard["radionuclides"]["ZAs"]
+    for data_point in data_list:
+        for i, ZA in enumerate(ZAs):
+            if data_point["ZA"] == ZA:
+                # Check which energies are relevant for this radionuclide
+                gammas_singles = plotcard["radionuclides"]["gammas_singles"][i]
+                gammas_coincidences = plotcard["radionuclides"]["gammas_coincidences"][i]
+
+                # Need a new data point for every single gamma ray energy
+                for gamma_single in gammas_singles:
+                    new_data_point = data_point.copy() # important with .copy() here!
+                    new_data_point["analysis_type"] = "singles"
+                    new_data_point["gamma_single"] = gamma_single
+                    new_data_list.append(new_data_point)
+                
+                # Need a new data point for every pair of coincidence gamma rays
+                for gamma_coincidence in gammas_coincidences:
+                    new_data_point = data_point.copy() # important with .copy() here!
+                    new_data_point["analysis_type"] = "coincidences"
+                    new_data_point["gamma_coincidence"] = gamma_coincidence
+                    new_data_list.append(new_data_point)
+            else:
+                # This data point has a different radionuclide
+                pass
+    data_list = new_data_list
+
+    return data_list
+
+
+# NOTE OK ABOVE!
 
 def analyze_file(plotcard, metadata, data_path):
     print("Starting analysis")
@@ -144,7 +218,6 @@ def ROI_analysis_1D(events, E_gamma, ROI_width):
     cond = np.logical_and(events > E_gamma-dE, events < E_gamma+dE)
     counts = cond.sum()
     return int(counts)
-
 
 
 def ROI_analysis_2D(events_a, events_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2):
@@ -244,6 +317,11 @@ def calculate_quantities(plotcard):
         # Update the metadata in the plotcad
         plotcard["metadata"][key] = value
 
+
+    # TODO save as list of dictionaries instead!!!
+    # each dictionary like
+    #{"detector_type": X, "detector_diameter": X, "detector_length": X, "detector_source_distance": X, "source_type": X, "ZA": X, "analysis_type": singles/coincidences, "gammas_XXX": X, "background_file": X,       NOW THE DATA PART: "" "background counts"}
+
     # pprint.pp(plotcard)
 
     return plotcard
@@ -280,14 +358,22 @@ def calculate_LD(total_counts, events, pseudo_time, measurement_time):
     return LD, LD_unc
             
 
-def plot_mda():
+def plot_mda(plotcard):
+    metadata = plotcard[""]
+
     # Now the MDA can be caluclated in the next step
     return
 
 
-def calculate_mda(LD, effint, tM):
+def calculate_mda(LD, effint, tM, t12=0):
     # Calculate the minimum detectable activity
     mda = LD / (effint * tM)
+
+    # Optional correction for decay during measurement
+    if t12 != 0:
+        lambdaa = np.log(2)/t12 # extra a to respect Python reserved word
+        decay_correction = (lambdaa * tM) / (1 - np.exp(-lambdaa * tM))
+        mda *= decay_correction
 
     return mda
 
@@ -301,6 +387,8 @@ def calculate_combined_mda():
     return
 
 
+def make_plot():
+    return
 
 
 # step 3: mda calculation
@@ -319,9 +407,9 @@ parser = argparse.ArgumentParser(prog="plot_mda",
                                  description="Analyze simulation data and plot the MDA",
                                  epilog="Elias Arnqvist, 2026, Uppsala University",
                                  add_help=True)
-parser.add_argument("-p", "--plotcard", type=str, required=False, default="../plotcards/plotcard_test.json", help="File specifying analysis and plotting settings")
-parser.add_argument("-m", "--metadata", type=str, required=False, default="../../geant4/output/metadata.json", help="Metadata file")
-parser.add_argument("-d", "--data", type=str, required=False, default="../../geant4/output/data_pelle", help="Directory of data")
+parser.add_argument("-p", "--plotcard", type=str, required=False, default="plotcards/plotcard_test.json", help="File specifying analysis and plotting settings")
+parser.add_argument("-m", "--metadata", type=str, required=False, default="../geant4/output/metadata.json", help="Metadata file")
+parser.add_argument("-d", "--data", type=str, required=False, default="../geant4/output/data_pelle", help="Directory of data")
 args = parser.parse_args()
 
 # Open the plotcard with analysis and plot settings
@@ -339,11 +427,24 @@ data_path = args.data
 
 metadata = cut_metadata(plotcard, metadata)
 
-plotcard = analyze_file(plotcard, metadata, data_path)
+data_list = create_data_list(plotcard, metadata)
 
-plotcard = calculate_quantities(plotcard)
+pprint.pp(data_list)
 
 
+
+
+# plotcard = analyze_file(plotcard, metadata, data_path)
+
+
+
+
+# plotcard = calculate_quantities(plotcard)
+
+# plot_mda(plotcard)
+
+# with open("temp.json", "w") as f:
+#     json.dump(plotcard, f, indent=4)
 
 # print(plotcard)
 

@@ -1,0 +1,756 @@
+{
+    "geometry": {
+        "_detector_type": "0=p-type coaxial, 1=n-type coaxial, 2=BEGe planar",
+        "detector_type": [
+            2
+        ],
+        "detector_diameter": [
+            "any"
+        ],
+        "detector_length": [
+            30
+        ],
+        "detector_source_distance": [
+            0
+        ],
+        "_source_type": "0=point source, 1=FOI filter source",
+        "source_type": [
+            1
+        ]
+    },
+    "radionuclides": {
+        "active": true,
+        "ZAs": [
+            [
+                57,
+                140
+            ]
+        ],
+        "gammas_singles": [
+            [
+                328.76,
+                487.02,
+                815.77,
+                1596.21,
+                "combined"
+            ]
+        ],
+        "gammas_coincidences": [
+            [
+                [
+                    328.76,
+                    487.02
+                ],
+                [
+                    328.76,
+                    1596.21
+                ],
+                [
+                    815.77,
+                    1596.21
+                ],
+                [
+                    487.02,
+                    1596.21
+                ],
+                "combined"
+            ]
+        ],
+        "only_show_combined": false
+    },
+    "background": {
+        "active": true,
+        "background_file": [
+            "resources/source_flux_avg_unshielded.csv"
+        ]
+    },
+    "filter": {
+        "active": false,
+        "ZAs_Bq_exposure": [
+            [
+                4,
+                7,
+                65.31,
+                0.68
+            ],
+            [
+                55,
+                137,
+                0.069,
+                0.005
+            ],
+            [
+                19,
+                40,
+                4.28,
+                0.26
+            ]
+        ],
+        "ZAs_Bq_filter": [
+            [
+                19,
+                40,
+                18.4,
+                0.29
+            ],
+            [
+                82,
+                214,
+                0.44,
+                0.006
+            ],
+            [
+                83,
+                214,
+                0.44,
+                0.006
+            ],
+            [
+                89,
+                228,
+                0.267,
+                0.008
+            ],
+            [
+                82,
+                212,
+                0.117,
+                0.005
+            ],
+            [
+                83,
+                212,
+                0.117,
+                0.005
+            ],
+            [
+                81,
+                208,
+                0.117,
+                0.005
+            ],
+            [
+                92,
+                235,
+                0.0323,
+                0.0038
+            ]
+        ]
+    },
+    "analysis": {
+        "ROI_type": "square",
+        "_ROI_width_polynomial": "elements are degrees of polynomial describing the ROI width as a function of energy (keV), from highest to lowest (constant) order",
+        "ROI_width_polynomial": [
+            0,
+            0,
+            20
+        ],
+        "measurement_time_hours": 24
+    },
+    "plot": {
+        "x_value": "detector_diameter",
+        "x_label": "$d=l$ (mm)",
+        "line_by": [
+            "gammas"
+        ],
+        "save_plot": false,
+        "save_data": false,
+        "save_path": "figures/v3/la140"
+    },
+    "results": {
+        "x": [],
+        "y": [],
+        "label": []
+    },
+    "metadata": {
+        "1343c968-8c3d-42b1-8fe0-ee4c3770c855": {
+            "filename": "1343c968-8c3d-42b1-8fe0-ee4c3770c855.root",
+            "file_size": 38385548,
+            "type": "radionuclides",
+            "properties": {
+                "detector_type": 2,
+                "detector_diameter": 50.0,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "events": 10000000,
+                "threads": 32,
+                "time_minutes": 1.2425361116727194,
+                "throughput": 4191.695745825691,
+                "Z": 57,
+                "A": 140
+            },
+            "counts_singles": [
+                [
+                    [
+                        101937,
+                        102144
+                    ],
+                    [
+                        122305,
+                        123513
+                    ],
+                    [
+                        44945,
+                        44790
+                    ],
+                    [
+                        71517,
+                        70665
+                    ]
+                ]
+            ],
+            "counts_coincidences": [
+                [
+                    [
+                        2338,
+                        2336
+                    ],
+                    [
+                        774,
+                        783
+                    ],
+                    [
+                        326,
+                        341
+                    ],
+                    [
+                        971,
+                        1066
+                    ]
+                ]
+            ],
+            "effint_singles": [
+                [
+                    [
+                        0.0204081,
+                        4.471197765072576e-05
+                    ],
+                    [
+                        0.0245818,
+                        4.8966861354144394e-05
+                    ],
+                    [
+                        0.0089735,
+                        2.9821093705211415e-05
+                    ],
+                    [
+                        0.0142182,
+                        3.743800580794869e-05
+                    ]
+                ]
+            ],
+            "effint_coincidences": [
+                [
+                    [
+                        0.0004674,
+                        6.835067938506538e-06
+                    ],
+                    [
+                        0.0001557,
+                        3.945576732367526e-06
+                    ],
+                    [
+                        6.67e-05,
+                        2.5825481817383387e-06
+                    ],
+                    [
+                        0.0002037,
+                        4.512853934152976e-06
+                    ]
+                ]
+            ]
+        },
+        "490a7db6-7872-4022-b77f-17390eb8fb63": {
+            "filename": "490a7db6-7872-4022-b77f-17390eb8fb63.root",
+            "file_size": 52088542,
+            "type": "radionuclides",
+            "properties": {
+                "detector_type": 2,
+                "detector_diameter": 60.0,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "events": 10000000,
+                "threads": 32,
+                "time_minutes": 1.3193769534428914,
+                "throughput": 3947.570343518793,
+                "Z": 57,
+                "A": 140
+            },
+            "counts_singles": [
+                [
+                    [
+                        134483,
+                        134503
+                    ],
+                    [
+                        168138,
+                        168675
+                    ],
+                    [
+                        66073,
+                        65947
+                    ],
+                    [
+                        105000,
+                        104283
+                    ]
+                ]
+            ],
+            "counts_coincidences": [
+                [
+                    [
+                        4356,
+                        4366
+                    ],
+                    [
+                        1449,
+                        1518
+                    ],
+                    [
+                        781,
+                        776
+                    ],
+                    [
+                        2019,
+                        2197
+                    ]
+                ]
+            ],
+            "effint_singles": [
+                [
+                    [
+                        0.0268986,
+                        5.11615728042444e-05
+                    ],
+                    [
+                        0.0336813,
+                        5.7049864180653404e-05
+                    ],
+                    [
+                        0.013202,
+                        3.609391527113677e-05
+                    ],
+                    [
+                        0.0209283,
+                        4.5266219478889554e-05
+                    ]
+                ]
+            ],
+            "effint_coincidences": [
+                [
+                    [
+                        0.0008722,
+                        9.335091146635903e-06
+                    ],
+                    [
+                        0.0002967,
+                        5.446209407560455e-06
+                    ],
+                    [
+                        0.0001557,
+                        3.945576732367526e-06
+                    ],
+                    [
+                        0.0004216,
+                        6.491704348166203e-06
+                    ]
+                ]
+            ]
+        },
+        "6079f38c-ca5f-48da-b1ab-e22d01e95823": {
+            "filename": "6079f38c-ca5f-48da-b1ab-e22d01e95823.root",
+            "file_size": 65600616,
+            "type": "radionuclides",
+            "properties": {
+                "detector_type": 2,
+                "detector_diameter": 70.0,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "events": 10000000,
+                "threads": 32,
+                "time_minutes": 1.3799212058385213,
+                "throughput": 3774.3700954058777,
+                "Z": 57,
+                "A": 140
+            },
+            "counts_singles": [
+                [
+                    [
+                        161978,
+                        162226
+                    ],
+                    [
+                        211698,
+                        212219
+                    ],
+                    [
+                        88012,
+                        87893
+                    ],
+                    [
+                        139892,
+                        139035
+                    ]
+                ]
+            ],
+            "counts_coincidences": [
+                [
+                    [
+                        7098,
+                        7188
+                    ],
+                    [
+                        2340,
+                        2462
+                    ],
+                    [
+                        1541,
+                        1503
+                    ],
+                    [
+                        3630,
+                        3775
+                    ]
+                ]
+            ],
+            "effint_singles": [
+                [
+                    [
+                        0.0324204,
+                        5.600831872484658e-05
+                    ],
+                    [
+                        0.0423917,
+                        6.371392608457746e-05
+                    ],
+                    [
+                        0.0175905,
+                        4.1570511555368185e-05
+                    ],
+                    [
+                        0.0278927,
+                        5.2071774779346626e-05
+                    ]
+                ]
+            ],
+            "effint_coincidences": [
+                [
+                    [
+                        0.0014286,
+                        1.194386496089101e-05
+                    ],
+                    [
+                        0.0004802,
+                        6.927982447726033e-06
+                    ],
+                    [
+                        0.0003044,
+                        5.516405900946739e-06
+                    ],
+                    [
+                        0.0007405,
+                        8.602044290457937e-06
+                    ]
+                ]
+            ]
+        },
+        "f20af09b-7bde-492c-9ae2-2a0fd40f28ac": {
+            "filename": "f20af09b-7bde-492c-9ae2-2a0fd40f28ac.root",
+            "file_size": 78329152,
+            "type": "radionuclides",
+            "properties": {
+                "detector_type": 2,
+                "detector_diameter": 80.0,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "events": 10000000,
+                "threads": 32,
+                "time_minutes": 1.4497653206189474,
+                "throughput": 3592.535467126323,
+                "Z": 57,
+                "A": 140
+            },
+            "counts_singles": [
+                [
+                    [
+                        183906,
+                        183815
+                    ],
+                    [
+                        251354,
+                        251457
+                    ],
+                    [
+                        109052,
+                        109290
+                    ],
+                    [
+                        173177,
+                        172777
+                    ]
+                ]
+            ],
+            "counts_coincidences": [
+                [
+                    [
+                        10283,
+                        10239
+                    ],
+                    [
+                        3585,
+                        3544
+                    ],
+                    [
+                        2564,
+                        2611
+                    ],
+                    [
+                        5751,
+                        5796
+                    ]
+                ]
+            ],
+            "effint_singles": [
+                [
+                    [
+                        0.0367721,
+                        5.951463068993204e-05
+                    ],
+                    [
+                        0.0502811,
+                        6.910348108654874e-05
+                    ],
+                    [
+                        0.0218342,
+                        4.621414037971495e-05
+                    ],
+                    [
+                        0.0345954,
+                        5.77914857905903e-05
+                    ]
+                ]
+            ],
+            "effint_coincidences": [
+                [
+                    [
+                        0.0020522,
+                        1.4310794789808147e-05
+                    ],
+                    [
+                        0.0007129,
+                        8.440330405795734e-06
+                    ],
+                    [
+                        0.0005175,
+                        7.191885661980452e-06
+                    ],
+                    [
+                        0.0011547,
+                        1.0739490993105773e-05
+                    ]
+                ]
+            ]
+        },
+        "d39ef687-a044-421f-bf4d-bcbe3e8eb412": {
+            "filename": "d39ef687-a044-421f-bf4d-bcbe3e8eb412.root",
+            "file_size": 89803212,
+            "type": "radionuclides",
+            "properties": {
+                "detector_type": 2,
+                "detector_diameter": 90.0,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "events": 10000000,
+                "threads": 32,
+                "time_minutes": 1.5022482951482137,
+                "throughput": 3467.0256242956643,
+                "Z": 57,
+                "A": 140
+            },
+            "counts_singles": [
+                [
+                    [
+                        201697,
+                        202020
+                    ],
+                    [
+                        283037,
+                        283932
+                    ],
+                    [
+                        129968,
+                        129451
+                    ],
+                    [
+                        203881,
+                        203391
+                    ]
+                ]
+            ],
+            "counts_coincidences": [
+                [
+                    [
+                        13171,
+                        13224
+                    ],
+                    [
+                        4596,
+                        4712
+                    ],
+                    [
+                        3850,
+                        3790
+                    ],
+                    [
+                        7999,
+                        8028
+                    ]
+                ]
+            ],
+            "effint_singles": [
+                [
+                    [
+                        0.0403717,
+                        6.22429319996335e-05
+                    ],
+                    [
+                        0.0566969,
+                        7.313163578807054e-05
+                    ],
+                    [
+                        0.0259419,
+                        5.026819851992908e-05
+                    ],
+                    [
+                        0.0407272,
+                        6.250479596011814e-05
+                    ]
+                ]
+            ],
+            "effint_coincidences": [
+                [
+                    [
+                        0.0026395,
+                        1.6225082556800752e-05
+                    ],
+                    [
+                        0.0009308,
+                        9.643306545786047e-06
+                    ],
+                    [
+                        0.000764,
+                        8.73736976440851e-06
+                    ],
+                    [
+                        0.0016027,
+                        1.2649629847193158e-05
+                    ]
+                ]
+            ]
+        },
+        "dedc7355-72fc-4195-9571-951964c8a90a": {
+            "filename": "dedc7355-72fc-4195-9571-951964c8a90a.root",
+            "file_size": 981698587,
+            "type": "background",
+            "properties": {
+                "detector_type": 2,
+                "detector_diameter": 50.0,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "events": 1000000000,
+                "threads": 32,
+                "time_minutes": 39.84450023969014,
+                "throughput": 13071.64929162589,
+                "background_file": "resources/source_flux_avg_unshielded.csv",
+                "SURE_radius": 67.70974819034554,
+                "SURE_pseudo_time": 513944.93899958296
+            },
+            "counts_singles": [
+                [
+                    [
+                        898619,
+                        792737
+                    ],
+                    [
+                        387709,
+                        341931
+                    ],
+                    [
+                        164389,
+                        144621
+                    ],
+                    [
+                        40456,
+                        35725
+                    ]
+                ]
+            ],
+            "counts_coincidences": [
+                [
+                    [
+                        367,
+                        358
+                    ],
+                    [
+                        73,
+                        92
+                    ],
+                    [
+                        4,
+                        2
+                    ],
+                    [
+                        15,
+                        9
+                    ]
+                ]
+            ],
+            "LD_singles": [
+                [
+                    [
+                        2482.2381400558697,
+                        0.9524757938276589
+                    ],
+                    [
+                        1631.2778033808504,
+                        0.9529344649578001
+                    ],
+                    [
+                        1062.543869395782,
+                        0.9531350066067668
+                    ],
+                    [
+                        528.9391016114623,
+                        0.953245993178107
+                    ]
+                ]
+            ],
+            "LD_coincidences": [
+                [
+                    [
+                        54.045823194463225,
+                        0.9532819593044207
+                    ],
+                    [
+                        27.20026583834472,
+                        0.9532822262235257
+                    ],
+                    [
+                        7.380110455508206,
+                        0.9532823020094721
+                    ],
+                    [
+                        12.050220911016414,
+                        0.9532822934299315
+                    ]
+                ]
+            ]
+        }
+    }
+}

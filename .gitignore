@@ -6,3 +6,4 @@ python/metadata_peakinfo.json
 python/metadata_backinfo.json
 python/datacuts/*
 python/figures/*
+python/analysis/__pycache__/*
