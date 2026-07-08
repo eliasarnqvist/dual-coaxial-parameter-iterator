@@ -6,11 +6,8 @@ import uuid
 import os
 import numpy as np
 import uproot
-from numba import jit
+import pprint
 
-
-# step 1: cut the metadata
-# OK!
 
 def cut_metadata(plotcard, metadata):
     # Use the selection cuts in the plotcard to remove irrelevant metadata
@@ -54,14 +51,16 @@ def cut_metadata(plotcard, metadata):
     return metadata
 
 
-# step 2: open and analyze the data: ROI, effint, back, filter_back (both intrisic and exposure!), and MDA
-# analyze: input: file, output effint
-
 def analyze_file(plotcard, metadata, data_path):
     print("Starting analysis")
 
     # Need to iterate through the relevant files
     for i, (key, value) in enumerate(metadata.items()):
+
+        # NOTE just for testing
+        if i > 5:
+            continue
+
         run_type = value["type"]
 
         data_filename = value["filename"]
@@ -133,24 +132,8 @@ def analyze_file(plotcard, metadata, data_path):
         value["counts_singles"] = radionuclide_counts_singles
         value["counts_coincidences"] = radionuclide_counts_coincidences
         plotcard["metadata"][key] = value
-        
 
-
-    # Put the counts and metadata in the plotcard now
-
-
-    # Do combined now! For MDA!!! Both 1D 2D
-            # if "combined" in plotcard["radionuclides"]["gammas_singles"][j]:
-            #     print("do combined also")
-
-    # result should be LD, effint, mda, x value, and line label
-
-    # need: gamma energies from plotcard
-    # get energy -> get ROI
-    # go through data look for counts in ROI: single and coincidence
-
-
-    return
+    return plotcard
 
 
 def ROI_analysis_1D(events, E_gamma, ROI_width):
@@ -177,14 +160,147 @@ def ROI_analysis_2D(events_a, events_b, E_gamma1, E_gamma2, ROI_width1, ROI_widt
     return int(counts)
 
 
-def calculate_LD():
+def calculate_quantities(plotcard):
 
+    for i, (key, value) in enumerate(plotcard["metadata"].items()):
+
+        if value["type"] == "radionuclides":
+            # If the type is radionuclides, the efficiency and intensity should be calculated
+
+            # Use both detectors as a bigger single detector
+            effint_singles = []
+            for radionuclide_counts in value["counts_singles"]:
+                radionuclide_effint = []
+                for gamma_counts in radionuclide_counts:
+                    total_counts = sum(gamma_counts)
+                    events = value["properties"]["events"]
+
+                    effint, effint_unc = caluclate_effint(total_counts, events)
+
+                    radionuclide_effint.append([effint, effint_unc])
+                effint_singles.append(radionuclide_effint)
+            
+            # Use standard coincidence detection (no addback)
+            effint_coincidences = []
+            for radionuclide_counts in value["counts_coincidences"]:
+                radionuclide_effint = []
+                for gamma_counts in radionuclide_counts:
+                    total_counts = sum(gamma_counts)
+                    events = value["properties"]["events"]
+
+                    effint, effint_unc = caluclate_effint(total_counts, events)
+
+                    radionuclide_effint.append([effint, effint_unc])
+                effint_coincidences.append(radionuclide_effint)
+            
+            # Add the efficiencies to the metadata
+            value["effint_singles"] = effint_singles
+            value["effint_coincidences"] = effint_coincidences
+
+        elif value["type"] == "background":
+            # If the type is background, the detection limit should be calculated
+
+            # Use both detectors as a bigger single detector
+            LD_singles = []
+            for radionuclide_counts in value["counts_singles"]:
+                radionuclide_LD = []
+                for gamma_counts in radionuclide_counts:
+                    total_counts = sum(gamma_counts)
+                    events = value["properties"]["events"]
+                    pseudo_time = value["properties"]["SURE_pseudo_time"]
+                    measurement_time = plotcard["analysis"]["measurement_time_hours"]
+
+                    LD, LD_unc = calculate_LD(total_counts, events, pseudo_time, measurement_time)
+
+                    radionuclide_LD.append([LD, LD_unc])
+                LD_singles.append(radionuclide_LD)
+
+            # Use standard coincidence detection (no addback)
+            LD_coincidences = []
+            for radionuclide_counts in value["counts_coincidences"]:
+                radionuclide_LD = []
+                for gamma_counts in radionuclide_counts:
+                    total_counts = sum(gamma_counts)
+                    events = value["properties"]["events"]
+                    pseudo_time = value["properties"]["SURE_pseudo_time"]
+                    measurement_time = plotcard["analysis"]["measurement_time_hours"]
+
+                    LD, LD_unc = calculate_LD(total_counts, events, pseudo_time, measurement_time)
+
+                    radionuclide_LD.append([LD, LD_unc])
+                LD_coincidences.append(radionuclide_LD)
+
+
+            # Add the efficiencies to the metadata
+            value["LD_singles"] = LD_singles
+            value["LD_coincidences"] = LD_coincidences
+
+        elif value["type"] == "filter":
+            # Pass for now, TODO later
+            pass
+        else:
+            pass
+
+        # Update the metadata in the plotcad
+        plotcard["metadata"][key] = value
+
+    # pprint.pp(plotcard)
+
+    return plotcard
+
+
+def caluclate_effint(total_counts, events):
+    # Calculate efficiency and intensity
+    effint = total_counts / events
+
+    # Use binomial instead of poisson approximation
+    effint_unc = np.sqrt(total_counts * (1 - total_counts/events)) / events
+
+    return effint, effint_unc
+
+
+# TODO implement proper detection limit formula that works for low counts
+# TODO implement uncertainty of B when B is zero (one-sided uncertainty)
+def calculate_LD(total_counts, events, pseudo_time, measurement_time):
+    # Background count rate
+    b = total_counts / pseudo_time
+    # Background counts during measurement time
+    B = b * (measurement_time * 3600)
+    if B == 0:
+        print("Encountered 0 background!!!")
+        raise ValueError
+    # Detection limit according to Currie
+    LD = 2.71 + 4.65*np.sqrt(B)
+
+    # Calculate the uncertainty
+    b_unc = np.sqrt(total_counts * (1 - total_counts/events)) / pseudo_time
+    B_unc = b_unc * (measurement_time * 3600)
+    LD_unc = 4.65 * (0.5/np.sqrt(B)) * B_unc
+
+    return LD, LD_unc
+            
+
+def plot_mda():
+    # Now the MDA can be caluclated in the next step
     return
 
 
-def calculate_effint():
+def calculate_mda(LD, effint, tM):
+    # Calculate the minimum detectable activity
+    mda = LD / (effint * tM)
 
+    return mda
+
+
+def calculate_combined_mda():
+
+    # Check if the combined MDA should be calculated
+    # if "combined" in plotcard["radionuclides"]["gammas_singles"][j]:
+    #     print("do combined also")
+    # This should be for every radionucldie... need to iterate through ZAs
     return
+
+
 
 
 # step 3: mda calculation
@@ -223,7 +339,10 @@ data_path = args.data
 
 metadata = cut_metadata(plotcard, metadata)
 
-analyze_file(plotcard, metadata, data_path)
+plotcard = analyze_file(plotcard, metadata, data_path)
+
+plotcard = calculate_quantities(plotcard)
+
 
 
 # print(plotcard)

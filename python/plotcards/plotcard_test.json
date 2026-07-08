@@ -27,7 +27,7 @@
     "analysis": {
         "ROI_type": "square",
         "_ROI_width_polynomial": "elements are degrees of polynomial describing the ROI width as a function of energy (keV), from highest to lowest (constant) order",
-        "ROI_width_polynomial": [0, 0, 5],
+        "ROI_width_polynomial": [0, 0, 20],
         "measurement_time_hours": 24
     },
     "plot": {
