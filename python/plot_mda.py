@@ -106,14 +106,14 @@ def create_data_list(plotcard, metadata):
                 for gamma_single in gammas_singles:
                     new_data_point = data_point.copy() # important with .copy() here!
                     new_data_point["analysis_type"] = "singles"
-                    new_data_point["gamma_single"] = gamma_single
+                    new_data_point["Egamma"] = gamma_single
                     new_data_list.append(new_data_point)
                 
                 # Need a new data point for every pair of coincidence gamma rays
                 for gamma_coincidence in gammas_coincidences:
                     new_data_point = data_point.copy() # important with .copy() here!
                     new_data_point["analysis_type"] = "coincidences"
-                    new_data_point["gamma_coincidence"] = gamma_coincidence
+                    new_data_point["Egamma1_Egamma2"] = gamma_coincidence
                     new_data_list.append(new_data_point)
             else:
                 # This data point has a different radionuclide
@@ -125,18 +125,17 @@ def create_data_list(plotcard, metadata):
 
 # NOTE OK ABOVE!
 
-def analyze_file(plotcard, metadata, data_path):
-    print("Starting analysis")
+def analyze_files(data_list, plotcard, metadata, data_path):
+    print("Starting analysis of data files!")
 
     # Need to iterate through the relevant files
     for i, (key, value) in enumerate(metadata.items()):
 
         # NOTE just for testing
-        if i > 5:
+        if i > 4:
             continue
 
         run_type = value["type"]
-
         data_filename = value["filename"]
         data_filesize = value["file_size"] / (1024**2)
         print("\tOpening file " + str(i+1) + " out of " + str(len(metadata)) + ": " + str(data_filename) + " (" + run_type + f" / {data_filesize:.2f} mb)...")
@@ -152,62 +151,121 @@ def analyze_file(plotcard, metadata, data_path):
         tree_detector_ab = data_file["E_ab_list"]
         events_coincidence_a = tree_detector_ab["energy_a"].array(library="np") * 1e3
         events_coincidence_b = tree_detector_ab["energy_b"].array(library="np") * 1e3
+
         # At the moment the data loading above is the bottleneck...
 
-        radionuclide_counts_singles = []
-        radionuclide_counts_coincidences = []
+        # Based on the file metadata, this should be the data point
+        data_point_criteria = {
+            "detector_type": value["properties"]["detector_type"],
+            "detector_diameter": value["properties"]["detector_diameter"],
+            "detector_length": value["properties"]["detector_length"],
+            "detector_source_distance": value["properties"]["detector_source_distance"],
+            "source_type": value["properties"]["source_type"],
+        }
 
-        # Need to iterate through every peak of interest, which means first iterating though the radionuclides
-        for j, (Z, A) in enumerate(plotcard["radionuclides"]["ZAs"]):
+        if run_type == "radionuclides":
+            # Based on the file, this should be the ZA of the data_point
+            ZA_criteria = [value["properties"]["Z"], value["properties"]["A"]]
+            data_point_criteria["ZA"] = ZA_criteria
 
-            print("\t\tAnalyzing radionuclide " + str(j+1) + " out of " + str(len(plotcard["radionuclides"]["ZAs"])) + f": Z={Z}, A={A}")
+            for j, ZA in enumerate(plotcard["radionuclides"]["ZAs"]):
+                if ZA == ZA_criteria:
+                    # Check which energies are relevant for this radionuclide
+                    gammas_singles = plotcard["radionuclides"]["gammas_singles"][j]
+                    gammas_coincidences = plotcard["radionuclides"]["gammas_coincidences"][j]
 
-            counts_singles = []
-            counts_coincidences = []
+                    # Analyze single gamma rays
+                    for E_gamma in gammas_singles:
+                        if E_gamma == "combined":
+                            # Handle this later
+                            counts = "n/a"
+                            effint, effint_unc = 0.0, 0.0
+                        else:
+                            ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
+                            ROI_width = np.polyval(ROI_polynial_coeffs, E_gamma)
 
-            # Need to iterate through the gamma singles peaks
-            for k, E_gamma in enumerate(plotcard["radionuclides"]["gammas_singles"][j]):
-                # Need to handle the combined peaks later
-                if E_gamma == "combined":
-                    continue
-                else:
-                    pass
+                            counts_a = ROI_analysis_1D(events_single_a, E_gamma, ROI_width)
+                            counts_b = ROI_analysis_1D(events_single_b, E_gamma, ROI_width)
+                            print("\t\t\tGamma ray: " + str(E_gamma) + " keV, counts a: " + str(counts_a) + ", counts b: " + str(counts_b))
+
+                            counts = counts_a + counts_b
+                            events = value["properties"]["events"]
+
+                            # Caluclate the effint
+                            effint, effint_unc = caluclate_effint(counts, events)
+
+                        this_data_point_criteria = data_point_criteria.copy()
+                        this_data_point_criteria["analysis_type"] = "singles"
+                        this_data_point_criteria["Egamma"] = E_gamma
+
+                        # Store the data in the data_list
+                        for data_point in data_list:
+                            if all(data_point[k] == v for k, v in this_data_point_criteria.items()):
+                                data_point["counts_radionuclide"] = counts
+                                data_point["effint"] = [effint, effint_unc]
+
+                    # Analyze coincidence gamma rays also
+                    for Egamma1_Egamma2 in gammas_coincidences:
+                        if Egamma1_Egamma2 == "combined":
+                            # Handle this later
+                            counts = "n/a"
+                            effint, effint_unc = 0.0, 0.0
+                        else:
+                            E_gamma1, E_gamma2 = Egamma1_Egamma2
+
+                            ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
+                            ROI_width1 = np.polyval(ROI_polynial_coeffs, E_gamma1)
+                            ROI_width2 = np.polyval(ROI_polynial_coeffs, E_gamma2)
+
+                            counts_a1b2 = ROI_analysis_2D(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2)
+                            counts_b1a2 = ROI_analysis_2D(events_coincidence_b, events_coincidence_a, E_gamma1, E_gamma2, ROI_width1, ROI_width2)
+                            print("\t\t\tGamma ray 1: " + str(E_gamma1) + " keV, gamma ray 2: " + str(E_gamma2) + " keV , counts a1b2: " + str(counts_a1b2) + ", counts b2a1: " + str(counts_b1a2))
+
+                            counts = counts_a1b2 + counts_b1a2
+                            events = value["properties"]["events"]
+
+                            # Caluclate the effint
+                            effint, effint_unc = caluclate_effint(counts, events)
+
+                        this_data_point_criteria = data_point_criteria.copy()
+                        this_data_point_criteria["analysis_type"] = "coincidences"
+                        this_data_point_criteria["Egamma1_Egamma2"] = Egamma1_Egamma2
+
+                        # Store the data in the data_list
+                        for data_point in data_list:
+                            if all(data_point[k] == v for k, v in this_data_point_criteria.items()):
+                                data_point["counts_radionuclide"] = counts
+                                data_point["effint"] = [effint, effint_unc]
+
+        elif run_type == "background":
+
+            # for j, ZA in enumerate(plotcard["radionuclides"]["ZAs"]):
+            #         print("\t\tAnalyzing radionuclide " + str(j+1) + " out of " + str(len(plotcard["radionuclides"]["ZAs"])) + f": Z={ZA[0]}, A={A[1]}")
+
+            # iterate through all the radionuclides and gamma rays here (all of them!)
+
+            pass
+        elif run_type == "filter":
+            # Do this later
+            pass
+        else:
+            pass
+
                 
-                ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
-                ROI_width = np.polyval(ROI_polynial_coeffs, E_gamma)
 
-                counts_a = ROI_analysis_1D(events_single_a, E_gamma, ROI_width)
-                counts_b = ROI_analysis_1D(events_single_b, E_gamma, ROI_width)
-                print("\t\t\tGamma ray: " + str(E_gamma) + " keV, counts a: " + str(counts_a) + ", counts b: " + str(counts_b))
 
-                counts_singles.append([counts_a, counts_b])
+                
 
-            # Need to iterate through the gamma coincidences peaks
-            for k, E_gammas in enumerate(plotcard["radionuclides"]["gammas_coincidences"][j]):
-                if E_gammas == "combined":
-                    continue
-                else:
-                    E_gamma1, E_gamma2 = E_gammas
-                    pass
-
-                ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
-                ROI_width1 = np.polyval(ROI_polynial_coeffs, E_gamma1)
-                ROI_width2 = np.polyval(ROI_polynial_coeffs, E_gamma2)
-
-                counts_a1b2 = ROI_analysis_2D(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2)
-                counts_b1a2 = ROI_analysis_2D(events_coincidence_b, events_coincidence_a, E_gamma1, E_gamma2, ROI_width1, ROI_width2)
-                print("\t\t\tGamma ray 1: " + str(E_gamma1) + " keV, gamma ray 2: " + str(E_gamma2) + " keV , counts a1b2: " + str(counts_a1b2) + ", counts b2a1: " + str(counts_b1a2))
-
-                counts_coincidences.append([counts_a1b2, counts_b1a2])
+        #         counts_coincidences.append([counts_a1b2, counts_b1a2])
             
-            radionuclide_counts_singles.append(counts_singles)
-            radionuclide_counts_coincidences.append(counts_coincidences)
+        #     radionuclide_counts_singles.append(counts_singles)
+        #     radionuclide_counts_coincidences.append(counts_coincidences)
         
-        value["counts_singles"] = radionuclide_counts_singles
-        value["counts_coincidences"] = radionuclide_counts_coincidences
-        plotcard["metadata"][key] = value
+        # value["counts_singles"] = radionuclide_counts_singles
+        # value["counts_coincidences"] = radionuclide_counts_coincidences
+        # plotcard["metadata"][key] = value
 
-    return plotcard
+    return data_list
 
 
 def ROI_analysis_1D(events, E_gamma, ROI_width):
@@ -334,7 +392,7 @@ def caluclate_effint(total_counts, events):
     # Use binomial instead of poisson approximation
     effint_unc = np.sqrt(total_counts * (1 - total_counts/events)) / events
 
-    return effint, effint_unc
+    return float(effint), float(effint_unc)
 
 
 # TODO implement proper detection limit formula that works for low counts
@@ -429,14 +487,12 @@ metadata = cut_metadata(plotcard, metadata)
 
 data_list = create_data_list(plotcard, metadata)
 
+data_list = analyze_files(data_list, plotcard, metadata, data_path)
+
 pprint.pp(data_list)
 
-
-
-
-# plotcard = analyze_file(plotcard, metadata, data_path)
-
-
+for data_point in data_list:
+    print(data_point["effint"])
 
 
 # plotcard = calculate_quantities(plotcard)
