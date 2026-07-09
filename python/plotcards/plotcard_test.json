@@ -31,10 +31,69 @@
     "plot": {
         "x_value": "detector_diameter",
         "x_label": "$d=l$ (mm)",
-        "line_by": ["gammas"],
+        "y_value": "mda",
+        "y_label": "MDA (Bq)",
         "save_plot": false,
         "save_data": false,
-        "save_path": "figures/v3/la140"
+        "save_path": "figures/v3/la140",
+        "legend_title": "La-140",
+        "lines": [
+            {
+                "detector_type": 2,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "ZA": [57, 140],
+                "background_file": "resources/source_flux_avg_unshielded.csv",
+                "analysis_type": "singles",
+                "gamma": 328.76,
+                "PLOT_label": "328.76"
+            },
+            {
+                "detector_type": 2,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "ZA": [57, 140],
+                "background_file": "resources/source_flux_avg_unshielded.csv",
+                "analysis_type": "singles",
+                "gamma": 487.02,
+                "PLOT_label": "487.02"
+            },
+            {
+                "detector_type": 2,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "ZA": [57, 140],
+                "background_file": "resources/source_flux_avg_unshielded.csv",
+                "analysis_type": "singles",
+                "gamma": 815.77,
+                "PLOT_label": "815.77"
+            },
+            {
+                "detector_type": 2,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "ZA": [57, 140],
+                "background_file": "resources/source_flux_avg_unshielded.csv",
+                "analysis_type": "singles",
+                "gamma": 1596.21,
+                "PLOT_label": "1596.21"
+            },
+            {
+                "detector_type": 2,
+                "detector_length": 30.0,
+                "detector_source_distance": 0,
+                "source_type": 1,
+                "ZA": [57, 140],
+                "background_file": "resources/source_flux_avg_unshielded.csv",
+                "analysis_type": "singles",
+                "gamma": "combined",
+                "PLOT_label": "combined"
+            }
+        ]
     },
     "results": {
         "x": [],
