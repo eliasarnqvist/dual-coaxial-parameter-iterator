@@ -106,14 +106,14 @@ def create_data_list(plotcard, metadata):
                 for gamma_single in gammas_singles:
                     new_data_point = data_point.copy() # important with .copy() here!
                     new_data_point["analysis_type"] = "singles"
-                    new_data_point["Egamma"] = gamma_single
+                    new_data_point["gamma"] = gamma_single
                     new_data_list.append(new_data_point)
                 
                 # Need a new data point for every pair of coincidence gamma rays
                 for gamma_coincidence in gammas_coincidences:
                     new_data_point = data_point.copy() # important with .copy() here!
                     new_data_point["analysis_type"] = "coincidences"
-                    new_data_point["Egamma1_Egamma2"] = gamma_coincidence
+                    new_data_point["gamma"] = gamma_coincidence
                     new_data_list.append(new_data_point)
             else:
                 # This data point has a different radionuclide
@@ -125,6 +125,9 @@ def create_data_list(plotcard, metadata):
 
 def analyze_files(data_list, plotcard, metadata, data_path):
     print("Starting analysis of data files!")
+
+    # Quantities not needed inside a loop
+    measurement_time_hours = plotcard["analysis"]["measurement_time_hours"]
 
     # Need to iterate through the relevant files
     for i, (key, value) in enumerate(metadata.items()):
@@ -177,8 +180,7 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                     for E_gamma in gammas_singles:
                         if E_gamma == "combined":
                             # Handle this later
-                            counts = "n/a"
-                            effint, effint_unc = 0.0, 0.0
+                            continue
                         else:
                             ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
                             ROI_width = np.polyval(ROI_polynial_coeffs, E_gamma)
@@ -196,7 +198,7 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                         # Need to make a copy below so the keys for singles do not interfere with the keys for coincidences
                         this_data_point_criteria = data_point_criteria.copy()
                         this_data_point_criteria["analysis_type"] = "singles"
-                        this_data_point_criteria["Egamma"] = E_gamma
+                        this_data_point_criteria["gamma"] = E_gamma
 
                         # Store the data in the data_list
                         for data_point in data_list:
@@ -208,8 +210,7 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                     for Egamma1_Egamma2 in gammas_coincidences:
                         if Egamma1_Egamma2 == "combined":
                             # Handle this later
-                            counts = "n/a"
-                            effint, effint_unc = 0.0, 0.0
+                            continue
                         else:
                             E_gamma1, E_gamma2 = Egamma1_Egamma2
 
@@ -230,7 +231,7 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                         # Need to make a copy below so the keys for singles do not interfere with the keys for coincidences
                         this_data_point_criteria = data_point_criteria.copy()
                         this_data_point_criteria["analysis_type"] = "coincidences"
-                        this_data_point_criteria["Egamma1_Egamma2"] = Egamma1_Egamma2
+                        this_data_point_criteria["gamma"] = Egamma1_Egamma2
 
                         # Store the data in the data_list
                         for data_point in data_list:
@@ -257,8 +258,7 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                 for E_gamma in gammas_singles:
                     if E_gamma == "combined":
                         # Handle this later
-                        counts = "n/a"
-                        LD, LD_unc = 0.0, 0.0
+                        continue
                     else:
                         ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
                         ROI_width = np.polyval(ROI_polynial_coeffs, E_gamma)
@@ -270,15 +270,14 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                         counts = counts_a + counts_b
                         events = value["properties"]["events"]
                         pseudo_time = value["properties"]["SURE_pseudo_time"]
-                        measurement_time = plotcard["analysis"]["measurement_time_hours"]
 
                         # Caluclate the LD
-                        LD, LD_unc = calculate_LD(counts, events, pseudo_time, measurement_time)
+                        LD, LD_unc = calculate_LD(counts, events, pseudo_time, measurement_time_hours)
 
                     # Need to make a copy below so the keys for singles do not interfere with the keys for coincidences
                     this_data_point_criteria = data_point_criteria.copy()
                     this_data_point_criteria["analysis_type"] = "singles"
-                    this_data_point_criteria["Egamma"] = E_gamma
+                    this_data_point_criteria["gamma"] = E_gamma
 
                     # Store the data in the data_list
                     for data_point in data_list:
@@ -290,8 +289,7 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                 for Egamma1_Egamma2 in gammas_coincidences:
                     if Egamma1_Egamma2 == "combined":
                         # Handle this later
-                        counts = "n/a"
-                        LD, LD_unc = 0.0, 0.0
+                        continue
                     else:
                         E_gamma1, E_gamma2 = Egamma1_Egamma2
 
@@ -306,15 +304,14 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                         counts = counts_a1b2 + counts_b1a2
                         events = value["properties"]["events"]
                         pseudo_time = value["properties"]["SURE_pseudo_time"]
-                        measurement_time = plotcard["analysis"]["measurement_time_hours"]
 
                         # Caluclate the LD
-                        LD, LD_unc = calculate_LD(counts, events, pseudo_time, measurement_time)
+                        LD, LD_unc = calculate_LD(counts, events, pseudo_time, measurement_time_hours)
 
                     # Need to make a copy below so the keys for singles do not interfere with the keys for coincidences
                     this_data_point_criteria = data_point_criteria.copy()
                     this_data_point_criteria["analysis_type"] = "coincidences"
-                    this_data_point_criteria["Egamma1_Egamma2"] = Egamma1_Egamma2
+                    this_data_point_criteria["gamma"] = Egamma1_Egamma2
 
                     # Store the data in the data_list
                     for data_point in data_list:
@@ -328,9 +325,56 @@ def analyze_files(data_list, plotcard, metadata, data_path):
         else:
             pass
 
+    # Now it is possible to caluclate the MDA for each data point
+    for data_point in data_list:
+        # Check that both efficiency and intensity information is present for this data point
+        if ("effint" in data_point) and ("LD" in data_point):
+            # Get the effint and LD information for this data point
+            effint, effint_unc = data_point["effint"]
+            LD, LD_unc = data_point["LD"]
+
+            if data_point["gamma"] == "combined":
+                # Handle this later
+                continue
+            
+            mda, mda_unc = calculate_mda([LD, LD_unc], [effint, effint_unc], measurement_time_hours, t12=0)
+
+            data_point["mda"] = [mda, mda_unc]
+        else:
+            # This is the case when either of effint or LD are not calculated
+            data_point["mda"] = [1000.0, 1000.0]
+    
+    # Now calculate the combined MDA entries where applicable
+    for data_point in data_list:
+        # Check if this data point is for combined signatures
+        if data_point["gamma"] != "combined":
+            continue
+
+        mda_list = []
+
+        # Check which entries have the same properties as this data point
+        data_point_criteria = {
+            "detector_type": data_point["detector_type"],
+            "detector_diameter": data_point["detector_diameter"],
+            "detector_length": data_point["detector_length"],
+            "detector_source_distance": data_point["detector_source_distance"],
+            "source_type": data_point["source_type"],
+            "ZA": data_point["ZA"],
+            "background_file": data_point["background_file"],
+            "analysis_type": data_point["analysis_type"],
+        }
+        for data_point_candidate in data_list:
+            if all(data_point_candidate[k] == v for k, v in data_point_criteria.items()) and data_point_candidate["gamma"] != "combined":
+                mda, mda_unc = data_point_candidate["mda"]
+                mda_list.append([mda, mda_unc])
+
+        combined_mda, combined_mda_unc = calculate_combined_mda(mda_list)
+        data_point["mda"] = [combined_mda, combined_mda_unc]
+    
     return data_list
 
 
+# TODO ROI averaging: inflate by 4x and then divide by 16?
 def ROI_analysis_1D(events, E_gamma, ROI_width):
     # Energy distance is half of the ROI size
     dE = ROI_width/2
@@ -341,6 +385,7 @@ def ROI_analysis_1D(events, E_gamma, ROI_width):
     return int(counts)
 
 
+# TODO ROI averaging: inflate by 4x and then divide by 16?
 def ROI_analysis_2D(events_a, events_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2):
     # Energy distance is half of the ROI size
     dE_1 = ROI_width1/2
@@ -366,11 +411,13 @@ def caluclate_effint(counts, events):
 
 # TODO implement proper detection limit formula that works for low counts
 # TODO implement uncertainty of B when B is zero (one-sided uncertainty)
-def calculate_LD(counts, events, pseudo_time, measurement_time):
+def calculate_LD(counts, events, pseudo_time, measurement_time_hours):
+    # Convert to seconds
+    measurement_time = measurement_time_hours * 3600
     # Background count rate
     b = counts / pseudo_time
     # Background counts during measurement time
-    B = b * (measurement_time * 3600)
+    B = b * measurement_time
     if B == 0:
         print("Encountered 0 background!!!")
         raise ValueError
@@ -379,23 +426,23 @@ def calculate_LD(counts, events, pseudo_time, measurement_time):
 
     # Calculate the uncertainty
     b_unc = np.sqrt(counts * (1 - counts/events)) / pseudo_time
-    B_unc = b_unc * (measurement_time * 3600)
+    B_unc = b_unc * measurement_time
     LD_unc = 4.65 * (0.5/np.sqrt(B)) * B_unc
 
     return float(LD), float(LD_unc)
 
 
-# NOTE OK ABOVE!
+# TODO use the half life to determine the optimal measurement time
+def calculate_mda(LD_, effint_, measurement_time_hours, t12=0):
+    # Convert to seconds
+    tM = measurement_time_hours * 3600
+    # Extract uncertainties
+    LD, LD_unc = LD_
+    effint, effint_unc = effint_
 
-
-def plot_mda(plotcard):
-    metadata = plotcard[""]
-
-    # Now the MDA can be caluclated in the next step
-    return
-
-
-def calculate_mda(LD, effint, tM, t12=0):
+    # Optional determination of the measurement time for optimal mda
+    # TODO here
+    
     # Calculate the minimum detectable activity
     mda = LD / (effint * tM)
 
@@ -405,31 +452,38 @@ def calculate_mda(LD, effint, tM, t12=0):
         decay_correction = (lambdaa * tM) / (1 - np.exp(-lambdaa * tM))
         mda *= decay_correction
 
-    return mda
+    mda_unc = 0
+
+    return float(mda), float(mda_unc)
 
 
-def calculate_combined_mda():
+# TODO implement combined mda uncertainty calculation
+def calculate_combined_mda(mda_list):
 
     # Check if the combined MDA should be calculated
     # if "combined" in plotcard["radionuclides"]["gammas_singles"][j]:
     #     print("do combined also")
     # This should be for every radionucldie... need to iterate through ZAs
+
+    sum = 0
+    for mda, mda_unc in mda_list:
+        sum += 1 / np.power(mda, 2)
+
+    mda_combined = np.sqrt(1 / sum)
+    mda_combined_unc = 1
+
+    return float(mda_combined), float(mda_combined_unc)
+
+
+def plot_mda(plotcard):
+    metadata = plotcard[""]
+
+    # Now the MDA can be caluclated in the next step
     return
 
 
 def make_plot():
     return
-
-
-# step 3: mda calculation
-
-# step 4: plot and save
-
-
-
-
-
-
 
 
 # Parser for adding arguments
@@ -463,9 +517,8 @@ data_list = analyze_files(data_list, plotcard, metadata, data_path)
 
 pprint.pp(data_list)
 
-for data_point in data_list:
-    print(data_point["effint"])
-
+# for data_point in data_list:
+#     print(data_point["effint"])
 
 # plotcard = calculate_quantities(plotcard)
 
