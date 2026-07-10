@@ -10,7 +10,7 @@
     },
     "radionuclides": {
         "ZAs": [[57, 140]],
-        "gammas_singles": [[328.76, 487.02, 815.77, 1596.21, "combined"]],
+        "gammas_singles": [[]],
         "gammas_coincidences": [[[328.76, 487.02], [328.76, 1596.21], [815.77, 1596.21], [487.02, 1596.21], "combined"]]
     },
     "background": {
@@ -19,8 +19,8 @@
     "filter": {
         "filter_active": false,
         "exposure_active": false,
-        "ZAs_Bq_exposure": [[4, 7, 65.31, 0.68], [55, 137, 0.069, 0.005], [19, 40, 4.28, 0.26]],
-        "ZAs_Bq_filter": [[19, 40, 18.40, 0.29], [82, 214, 0.440, 0.006], [83, 214, 0.440, 0.006], [89, 228, 0.267, 0.008], [82, 212, 0.117, 0.005], [83, 212, 0.117, 0.005], [81, 208, 0.117, 0.005], [92, 235, 0.0323, 0.0038]]
+        "ZAs_Bq_exposure": [],
+        "ZAs_Bq_filter": []
     },
     "analysis": {
         "ROI_type": "square",
@@ -46,8 +46,8 @@
                 "ZA": [57, 140],
                 "background_file": "resources/source_flux_avg_unshielded.csv",
                 "analysis_type": "singles",
-                "gamma": 328.76,
-                "plot_label": "328.76"
+                "gamma": [328.76, 487.02],
+                "plot_label": "328.76, 487.02"
             },
             {
                 "detector_type": 2,
@@ -57,8 +57,8 @@
                 "ZA": [57, 140],
                 "background_file": "resources/source_flux_avg_unshielded.csv",
                 "analysis_type": "singles",
-                "gamma": 487.02,
-                "plot_label": "487.02"
+                "gamma": [328.76, 1596.21],
+                "plot_label": "328.76, 1596.21"
             },
             {
                 "detector_type": 2,
@@ -68,8 +68,8 @@
                 "ZA": [57, 140],
                 "background_file": "resources/source_flux_avg_unshielded.csv",
                 "analysis_type": "singles",
-                "gamma": 815.77,
-                "plot_label": "815.77"
+                "gamma": [815.77, 1596.21],
+                "plot_label": "815.77, 1596.21"
             },
             {
                 "detector_type": 2,
@@ -79,8 +79,8 @@
                 "ZA": [57, 140],
                 "background_file": "resources/source_flux_avg_unshielded.csv",
                 "analysis_type": "singles",
-                "gamma": 1596.21,
-                "plot_label": "1596.21"
+                "gamma": [487.02, 1596.21],
+                "plot_label": "487.02, 1596.21"
             },
             {
                 "detector_type": 2,
