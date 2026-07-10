@@ -17,9 +17,7 @@
         "background_file": ["resources/source_flux_avg_unshielded.csv"]
     },
     "filter": {
-        "filter_active": false,
-        "exposure_active": false,
-        "ZAs_Bq_exposure": [[4, 7, 65.31, 0.68], [55, 137, 0.069, 0.005], [19, 40, 4.28, 0.26]],
+        "filter_active": [false, true],
         "ZAs_Bq_filter": [[19, 40, 18.40, 0.29], [82, 214, 0.440, 0.006], [83, 214, 0.440, 0.006], [89, 228, 0.267, 0.008], [82, 212, 0.117, 0.005], [83, 212, 0.117, 0.005], [81, 208, 0.117, 0.005], [92, 235, 0.0323, 0.0038]]
     },
     "analysis": {
