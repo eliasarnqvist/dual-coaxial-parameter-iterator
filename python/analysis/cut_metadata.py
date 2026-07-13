@@ -1,4 +1,4 @@
-
+# Cut the metadata according to the cuts in the plotcard
 def cut_metadata(plotcard, metadata):
     # Use the selection cuts in the plotcard to remove irrelevant metadata
     for key in list(metadata):
@@ -26,11 +26,10 @@ def cut_metadata(plotcard, metadata):
         elif value["type"] == "filter":
             ZA = [value["properties"]["Z"], value["properties"]["A"]]
             ZAs_filter = [plotcard["filter"]["ZAs_Bq_filter"][i][0:2] for i in range(len(plotcard["filter"]["ZAs_Bq_filter"]))]
-            ZAs_exposure = [plotcard["filter"]["ZAs_Bq_filter"][i][0:2] for i in range(len(plotcard["filter"]["ZAs_Bq_filter"]))]
-            if (ZA not in ZAs_filter) and (ZA not in ZAs_exposure):
+            filter_active = plotcard["filter"]["filter_active"]
+            if (ZA not in ZAs_filter) or (True not in filter_active):
                 keep_this_key = False
         else:
-            print("BAD RUN TYPE!")
             raise ValueError
         
         # Remove the key from the metadata dictionary if it is not interesting
