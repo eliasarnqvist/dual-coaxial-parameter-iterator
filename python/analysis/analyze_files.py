@@ -194,7 +194,7 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                         ROI_extension_factor = plotcard["analysis"]["ROI_background_extension_factor"]
 
                         counts_a1b2, counts_a1b2_unc = ROI_analysis_2D(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events, ROI_extension_factor)
-                        counts_b1a2, counts_a1b2_unc = ROI_analysis_2D(events_coincidence_b, events_coincidence_a, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events, ROI_extension_factor)
+                        counts_b1a2, counts_b1a2_unc = ROI_analysis_2D(events_coincidence_b, events_coincidence_a, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events, ROI_extension_factor)
                         print("\t\t\tGamma ray 1: " + str(E_gamma1) + " keV, gamma ray 2: " + str(E_gamma2) + " keV , counts a1b2: " + str(counts_a1b2) + ", counts b2a1: " + str(counts_b1a2))
 
                         counts = counts_a1b2 + counts_b1a2
@@ -267,6 +267,8 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                             if "B_filter" in data_point:
                                 new_B_filter = data_point["B_filter"][0] + B_filter
                                 new_B_filter_unc = np.sqrt(np.power(data_point["B_filter"][1], 2) + B_filter_unc)
+                                new_B_filter = float(new_B_filter)
+                                new_B_filter_unc = float(new_B_filter_unc)
                                 data_point["B_filter"] = [new_B_filter, new_B_filter_unc]
                             else:
                                 data_point["B_filter"] = [B_filter, B_filter_unc]
@@ -310,6 +312,8 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                             if "B_filter" in data_point:
                                 new_B_filter = data_point["B_filter"][0] + B_filter
                                 new_B_filter_unc = np.sqrt(np.power(data_point["B_filter"][1], 2) + B_filter_unc)
+                                new_B_filter = float(new_B_filter)
+                                new_B_filter_unc = float(new_B_filter_unc)
                                 data_point["B_filter"] = [new_B_filter, new_B_filter_unc]
                             else:
                                 data_point["B_filter"] = [B_filter, B_filter_unc]

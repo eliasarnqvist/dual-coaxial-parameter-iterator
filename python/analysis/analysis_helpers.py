@@ -11,10 +11,10 @@ def ROI_analysis_1D(event_data, E_gamma, ROI_width, events, ROI_background_exten
     counts_unc = np.sqrt(counts * (1 - counts/events))
 
     # Correct for ROI_background_extension_factor
-    counts /= np.power(ROI_background_extension_factor, 2)
-    counts_unc /= np.power(ROI_background_extension_factor, 2)
+    counts /= ROI_background_extension_factor
+    counts_unc /= ROI_background_extension_factor
 
-    return int(counts), float(counts_unc)
+    return float(counts), float(counts_unc)
 
 
 def ROI_analysis_2D(event_data_a, event_data_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events, ROI_background_extension_factor=1):
@@ -33,7 +33,7 @@ def ROI_analysis_2D(event_data_a, event_data_b, E_gamma1, E_gamma2, ROI_width1, 
     counts /= np.power(ROI_background_extension_factor, 2)
     counts_unc /= np.power(ROI_background_extension_factor, 2)
 
-    return int(counts), float(counts_unc)
+    return float(counts), float(counts_unc)
 
 
 def calculate_effint(counts_, events):
