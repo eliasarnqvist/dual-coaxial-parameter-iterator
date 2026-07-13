@@ -73,16 +73,17 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                         else:
                             ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
                             ROI_width = np.polyval(ROI_polynial_coeffs, E_gamma)
+                            events = value["properties"]["events"]
 
-                            counts_a = ROI_analysis_1D(events_single_a, E_gamma, ROI_width)
-                            counts_b = ROI_analysis_1D(events_single_b, E_gamma, ROI_width)
+                            counts_a, counts_a_unc = ROI_analysis_1D(events_single_a, E_gamma, ROI_width, events)
+                            counts_b, counts_b_unc = ROI_analysis_1D(events_single_b, E_gamma, ROI_width, events)
                             print("\t\tZA: " + str(ZA) + ", gamma ray: " + str(E_gamma) + " keV, counts a: " + str(counts_a) + ", counts b: " + str(counts_b))
 
                             counts = counts_a + counts_b
-                            events = value["properties"]["events"]
+                            counts_unc = np.sqrt(np.power(counts_a_unc, 2) + np.power(counts_b_unc, 2))
 
                             # Caluclate the effint
-                            effint, effint_unc = calculate_effint(counts, events)
+                            effint, effint_unc = calculate_effint([counts, counts_unc], events)
 
                         # Need to make a copy below so the keys for singles do not interfere with the keys for coincidences
                         this_data_point_criteria = data_point_criteria.copy()
@@ -106,16 +107,17 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                             ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
                             ROI_width1 = np.polyval(ROI_polynial_coeffs, E_gamma1)
                             ROI_width2 = np.polyval(ROI_polynial_coeffs, E_gamma2)
+                            events = value["properties"]["events"]
 
-                            counts_a1b2 = ROI_analysis_2D(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2)
-                            counts_b1a2 = ROI_analysis_2D(events_coincidence_b, events_coincidence_a, E_gamma1, E_gamma2, ROI_width1, ROI_width2)
+                            counts_a1b2, counts_a1b2_unc = ROI_analysis_2D(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events)
+                            counts_b1a2, counts_b1a2_unc = ROI_analysis_2D(events_coincidence_b, events_coincidence_a, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events)
                             print("\t\tZA: " + str(ZA) + ", gamma ray 1: " + str(E_gamma1) + " keV, gamma ray 2: " + str(E_gamma2) + " keV , counts a1b2: " + str(counts_a1b2) + ", counts b2a1: " + str(counts_b1a2))
 
                             counts = counts_a1b2 + counts_b1a2
-                            events = value["properties"]["events"]
+                            counts_unc = np.sqrt(np.power(counts_a1b2_unc, 2) + np.power(counts_b1a2_unc, 2))
 
                             # Caluclate the effint
-                            effint, effint_unc = calculate_effint(counts, events)
+                            effint, effint_unc = calculate_effint([counts, counts_unc], events)
 
                         # Need to make a copy below so the keys for singles do not interfere with the keys for coincidences
                         this_data_point_criteria = data_point_criteria.copy()
@@ -151,17 +153,20 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                     else:
                         ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
                         ROI_width = np.polyval(ROI_polynial_coeffs, E_gamma)
+                        events = value["properties"]["events"]
+                        ROI_extension_factor = plotcard["analysis"]["ROI_background_extension_factor"]
 
-                        counts_a = ROI_analysis_1D(events_single_a, E_gamma, ROI_width)
-                        counts_b = ROI_analysis_1D(events_single_b, E_gamma, ROI_width)
+                        counts_a, counts_a_unc = ROI_analysis_1D(events_single_a, E_gamma, ROI_width, events, ROI_extension_factor)
+                        counts_b, counts_b_unc = ROI_analysis_1D(events_single_b, E_gamma, ROI_width, events, ROI_extension_factor)
                         print("\t\t\tGamma ray: " + str(E_gamma) + " keV, counts a: " + str(counts_a) + ", counts b: " + str(counts_b))
 
                         counts = counts_a + counts_b
-                        events = value["properties"]["events"]
+                        counts_unc = np.sqrt(np.power(counts_a_unc, 2) + np.power(counts_b_unc, 2))
+
                         pseudo_time = value["properties"]["SURE_pseudo_time"]
 
                         # Calculate the number of background counts
-                        B, B_unc = calculate_B(counts, events, pseudo_time, measurement_time_hours)
+                        B, B_unc = calculate_B([counts, counts_unc], events, pseudo_time, measurement_time_hours)
                         
                     # Need to make a copy below so the keys for singles do not interfere with the keys for coincidences
                     this_data_point_criteria = data_point_criteria.copy()
@@ -185,17 +190,20 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                         ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
                         ROI_width1 = np.polyval(ROI_polynial_coeffs, E_gamma1)
                         ROI_width2 = np.polyval(ROI_polynial_coeffs, E_gamma2)
+                        events = value["properties"]["events"]
+                        ROI_extension_factor = plotcard["analysis"]["ROI_background_extension_factor"]
 
-                        counts_a1b2 = ROI_analysis_2D(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2)
-                        counts_b1a2 = ROI_analysis_2D(events_coincidence_b, events_coincidence_a, E_gamma1, E_gamma2, ROI_width1, ROI_width2)
+                        counts_a1b2, counts_a1b2_unc = ROI_analysis_2D(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events, ROI_extension_factor)
+                        counts_b1a2, counts_a1b2_unc = ROI_analysis_2D(events_coincidence_b, events_coincidence_a, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events, ROI_extension_factor)
                         print("\t\t\tGamma ray 1: " + str(E_gamma1) + " keV, gamma ray 2: " + str(E_gamma2) + " keV , counts a1b2: " + str(counts_a1b2) + ", counts b2a1: " + str(counts_b1a2))
 
                         counts = counts_a1b2 + counts_b1a2
-                        events = value["properties"]["events"]
+                        counts_unc = np.sqrt(np.power(counts_a1b2_unc, 2) + np.power(counts_b1a2_unc, 2))
+
                         pseudo_time = value["properties"]["SURE_pseudo_time"]
 
                         # Calculate the number of background counts
-                        B, B_unc = calculate_B(counts, events, pseudo_time, measurement_time_hours)
+                        B, B_unc = calculate_B([counts, counts_unc], events, pseudo_time, measurement_time_hours)
 
                     # Need to make a copy below so the keys for singles do not interfere with the keys for coincidences
                     this_data_point_criteria = data_point_criteria.copy()
@@ -232,19 +240,21 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                     else:
                         ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
                         ROI_width = np.polyval(ROI_polynial_coeffs, E_gamma)
+                        events = value["properties"]["events"]
 
-                        counts_a = ROI_analysis_1D(events_single_a, E_gamma, ROI_width)
-                        counts_b = ROI_analysis_1D(events_single_b, E_gamma, ROI_width)
+                        counts_a, counts_a_unc = ROI_analysis_1D(events_single_a, E_gamma, ROI_width, events)
+                        counts_b, counts_b_unc = ROI_analysis_1D(events_single_b, E_gamma, ROI_width, events)
                         print("\t\t\tGamma ray: " + str(E_gamma) + " keV, counts a: " + str(counts_a) + ", counts b: " + str(counts_b))
 
                         counts = counts_a + counts_b
-                        events = value["properties"]["events"]
+                        counts_unc = np.sqrt(np.power(counts_a_unc, 2) + np.power(counts_b_unc, 2))
+
                         ZA_Bq_filter = next((x for x in plotcard["filter"]["ZAs_Bq_filter"] if x[:2] == filter_ZA), None)
                         Bq = ZA_Bq_filter[2]
                         Bq_unc = ZA_Bq_filter[3]
 
                         # Calculate the number of background counts
-                        B_filter, B_filter_unc = calculate_B_filter(counts, events, [Bq, Bq_unc], measurement_time_hours)
+                        B_filter, B_filter_unc = calculate_B_filter([counts, counts_unc], events, [Bq, Bq_unc], measurement_time_hours)
                     
                     # Need to make a copy below so the keys for singles do not interfere with the keys for coincidences
                     this_data_point_criteria = data_point_criteria.copy()
@@ -273,19 +283,21 @@ def analyze_files(data_list, plotcard, metadata, data_path):
                         ROI_polynial_coeffs = plotcard["analysis"]["ROI_width_polynomial"]
                         ROI_width1 = np.polyval(ROI_polynial_coeffs, E_gamma1)
                         ROI_width2 = np.polyval(ROI_polynial_coeffs, E_gamma2)
+                        events = value["properties"]["events"]
 
-                        counts_a1b2 = ROI_analysis_2D(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2)
-                        counts_b1a2 = ROI_analysis_2D(events_coincidence_b, events_coincidence_a, E_gamma1, E_gamma2, ROI_width1, ROI_width2)
+                        counts_a1b2, counts_a1b2_unc = ROI_analysis_2D(events_coincidence_a, events_coincidence_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events)
+                        counts_b1a2, counts_b1a2_unc = ROI_analysis_2D(events_coincidence_b, events_coincidence_a, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events)
                         print("\t\t\tGamma ray 1: " + str(E_gamma1) + " keV, gamma ray 2: " + str(E_gamma2) + " keV , counts a1b2: " + str(counts_a1b2) + ", counts b2a1: " + str(counts_b1a2))
 
                         counts = counts_a1b2 + counts_b1a2
-                        events = value["properties"]["events"]
+                        counts_unc = np.sqrt(np.power(counts_a1b2_unc, 2) + np.power(counts_b1a2_unc, 2))
+
                         ZA_Bq_filter = next((x for x in plotcard["filter"]["ZAs_Bq_filter"] if x[:2] == filter_ZA), None)
                         Bq = ZA_Bq_filter[2]
                         Bq_unc = ZA_Bq_filter[3]
 
                         # Calculate the number of background counts
-                        B_filter, B_filter_unc = calculate_B_filter(counts, events, [Bq, Bq_unc], measurement_time_hours)
+                        B_filter, B_filter_unc = calculate_B_filter([counts, counts_unc], events, [Bq, Bq_unc], measurement_time_hours)
                     
                     # Need to make a copy below so the keys for singles do not interfere with the keys for coincidences
                     this_data_point_criteria = data_point_criteria.copy()

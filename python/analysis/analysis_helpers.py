@@ -1,68 +1,86 @@
 import numpy as np
 
 
-# TODO ROI averaging: inflate by 4x and then divide by 16?
-def ROI_analysis_1D(events, E_gamma, ROI_width):
+def ROI_analysis_1D(event_data, E_gamma, ROI_width, events, ROI_background_extension_factor=1):
     # Energy distance is half of the ROI size
-    dE = ROI_width/2
+    dE = (ROI_width/2) * ROI_background_extension_factor
 
     # Count peak counts
-    cond = np.logical_and(events > E_gamma-dE, events < E_gamma+dE)
+    cond = np.logical_and(event_data > E_gamma-dE, event_data < E_gamma+dE)
     counts = cond.sum()
-    return int(counts)
+    counts_unc = np.sqrt(counts * (1 - counts/events))
+
+    # Correct for ROI_background_extension_factor
+    counts /= np.power(ROI_background_extension_factor, 2)
+    counts_unc /= np.power(ROI_background_extension_factor, 2)
+
+    return int(counts), float(counts_unc)
 
 
-# TODO ROI averaging: inflate by 4x and then divide by 16?
-def ROI_analysis_2D(events_a, events_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2):
+def ROI_analysis_2D(event_data_a, event_data_b, E_gamma1, E_gamma2, ROI_width1, ROI_width2, events, ROI_background_extension_factor=1):
     # Energy distance is half of the ROI size
-    dE_1 = ROI_width1/2
-    dE_2 = ROI_width2/2
+    dE_1 = (ROI_width1/2) * ROI_background_extension_factor
+    dE_2 = (ROI_width2/2) * ROI_background_extension_factor
 
     # Count peak counts
-    cond_1 = np.logical_and(events_a > E_gamma1-dE_1, events_a < E_gamma1+dE_1)
-    cond_2 = np.logical_and(events_b > E_gamma2-dE_2, events_b < E_gamma2+dE_2)
+    cond_1 = np.logical_and(event_data_a > E_gamma1-dE_1, event_data_a < E_gamma1+dE_1)
+    cond_2 = np.logical_and(event_data_b > E_gamma2-dE_2, event_data_b < E_gamma2+dE_2)
     cond = np.logical_and(cond_1, cond_2)
     counts = cond.sum()
-    return int(counts)
+    counts_unc = np.sqrt(counts * (1 - counts/events))
+
+    # Correct for ROI_background_extension_factor
+    counts /= np.power(ROI_background_extension_factor, 2)
+    counts_unc /= np.power(ROI_background_extension_factor, 2)
+
+    return int(counts), float(counts_unc)
 
 
-def calculate_effint(counts, events):
+def calculate_effint(counts_, events):
+    # Counts and uncertainty of counts
+    counts, counts_unc = counts_
+
     # Calculate efficiency and intensity
     effint = counts / events
 
     # Use binomial instead of poisson approximation
-    effint_unc = np.sqrt(counts * (1 - counts/events)) / events
+    effint_unc = counts_unc / events
 
     return float(effint), float(effint_unc)
 
 
-def calculate_B(counts, events, pseudo_time, measurement_time_hours):
+def calculate_B(counts_, events, pseudo_time, measurement_time_hours):
+    # Counts and uncertainty of counts
+    counts, counts_unc = counts_
+
     # Convert to seconds
     measurement_time = measurement_time_hours * 3600
     # Background count rate
     b = counts / pseudo_time
-    b_unc = np.sqrt(counts * (1 - counts/events)) / pseudo_time
+    b_unc = counts_unc / pseudo_time
     # Background counts during measurement time
     B = b * measurement_time
     B_unc = b_unc * measurement_time
     return float(B), float(B_unc)
 
 
-def calculate_B_filter(counts, events, Bq_, measurement_time_hours):
+def calculate_B_filter(counts_, events, Bq_, measurement_time_hours):
     # Activity of radionuclide in filter
     Bq, Bq_unc = Bq_
+    # Counts and uncertainty of counts
+    counts, counts_unc = counts_
 
     # Convert to seconds
     measurement_time = measurement_time_hours * 3600
     # Calculate efficiency and intensity
     effint = counts / events
     # Use binomial instead of poisson approximation
-    effint_unc = np.sqrt(counts * (1 - counts/events)) / events
+    effint_unc = counts_unc / events
     # Background counts
     B_filter = effint * Bq * measurement_time
     B_filter_unc = np.sqrt(np.power(Bq*measurement_time*effint_unc, 2) + np.power(effint*measurement_time*Bq_unc, 2))
 
-    return B_filter, B_filter_unc
+    return float(B_filter), float(B_filter_unc)
 
 
 def calculate_LD(B_):
@@ -101,7 +119,6 @@ def calculate_mda(LD_, effint_, measurement_time_hours, t12=0):
     return float(mda), float(mda_unc)
 
 
-# TODO implement combined mda uncertainty calculation
 def calculate_combined_mda(mda_list):
 
     # Combined MDA added in inverse quadrature
