@@ -1,14 +1,9 @@
 import argparse
 import json
-# import time
-# import subprocess
-# import uuid
-# import os
 import numpy as np
 import uproot
 import pprint
 import matplotlib.pyplot as plt
-
 from analysis.cut_metadata import cut_metadata
 from analysis.create_data_list import create_data_list
 from analysis.analyze_files import analyze_files
@@ -86,5 +81,4 @@ pprint.pp(data_list)
 plt.close('all')
 inch_to_mm = 25.4
 # plot_mda(data_list, plotcard)
-
 
